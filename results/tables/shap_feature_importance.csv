@@ -1,0 +1,19 @@
+Feature,Mean Absolute SHAP
+num__Age,0.051637
+cat__Regular Sinus Issues_Yes,0.026117
+cat__Headaches or Facial Pain_Yes,0.019355
+num__Sinus Severity (1-5),0.018509
+cat__Headaches or Facial Pain_No,0.013388
+cat__Triggered by External Factors_No,0.01276
+cat__Known Allergy_Yes,0.011923
+cat__Medication Frequency_Occasionally,0.005377
+cat__Medication Frequency_Regularly,0.003018
+cat__Doctor Consulted (Past Year)_No,0.00269
+cat__Gender_Male,0.001804
+cat__Known Allergy_No,0.001765
+cat__Most Problematic Season_Monsoon / Rainy,0.001403
+cat__Regular Sinus Issues_No,0.0
+cat__Triggered by External Factors_Yes,0.0
+cat__Most Problematic Season_Winter,0.0
+cat__Gender_Female,0.0
+cat__Doctor Consulted (Past Year)_Yes,0.0

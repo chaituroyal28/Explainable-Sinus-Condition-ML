@@ -1,0 +1,1007 @@
+Age,Gender,Regular Sinus Issues,Most Problematic Season,Triggered by External Factors,Known Allergy,Doctor Consulted (Past Year),Sinus Severity (1-5),Diagnosed with Sinus Condition,Headaches or Facial Pain,Medication Frequency
+43,Female,No,Monsoon / Rainy,Yes,Yes,No,4,Yes,No,Occasionally
+55,Female,Yes,Monsoon / Rainy,No,Yes,Yes,3,Yes,Yes,Occasionally
+48,Male,Yes,Winter,Yes,Yes,No,2,No,Yes,Occasionally
+65,Male,Yes,Winter,Yes,No,Yes,4,No,Yes,Occasionally
+34,Female,No,Winter,Yes,No,Yes,1,No,Yes,Regularly
+47,Male,No,Monsoon / Rainy,Yes,No,Yes,3,Yes,Yes,Regularly
+43,Female,Yes,Winter,No,No,No,1,Yes,Yes,Regularly
+35,Male,No,Winter,No,Yes,No,5,Yes,No,Occasionally
+51,Female,Yes,Monsoon / Rainy,No,Yes,Yes,2,No,No,Regularly
+31,Female,Yes,Monsoon / Rainy,Yes,No,Yes,4,Yes,Yes,Regularly
+40,Female,No,Winter,No,Yes,No,3,No,No,Regularly
+33,Male,No,Winter,Yes,Yes,No,3,Yes,No,Occasionally
+64,Male,No,Monsoon / Rainy,No,Yes,Yes,3,No,Yes,Regularly
+52,Female,Yes,Monsoon / Rainy,No,Yes,No,2,Yes,Yes,Regularly
+42,Female,No,Winter,Yes,Yes,Yes,4,Yes,No,Occasionally
+30,Male,No,Monsoon / Rainy,Yes,No,Yes,5,No,Yes,Regularly
+65,Male,No,Monsoon / Rainy,No,No,Yes,4,Yes,Yes,Regularly
+31,Female,Yes,Winter,Yes,No,Yes,1,No,No,Occasionally
+41,Female,Yes,Winter,Yes,No,Yes,1,Yes,Yes,Regularly
+37,Male,No,Monsoon / Rainy,Yes,Yes,Yes,2,No,Yes,Regularly
+28,Female,Yes,Winter,Yes,Yes,Yes,2,No,No,Occasionally
+47,Male,Yes,Winter,No,No,No,2,Yes,Yes,Occasionally
+21,Female,No,Monsoon / Rainy,No,Yes,Yes,5,Yes,No,Regularly
+46,Male,Yes,Winter,No,No,Yes,4,Yes,No,Regularly
+55,Male,Yes,Monsoon / Rainy,Yes,No,Yes,2,Yes,Yes,Regularly
+63,Female,Yes,Monsoon / Rainy,No,No,Yes,2,Yes,Yes,Occasionally
+54,Female,Yes,Monsoon / Rainy,Yes,No,No,1,No,Yes,Regularly
+34,Female,Yes,Winter,Yes,Yes,Yes,3,No,No,Regularly
+61,Male,No,Monsoon / Rainy,Yes,Yes,Yes,2,Yes,No,Occasionally
+56,Female,Yes,Winter,No,Yes,Yes,2,No,Yes,Occasionally
+19,Female,Yes,Winter,No,Yes,Yes,2,No,No,Occasionally
+30,Male,No,Monsoon / Rainy,No,No,Yes,1,No,Yes,Regularly
+64,Male,No,Monsoon / Rainy,Yes,No,No,3,No,No,Regularly
+41,Male,Yes,Monsoon / Rainy,Yes,No,Yes,5,No,No,Occasionally
+41,Male,Yes,Winter,Yes,No,Yes,4,Yes,Yes,Occasionally
+33,Female,No,Winter,No,Yes,No,4,Yes,Yes,Regularly
+31,Female,No,Winter,No,No,Yes,4,Yes,No,Occasionally
+41,Male,No,Monsoon / Rainy,No,Yes,No,4,No,No,Occasionally
+58,Female,Yes,Monsoon / Rainy,No,Yes,Yes,2,Yes,Yes,Occasionally
+54,Male,No,Monsoon / Rainy,Yes,Yes,Yes,4,Yes,No,Regularly
+55,Male,No,Monsoon / Rainy,No,No,Yes,3,No,No,Regularly
+56,Male,No,Winter,Yes,Yes,No,5,Yes,No,Regularly
+42,Male,Yes,Winter,No,No,Yes,3,Yes,Yes,Occasionally
+61,Female,No,Winter,No,Yes,No,2,Yes,Yes,Regularly
+33,Female,No,Winter,No,Yes,Yes,1,Yes,No,Regularly
+63,Female,Yes,Monsoon / Rainy,Yes,No,No,1,No,No,Occasionally
+50,Female,No,Monsoon / Rainy,Yes,Yes,Yes,2,Yes,Yes,Regularly
+47,Female,Yes,Monsoon / Rainy,No,No,Yes,1,Yes,Yes,Regularly
+41,Male,No,Monsoon / Rainy,No,Yes,Yes,5,No,Yes,Regularly
+59,Female,Yes,Monsoon / Rainy,No,No,Yes,1,No,Yes,Regularly
+61,Male,Yes,Monsoon / Rainy,No,Yes,Yes,5,Yes,Yes,Regularly
+35,Female,No,Winter,No,Yes,Yes,2,Yes,No,Occasionally
+52,Female,No,Monsoon / Rainy,Yes,Yes,No,4,Yes,No,Regularly
+36,Female,Yes,Monsoon / Rainy,No,Yes,No,3,Yes,Yes,Regularly
+35,Male,Yes,Winter,No,Yes,Yes,2,Yes,Yes,Regularly
+59,Female,Yes,Monsoon / Rainy,No,Yes,Yes,1,No,Yes,Regularly
+44,Female,Yes,Monsoon / Rainy,Yes,No,Yes,2,No,Yes,Occasionally
+55,Female,No,Monsoon / Rainy,No,No,No,5,No,Yes,Regularly
+58,Female,Yes,Monsoon / Rainy,Yes,Yes,No,3,No,No,Regularly
+26,Female,Yes,Winter,No,Yes,Yes,5,Yes,Yes,Regularly
+62,Female,No,Winter,No,Yes,Yes,5,Yes,Yes,Regularly
+57,Male,Yes,Monsoon / Rainy,No,Yes,No,3,No,No,Occasionally
+55,Female,Yes,Winter,No,No,Yes,2,No,Yes,Occasionally
+35,Female,Yes,Monsoon / Rainy,No,Yes,No,5,Yes,No,Occasionally
+42,Female,No,Monsoon / Rainy,Yes,Yes,Yes,4,No,Yes,Occasionally
+19,Male,Yes,Winter,Yes,Yes,No,5,No,Yes,Regularly
+49,Female,No,Monsoon / Rainy,Yes,Yes,No,1,Yes,No,Occasionally
+22,Male,Yes,Winter,No,No,Yes,1,Yes,Yes,Occasionally
+64,Male,Yes,Monsoon / Rainy,No,Yes,No,5,Yes,No,Occasionally
+21,Female,Yes,Monsoon / Rainy,Yes,No,No,2,Yes,No,Occasionally
+24,Female,Yes,Winter,Yes,Yes,No,5,Yes,Yes,Regularly
+52,Female,Yes,Winter,Yes,No,Yes,2,Yes,Yes,Occasionally
+36,Female,Yes,Winter,Yes,No,Yes,1,Yes,Yes,Regularly
+39,Female,Yes,Monsoon / Rainy,No,Yes,No,3,Yes,No,Occasionally
+33,Male,No,Winter,Yes,Yes,No,3,Yes,No,Occasionally
+62,Male,Yes,Monsoon / Rainy,Yes,Yes,No,4,No,Yes,Regularly
+59,Male,No,Monsoon / Rainy,No,No,Yes,5,No,No,Regularly
+47,Male,Yes,Monsoon / Rainy,Yes,Yes,No,1,No,Yes,Regularly
+19,Female,No,Monsoon / Rainy,No,Yes,No,1,Yes,No,Regularly
+26,Female,No,Monsoon / Rainy,No,Yes,No,5,Yes,No,Occasionally
+36,Female,Yes,Monsoon / Rainy,No,Yes,Yes,1,No,Yes,Regularly
+40,Female,No,Monsoon / Rainy,No,No,Yes,1,No,No,Regularly
+38,Male,No,Winter,No,No,Yes,5,Yes,No,Occasionally
+36,Female,Yes,Winter,Yes,No,No,5,No,Yes,Regularly
+65,Female,No,Monsoon / Rainy,Yes,No,No,1,No,No,Occasionally
+21,Male,No,Winter,No,No,Yes,5,No,No,Occasionally
+51,Male,Yes,Winter,No,Yes,No,4,Yes,No,Occasionally
+64,Male,No,Monsoon / Rainy,No,Yes,No,5,Yes,Yes,Regularly
+36,Female,Yes,Monsoon / Rainy,No,No,Yes,1,No,Yes,Occasionally
+64,Female,Yes,Monsoon / Rainy,Yes,No,No,5,No,No,Occasionally
+41,Male,Yes,Monsoon / Rainy,Yes,No,No,4,Yes,No,Occasionally
+40,Male,No,Winter,Yes,No,Yes,3,Yes,No,Occasionally
+41,Male,Yes,Winter,No,No,Yes,5,No,No,Regularly
+37,Female,No,Winter,No,No,No,4,No,Yes,Regularly
+33,Female,No,Winter,No,Yes,Yes,4,Yes,Yes,Regularly
+63,Male,Yes,Winter,Yes,No,No,4,Yes,No,Regularly
+29,Male,Yes,Monsoon / Rainy,No,No,No,2,No,Yes,Occasionally
+58,Male,No,Winter,Yes,No,No,4,No,No,Occasionally
+48,Male,Yes,Winter,Yes,No,Yes,3,No,Yes,Occasionally
+21,Female,No,Monsoon / Rainy,No,Yes,Yes,2,No,Yes,Regularly
+46,Female,No,Monsoon / Rainy,No,No,No,5,Yes,Yes,Occasionally
+31,Male,No,Monsoon / Rainy,Yes,Yes,No,3,No,Yes,Occasionally
+65,Female,Yes,Monsoon / Rainy,No,No,Yes,3,Yes,Yes,Regularly
+41,Female,No,Winter,No,No,Yes,1,Yes,Yes,Occasionally
+37,Male,Yes,Monsoon / Rainy,No,Yes,Yes,2,Yes,Yes,Occasionally
+20,Male,No,Winter,No,No,Yes,3,Yes,Yes,Regularly
+34,Female,Yes,Winter,No,Yes,Yes,1,No,No,Regularly
+45,Female,No,Monsoon / Rainy,No,Yes,Yes,1,Yes,No,Regularly
+35,Female,Yes,Winter,Yes,No,Yes,5,Yes,Yes,Occasionally
+28,Male,No,Monsoon / Rainy,Yes,Yes,Yes,3,Yes,Yes,Occasionally
+62,Female,Yes,Winter,Yes,Yes,No,5,No,Yes,Occasionally
+60,Female,Yes,Monsoon / Rainy,Yes,Yes,No,1,Yes,Yes,Occasionally
+55,Male,No,Winter,No,No,Yes,4,No,Yes,Occasionally
+23,Female,Yes,Monsoon / Rainy,No,Yes,No,4,Yes,No,Occasionally
+24,Male,Yes,Monsoon / Rainy,Yes,No,Yes,2,Yes,No,Occasionally
+41,Female,Yes,Monsoon / Rainy,Yes,Yes,No,4,No,No,Regularly
+20,Female,Yes,Winter,Yes,Yes,No,5,Yes,Yes,Regularly
+55,Female,No,Winter,No,Yes,No,5,No,Yes,Regularly
+19,Male,Yes,Winter,No,Yes,Yes,3,No,No,Occasionally
+42,Male,No,Winter,Yes,No,Yes,4,No,Yes,Occasionally
+26,Female,Yes,Winter,No,No,Yes,1,No,Yes,Occasionally
+26,Female,Yes,Monsoon / Rainy,Yes,No,No,1,No,Yes,Occasionally
+34,Female,No,Monsoon / Rainy,Yes,Yes,Yes,1,No,No,Occasionally
+39,Female,Yes,Winter,Yes,No,No,4,No,Yes,Regularly
+49,Female,No,Winter,No,No,Yes,5,No,No,Occasionally
+19,Female,Yes,Winter,No,Yes,Yes,3,No,No,Occasionally
+34,Female,No,Monsoon / Rainy,No,No,No,1,No,Yes,Occasionally
+21,Female,Yes,Winter,Yes,Yes,No,5,Yes,Yes,Regularly
+65,Male,Yes,Monsoon / Rainy,No,Yes,Yes,5,Yes,Yes,Regularly
+43,Female,Yes,Monsoon / Rainy,No,No,No,1,No,No,Occasionally
+65,Male,No,Monsoon / Rainy,No,No,No,1,Yes,No,Regularly
+60,Male,No,Monsoon / Rainy,No,Yes,Yes,3,No,No,Occasionally
+37,Male,Yes,Monsoon / Rainy,No,Yes,No,3,No,Yes,Occasionally
+19,Female,Yes,Winter,No,Yes,No,2,No,No,Occasionally
+37,Male,No,Winter,No,Yes,Yes,2,No,No,Regularly
+65,Male,No,Monsoon / Rainy,No,No,Yes,1,No,Yes,Regularly
+54,Male,No,Winter,No,Yes,Yes,4,No,No,Occasionally
+32,Female,No,Monsoon / Rainy,Yes,No,Yes,1,No,Yes,Occasionally
+63,Female,No,Winter,No,No,Yes,5,No,No,Occasionally
+49,Male,Yes,Monsoon / Rainy,Yes,No,Yes,1,Yes,No,Regularly
+19,Female,No,Monsoon / Rainy,No,No,Yes,3,Yes,Yes,Occasionally
+39,Male,Yes,Monsoon / Rainy,Yes,No,Yes,2,No,No,Regularly
+58,Female,Yes,Monsoon / Rainy,No,No,No,1,No,Yes,Regularly
+31,Female,Yes,Winter,Yes,Yes,No,2,No,No,Regularly
+19,Female,Yes,Monsoon / Rainy,Yes,No,Yes,1,No,Yes,Regularly
+22,Female,Yes,Monsoon / Rainy,No,Yes,No,1,Yes,No,Occasionally
+33,Male,No,Monsoon / Rainy,Yes,Yes,No,2,Yes,Yes,Occasionally
+58,Female,No,Winter,No,No,No,5,No,Yes,Regularly
+41,Female,No,Winter,Yes,No,Yes,4,Yes,No,Occasionally
+24,Male,No,Winter,Yes,No,Yes,1,Yes,No,Regularly
+50,Male,Yes,Monsoon / Rainy,No,No,No,3,No,No,Occasionally
+37,Male,Yes,Winter,Yes,No,Yes,3,Yes,Yes,Regularly
+38,Male,Yes,Monsoon / Rainy,No,Yes,Yes,1,No,Yes,Regularly
+24,Male,Yes,Winter,No,Yes,Yes,3,Yes,Yes,Regularly
+41,Female,No,Monsoon / Rainy,No,No,No,4,No,Yes,Regularly
+27,Female,No,Winter,No,Yes,No,4,No,No,Regularly
+19,Female,Yes,Monsoon / Rainy,Yes,Yes,No,1,No,Yes,Occasionally
+24,Female,Yes,Winter,Yes,Yes,No,5,Yes,Yes,Occasionally
+53,Female,No,Monsoon / Rainy,Yes,Yes,Yes,1,No,Yes,Regularly
+65,Male,No,Monsoon / Rainy,Yes,No,Yes,1,Yes,No,Occasionally
+52,Female,No,Monsoon / Rainy,No,Yes,Yes,1,Yes,Yes,Occasionally
+58,Male,Yes,Monsoon / Rainy,Yes,Yes,No,3,No,Yes,Regularly
+47,Female,No,Winter,No,Yes,Yes,2,Yes,No,Occasionally
+19,Female,No,Monsoon / Rainy,Yes,No,Yes,4,Yes,No,Regularly
+28,Male,No,Winter,Yes,No,No,5,Yes,Yes,Occasionally
+46,Female,Yes,Winter,No,Yes,No,1,No,No,Regularly
+45,Male,Yes,Monsoon / Rainy,Yes,Yes,No,3,Yes,Yes,Regularly
+44,Female,Yes,Winter,Yes,No,No,3,Yes,No,Occasionally
+27,Male,Yes,Monsoon / Rainy,No,Yes,Yes,2,No,No,Occasionally
+63,Female,No,Winter,No,No,No,1,No,Yes,Occasionally
+26,Female,No,Winter,Yes,No,No,5,Yes,Yes,Occasionally
+41,Male,No,Winter,No,Yes,Yes,3,Yes,No,Occasionally
+38,Female,Yes,Monsoon / Rainy,No,Yes,No,4,Yes,Yes,Regularly
+42,Female,Yes,Winter,Yes,No,Yes,3,No,Yes,Occasionally
+48,Female,No,Monsoon / Rainy,Yes,No,Yes,2,No,Yes,Occasionally
+48,Female,Yes,Monsoon / Rainy,No,Yes,Yes,4,No,No,Occasionally
+38,Female,No,Winter,Yes,Yes,No,5,No,No,Regularly
+36,Female,No,Monsoon / Rainy,Yes,No,Yes,5,No,No,Occasionally
+59,Male,No,Monsoon / Rainy,Yes,Yes,No,1,Yes,Yes,Regularly
+60,Female,No,Winter,No,Yes,Yes,1,Yes,Yes,Regularly
+62,Male,Yes,Monsoon / Rainy,No,No,Yes,4,Yes,No,Occasionally
+61,Male,Yes,Winter,Yes,Yes,No,2,No,No,Occasionally
+58,Female,No,Monsoon / Rainy,Yes,No,No,4,Yes,Yes,Regularly
+52,Female,Yes,Winter,No,Yes,No,2,No,Yes,Occasionally
+42,Male,Yes,Winter,No,No,Yes,4,No,Yes,Occasionally
+39,Male,No,Winter,Yes,Yes,Yes,3,No,No,Occasionally
+41,Male,Yes,Winter,Yes,Yes,Yes,4,Yes,Yes,Regularly
+43,Female,Yes,Monsoon / Rainy,Yes,No,Yes,3,Yes,No,Occasionally
+64,Female,Yes,Monsoon / Rainy,No,Yes,No,1,No,No,Occasionally
+21,Male,No,Winter,Yes,Yes,Yes,5,No,Yes,Occasionally
+33,Male,Yes,Winter,Yes,No,Yes,1,Yes,Yes,Regularly
+32,Female,Yes,Monsoon / Rainy,No,No,No,5,Yes,No,Occasionally
+55,Female,No,Monsoon / Rainy,Yes,Yes,No,1,Yes,No,Regularly
+50,Female,Yes,Monsoon / Rainy,No,No,Yes,5,No,No,Occasionally
+40,Female,No,Monsoon / Rainy,No,No,Yes,1,No,Yes,Regularly
+36,Male,Yes,Winter,Yes,No,No,2,No,No,Occasionally
+34,Male,No,Winter,No,No,Yes,4,No,Yes,Occasionally
+30,Female,No,Monsoon / Rainy,No,No,No,3,No,No,Regularly
+64,Female,No,Winter,Yes,Yes,Yes,5,Yes,Yes,Regularly
+39,Female,Yes,Winter,Yes,No,Yes,4,No,No,Occasionally
+52,Male,No,Winter,Yes,Yes,No,5,Yes,Yes,Occasionally
+28,Male,No,Winter,Yes,No,No,5,No,Yes,Occasionally
+61,Female,No,Winter,No,No,No,3,Yes,Yes,Regularly
+25,Male,No,Winter,No,Yes,No,3,No,Yes,Regularly
+33,Male,Yes,Winter,No,Yes,No,4,Yes,No,Regularly
+39,Female,No,Winter,No,Yes,No,5,Yes,Yes,Occasionally
+33,Female,No,Monsoon / Rainy,Yes,Yes,Yes,2,No,No,Occasionally
+48,Male,No,Monsoon / Rainy,No,Yes,No,2,No,Yes,Occasionally
+43,Female,No,Monsoon / Rainy,No,No,No,4,No,Yes,Regularly
+56,Male,No,Monsoon / Rainy,No,Yes,No,2,No,No,Occasionally
+59,Female,No,Winter,No,No,Yes,2,Yes,Yes,Occasionally
+22,Female,No,Winter,Yes,Yes,Yes,5,Yes,Yes,Regularly
+33,Male,Yes,Monsoon / Rainy,No,Yes,Yes,3,Yes,Yes,Occasionally
+48,Male,No,Winter,No,No,No,2,No,Yes,Regularly
+25,Female,No,Winter,Yes,No,Yes,1,Yes,No,Occasionally
+64,Male,No,Monsoon / Rainy,Yes,Yes,No,1,No,No,Regularly
+65,Male,Yes,Monsoon / Rainy,Yes,Yes,No,1,No,No,Occasionally
+58,Male,No,Winter,Yes,Yes,No,3,Yes,No,Regularly
+32,Male,Yes,Monsoon / Rainy,No,Yes,Yes,4,No,Yes,Occasionally
+36,Male,No,Monsoon / Rainy,No,No,Yes,2,No,Yes,Regularly
+57,Male,Yes,Winter,No,Yes,Yes,2,Yes,Yes,Occasionally
+60,Female,No,Winter,No,No,No,3,Yes,Yes,Regularly
+29,Female,Yes,Monsoon / Rainy,Yes,No,Yes,3,Yes,Yes,Regularly
+43,Male,No,Winter,Yes,Yes,Yes,3,Yes,Yes,Regularly
+37,Male,Yes,Monsoon / Rainy,Yes,No,Yes,1,Yes,Yes,Occasionally
+28,Male,No,Monsoon / Rainy,No,No,No,2,Yes,Yes,Occasionally
+18,Male,No,Winter,No,Yes,Yes,4,Yes,Yes,Regularly
+33,Male,No,Monsoon / Rainy,No,No,Yes,2,Yes,No,Occasionally
+20,Female,Yes,Monsoon / Rainy,Yes,No,No,4,No,Yes,Regularly
+37,Male,Yes,Winter,Yes,No,Yes,3,Yes,Yes,Occasionally
+24,Female,No,Winter,No,No,No,5,Yes,Yes,Occasionally
+57,Female,Yes,Monsoon / Rainy,Yes,Yes,Yes,2,No,No,Occasionally
+53,Male,No,Monsoon / Rainy,Yes,No,No,4,Yes,Yes,Occasionally
+65,Male,Yes,Monsoon / Rainy,No,Yes,Yes,1,No,Yes,Occasionally
+52,Male,Yes,Monsoon / Rainy,Yes,Yes,Yes,3,Yes,Yes,Occasionally
+38,Male,No,Winter,No,Yes,No,1,Yes,Yes,Occasionally
+33,Male,No,Winter,No,No,Yes,4,No,No,Regularly
+49,Female,Yes,Monsoon / Rainy,Yes,Yes,No,2,No,No,Occasionally
+48,Male,Yes,Winter,No,No,No,3,No,Yes,Occasionally
+27,Female,No,Monsoon / Rainy,No,No,No,1,Yes,Yes,Occasionally
+30,Male,Yes,Monsoon / Rainy,No,No,No,5,No,No,Regularly
+22,Male,No,Monsoon / Rainy,Yes,Yes,No,4,No,Yes,Occasionally
+35,Female,Yes,Winter,Yes,Yes,No,5,Yes,Yes,Occasionally
+62,Male,No,Winter,Yes,Yes,No,5,No,Yes,Occasionally
+47,Female,No,Monsoon / Rainy,No,Yes,No,5,No,No,Occasionally
+37,Male,No,Winter,No,Yes,Yes,4,Yes,No,Occasionally
+54,Female,Yes,Monsoon / Rainy,Yes,Yes,Yes,5,Yes,Yes,Occasionally
+37,Male,Yes,Winter,No,No,No,5,No,Yes,Occasionally
+58,Male,Yes,Winter,No,No,No,3,No,Yes,Occasionally
+25,Male,Yes,Winter,Yes,Yes,Yes,3,Yes,Yes,Occasionally
+64,Male,No,Winter,Yes,No,No,4,Yes,No,Regularly
+21,Male,No,Monsoon / Rainy,No,Yes,No,2,No,No,Occasionally
+32,Male,Yes,Winter,Yes,Yes,No,1,Yes,Yes,Regularly
+39,Male,Yes,Monsoon / Rainy,Yes,No,No,4,No,No,Occasionally
+27,Female,No,Winter,Yes,No,No,4,No,Yes,Occasionally
+60,Male,Yes,Monsoon / Rainy,Yes,Yes,No,3,Yes,No,Occasionally
+52,Female,No,Winter,No,No,Yes,2,No,Yes,Occasionally
+41,Female,Yes,Winter,No,No,Yes,4,Yes,Yes,Regularly
+49,Male,Yes,Winter,No,No,No,3,No,Yes,Occasionally
+46,Male,No,Monsoon / Rainy,No,Yes,No,1,Yes,No,Occasionally
+35,Female,No,Monsoon / Rainy,No,Yes,No,2,Yes,No,Occasionally
+23,Female,No,Monsoon / Rainy,Yes,No,Yes,4,Yes,Yes,Occasionally
+46,Male,No,Winter,Yes,No,No,4,Yes,Yes,Regularly
+55,Male,Yes,Winter,Yes,Yes,No,5,No,Yes,Regularly
+24,Male,Yes,Winter,No,No,Yes,2,Yes,Yes,Occasionally
+25,Female,No,Monsoon / Rainy,No,No,Yes,4,Yes,No,Occasionally
+57,Female,No,Monsoon / Rainy,No,Yes,No,2,No,Yes,Regularly
+51,Male,Yes,Winter,No,Yes,No,5,No,No,Regularly
+33,Male,Yes,Monsoon / Rainy,Yes,Yes,No,2,Yes,No,Occasionally
+46,Male,No,Winter,No,No,Yes,4,Yes,Yes,Regularly
+34,Female,Yes,Winter,Yes,Yes,No,1,Yes,No,Occasionally
+34,Female,No,Winter,No,No,Yes,2,No,Yes,Regularly
+24,Male,Yes,Monsoon / Rainy,No,No,No,3,No,No,Occasionally
+29,Female,No,Monsoon / Rainy,No,Yes,Yes,5,No,Yes,Regularly
+22,Female,No,Monsoon / Rainy,Yes,No,No,2,Yes,No,Regularly
+53,Female,Yes,Winter,Yes,Yes,Yes,4,Yes,Yes,Occasionally
+39,Female,No,Winter,No,Yes,Yes,4,Yes,Yes,Regularly
+49,Female,No,Winter,Yes,Yes,No,5,Yes,Yes,Occasionally
+24,Male,Yes,Monsoon / Rainy,No,No,Yes,3,Yes,No,Regularly
+31,Male,Yes,Monsoon / Rainy,Yes,No,No,1,No,Yes,Occasionally
+62,Female,Yes,Monsoon / Rainy,Yes,Yes,Yes,2,Yes,Yes,Occasionally
+22,Male,No,Monsoon / Rainy,No,Yes,Yes,3,No,Yes,Regularly
+54,Female,No,Winter,No,Yes,Yes,5,Yes,Yes,Regularly
+43,Female,Yes,Monsoon / Rainy,No,Yes,Yes,5,Yes,Yes,Regularly
+32,Female,No,Winter,Yes,No,Yes,5,Yes,No,Occasionally
+63,Female,Yes,Monsoon / Rainy,No,Yes,Yes,1,No,Yes,Regularly
+53,Male,No,Monsoon / Rainy,Yes,No,No,4,No,No,Regularly
+28,Female,Yes,Winter,Yes,No,No,1,Yes,No,Regularly
+30,Male,No,Monsoon / Rainy,Yes,No,No,5,Yes,No,Occasionally
+32,Male,No,Winter,No,No,Yes,2,Yes,No,Occasionally
+57,Female,No,Winter,Yes,Yes,No,5,Yes,No,Occasionally
+43,Female,Yes,Monsoon / Rainy,Yes,Yes,No,1,Yes,Yes,Occasionally
+25,Female,No,Monsoon / Rainy,Yes,Yes,Yes,3,Yes,Yes,Occasionally
+37,Male,Yes,Monsoon / Rainy,No,Yes,No,5,No,Yes,Regularly
+22,Female,Yes,Monsoon / Rainy,Yes,No,No,5,Yes,Yes,Occasionally
+47,Female,No,Winter,No,No,No,1,Yes,No,Regularly
+61,Female,No,Winter,Yes,No,Yes,4,No,Yes,Regularly
+62,Female,Yes,Winter,No,Yes,No,5,Yes,No,Regularly
+18,Female,Yes,Winter,No,Yes,No,4,Yes,No,Regularly
+62,Female,Yes,Monsoon / Rainy,Yes,No,Yes,3,No,Yes,Occasionally
+39,Female,Yes,Winter,No,Yes,No,4,Yes,No,Regularly
+28,Male,Yes,Monsoon / Rainy,Yes,Yes,Yes,2,No,Yes,Occasionally
+63,Male,No,Monsoon / Rainy,No,Yes,Yes,4,Yes,No,Regularly
+48,Male,No,Winter,No,Yes,No,3,Yes,No,Regularly
+57,Female,No,Monsoon / Rainy,Yes,Yes,No,3,No,No,Regularly
+18,Female,Yes,Winter,Yes,Yes,No,1,Yes,No,Regularly
+47,Female,No,Monsoon / Rainy,No,No,No,4,No,No,Regularly
+43,Male,Yes,Monsoon / Rainy,Yes,No,No,4,No,Yes,Regularly
+65,Female,No,Monsoon / Rainy,Yes,Yes,Yes,2,Yes,Yes,Regularly
+18,Male,No,Monsoon / Rainy,Yes,No,Yes,3,No,No,Regularly
+23,Female,No,Monsoon / Rainy,Yes,Yes,Yes,3,Yes,No,Occasionally
+63,Female,Yes,Monsoon / Rainy,No,No,Yes,1,Yes,No,Occasionally
+23,Female,Yes,Winter,No,No,No,3,Yes,No,Occasionally
+37,Male,Yes,Monsoon / Rainy,No,Yes,Yes,2,Yes,Yes,Occasionally
+56,Male,No,Winter,No,No,Yes,4,No,Yes,Occasionally
+59,Female,No,Winter,No,No,No,2,No,No,Occasionally
+46,Female,Yes,Winter,No,No,No,2,No,Yes,Occasionally
+43,Male,No,Monsoon / Rainy,Yes,No,No,1,No,No,Regularly
+32,Female,Yes,Winter,No,No,Yes,3,No,Yes,Occasionally
+47,Female,Yes,Monsoon / Rainy,No,No,No,1,Yes,No,Regularly
+40,Female,No,Monsoon / Rainy,Yes,Yes,Yes,5,Yes,No,Occasionally
+59,Male,Yes,Winter,Yes,No,Yes,3,No,No,Occasionally
+29,Female,No,Winter,No,Yes,Yes,1,No,Yes,Regularly
+27,Male,No,Monsoon / Rainy,Yes,No,Yes,3,Yes,Yes,Regularly
+28,Female,Yes,Monsoon / Rainy,Yes,Yes,No,1,No,No,Regularly
+20,Female,No,Monsoon / Rainy,Yes,Yes,No,5,Yes,Yes,Occasionally
+63,Female,Yes,Monsoon / Rainy,Yes,Yes,No,4,Yes,No,Occasionally
+56,Male,Yes,Monsoon / Rainy,No,Yes,No,1,No,Yes,Regularly
+65,Female,No,Monsoon / Rainy,No,Yes,No,4,No,Yes,Regularly
+23,Male,No,Monsoon / Rainy,No,Yes,No,3,Yes,Yes,Occasionally
+64,Male,No,Winter,Yes,No,No,1,Yes,Yes,Occasionally
+25,Male,No,Winter,No,Yes,Yes,3,No,No,Occasionally
+50,Female,No,Monsoon / Rainy,No,No,No,1,Yes,No,Occasionally
+28,Male,No,Monsoon / Rainy,Yes,Yes,Yes,2,Yes,Yes,Regularly
+46,Female,Yes,Winter,No,No,No,2,No,Yes,Occasionally
+34,Male,Yes,Winter,Yes,Yes,Yes,1,No,No,Regularly
+55,Female,Yes,Winter,No,No,Yes,4,No,No,Occasionally
+23,Female,No,Winter,No,Yes,Yes,4,No,Yes,Regularly
+45,Male,No,Monsoon / Rainy,Yes,No,Yes,2,Yes,Yes,Regularly
+32,Female,No,Winter,No,Yes,Yes,4,No,Yes,Regularly
+38,Female,No,Monsoon / Rainy,Yes,No,Yes,1,Yes,No,Occasionally
+38,Male,No,Winter,No,No,Yes,2,Yes,Yes,Occasionally
+23,Female,Yes,Winter,Yes,No,Yes,3,No,No,Occasionally
+30,Female,Yes,Winter,Yes,No,No,5,No,Yes,Regularly
+23,Male,Yes,Monsoon / Rainy,No,No,No,1,No,Yes,Occasionally
+56,Male,No,Winter,Yes,No,No,3,Yes,No,Regularly
+59,Female,Yes,Monsoon / Rainy,No,No,No,5,Yes,Yes,Regularly
+57,Female,Yes,Winter,Yes,No,Yes,1,No,No,Occasionally
+59,Male,No,Monsoon / Rainy,No,No,No,1,No,Yes,Regularly
+50,Female,No,Winter,Yes,No,No,3,Yes,No,Regularly
+21,Male,No,Winter,Yes,No,Yes,1,No,Yes,Regularly
+63,Female,Yes,Winter,No,Yes,No,1,No,Yes,Occasionally
+44,Female,No,Winter,Yes,Yes,No,4,Yes,No,Occasionally
+26,Male,Yes,Winter,No,Yes,Yes,1,Yes,Yes,Occasionally
+65,Male,No,Winter,No,No,Yes,4,Yes,No,Occasionally
+40,Female,Yes,Monsoon / Rainy,No,Yes,No,2,No,No,Regularly
+20,Male,No,Monsoon / Rainy,No,No,No,5,Yes,No,Regularly
+46,Male,No,Winter,Yes,Yes,No,5,Yes,No,Occasionally
+48,Female,Yes,Winter,No,No,Yes,1,Yes,Yes,Occasionally
+42,Male,No,Monsoon / Rainy,Yes,Yes,No,3,Yes,No,Regularly
+52,Female,Yes,Winter,Yes,No,No,4,Yes,Yes,Occasionally
+56,Male,Yes,Winter,No,No,No,3,Yes,No,Regularly
+46,Female,No,Monsoon / Rainy,Yes,Yes,Yes,1,No,No,Occasionally
+40,Male,Yes,Winter,No,Yes,No,3,Yes,Yes,Regularly
+65,Female,Yes,Monsoon / Rainy,No,No,Yes,5,No,No,Regularly
+31,Female,No,Winter,Yes,No,Yes,5,Yes,No,Occasionally
+65,Male,No,Winter,No,Yes,No,2,No,Yes,Occasionally
+58,Male,Yes,Monsoon / Rainy,No,Yes,Yes,3,Yes,Yes,Occasionally
+61,Male,No,Monsoon / Rainy,No,No,Yes,4,Yes,No,Regularly
+32,Male,Yes,Monsoon / Rainy,Yes,No,Yes,5,No,No,Occasionally
+47,Male,Yes,Winter,Yes,No,Yes,5,Yes,No,Occasionally
+44,Male,No,Winter,No,Yes,Yes,4,No,Yes,Occasionally
+34,Female,Yes,Winter,Yes,No,No,1,Yes,No,Occasionally
+19,Female,No,Winter,Yes,Yes,No,1,No,No,Occasionally
+45,Female,Yes,Winter,Yes,Yes,No,5,Yes,No,Regularly
+64,Female,Yes,Monsoon / Rainy,Yes,Yes,Yes,1,Yes,No,Occasionally
+20,Male,Yes,Winter,Yes,No,No,3,No,Yes,Occasionally
+38,Female,No,Winter,No,No,Yes,5,No,No,Regularly
+46,Male,Yes,Monsoon / Rainy,No,No,No,2,Yes,Yes,Regularly
+41,Female,No,Winter,Yes,Yes,No,1,No,Yes,Occasionally
+47,Female,Yes,Monsoon / Rainy,No,No,No,1,Yes,Yes,Occasionally
+48,Male,Yes,Winter,No,No,Yes,1,No,Yes,Regularly
+64,Female,No,Monsoon / Rainy,No,Yes,Yes,1,Yes,No,Occasionally
+62,Female,Yes,Monsoon / Rainy,No,No,No,3,Yes,Yes,Occasionally
+63,Male,Yes,Winter,Yes,No,Yes,5,Yes,Yes,Occasionally
+35,Male,Yes,Winter,Yes,Yes,No,5,Yes,Yes,Regularly
+19,Male,No,Winter,No,No,No,1,No,Yes,Occasionally
+28,Male,Yes,Monsoon / Rainy,No,Yes,Yes,5,Yes,No,Occasionally
+38,Female,Yes,Monsoon / Rainy,No,No,No,4,Yes,No,Regularly
+50,Female,No,Monsoon / Rainy,Yes,Yes,Yes,1,Yes,No,Occasionally
+42,Male,No,Monsoon / Rainy,No,Yes,Yes,3,Yes,No,Occasionally
+48,Female,No,Winter,No,No,Yes,2,Yes,No,Occasionally
+23,Female,Yes,Monsoon / Rainy,Yes,No,Yes,5,No,No,Occasionally
+57,Male,Yes,Winter,Yes,No,No,3,No,No,Regularly
+60,Female,No,Winter,Yes,No,No,5,No,No,Regularly
+52,Male,Yes,Winter,Yes,Yes,Yes,4,No,Yes,Occasionally
+45,Female,No,Monsoon / Rainy,No,No,No,4,No,No,Occasionally
+54,Female,Yes,Winter,No,Yes,No,4,Yes,No,Occasionally
+18,Male,Yes,Monsoon / Rainy,No,No,Yes,2,No,Yes,Regularly
+36,Male,Yes,Monsoon / Rainy,Yes,No,No,1,No,Yes,Regularly
+61,Male,No,Monsoon / Rainy,No,No,No,3,Yes,No,Occasionally
+64,Male,No,Monsoon / Rainy,Yes,Yes,No,5,No,Yes,Regularly
+29,Male,Yes,Monsoon / Rainy,No,Yes,No,5,No,No,Regularly
+57,Female,No,Winter,No,Yes,Yes,5,No,Yes,Regularly
+24,Female,Yes,Monsoon / Rainy,Yes,No,No,1,Yes,No,Occasionally
+24,Male,No,Monsoon / Rainy,No,Yes,No,5,Yes,No,Regularly
+41,Male,No,Monsoon / Rainy,Yes,Yes,Yes,1,Yes,Yes,Regularly
+18,Female,Yes,Winter,No,No,Yes,2,No,Yes,Regularly
+55,Female,No,Winter,No,Yes,No,4,No,No,Occasionally
+36,Male,Yes,Monsoon / Rainy,No,Yes,Yes,3,No,No,Occasionally
+25,Male,No,Monsoon / Rainy,No,No,Yes,3,No,Yes,Occasionally
+21,Male,No,Monsoon / Rainy,No,No,Yes,5,No,Yes,Occasionally
+19,Male,Yes,Monsoon / Rainy,Yes,No,Yes,5,No,Yes,Regularly
+32,Male,Yes,Monsoon / Rainy,Yes,No,No,4,Yes,No,Occasionally
+32,Female,No,Winter,Yes,No,No,4,No,No,Regularly
+45,Female,No,Winter,No,Yes,No,1,Yes,Yes,Occasionally
+57,Male,Yes,Monsoon / Rainy,Yes,No,No,4,No,No,Regularly
+47,Male,No,Monsoon / Rainy,Yes,No,No,3,No,Yes,Regularly
+42,Female,No,Monsoon / Rainy,Yes,Yes,Yes,3,Yes,No,Occasionally
+44,Female,Yes,Winter,No,No,No,1,No,Yes,Occasionally
+34,Male,Yes,Winter,No,No,No,1,Yes,No,Regularly
+44,Male,No,Winter,Yes,Yes,No,3,Yes,No,Occasionally
+65,Female,Yes,Winter,Yes,No,No,5,Yes,No,Regularly
+33,Female,Yes,Winter,Yes,Yes,No,5,Yes,Yes,Regularly
+56,Male,Yes,Monsoon / Rainy,Yes,No,Yes,1,Yes,Yes,Occasionally
+59,Male,Yes,Winter,Yes,No,No,4,No,No,Occasionally
+21,Male,Yes,Winter,No,Yes,No,3,No,Yes,Regularly
+65,Male,Yes,Monsoon / Rainy,Yes,No,Yes,3,No,No,Occasionally
+38,Male,Yes,Monsoon / Rainy,Yes,No,Yes,2,Yes,Yes,Occasionally
+65,Female,No,Winter,No,No,Yes,4,Yes,Yes,Occasionally
+60,Female,No,Monsoon / Rainy,No,Yes,Yes,1,No,No,Occasionally
+41,Female,No,Winter,Yes,Yes,No,1,No,No,Occasionally
+33,Female,No,Winter,Yes,Yes,Yes,3,No,No,Regularly
+47,Male,No,Monsoon / Rainy,No,No,No,5,No,No,Occasionally
+28,Female,No,Winter,No,No,No,3,Yes,No,Occasionally
+60,Female,No,Winter,No,Yes,No,1,Yes,No,Regularly
+23,Male,No,Winter,No,Yes,Yes,2,No,Yes,Regularly
+18,Female,Yes,Monsoon / Rainy,Yes,Yes,No,1,No,No,Regularly
+47,Female,Yes,Monsoon / Rainy,No,Yes,No,5,No,Yes,Regularly
+41,Female,No,Monsoon / Rainy,Yes,Yes,Yes,1,No,Yes,Regularly
+39,Female,Yes,Winter,Yes,No,Yes,5,Yes,No,Occasionally
+46,Male,Yes,Winter,No,Yes,Yes,3,No,No,Regularly
+46,Male,No,Monsoon / Rainy,No,Yes,No,1,No,Yes,Regularly
+33,Female,No,Winter,No,Yes,Yes,3,No,Yes,Regularly
+47,Male,No,Winter,No,No,No,1,Yes,No,Occasionally
+44,Female,Yes,Monsoon / Rainy,Yes,Yes,Yes,3,Yes,Yes,Regularly
+49,Male,Yes,Winter,No,Yes,No,4,No,No,Regularly
+56,Female,Yes,Winter,No,No,No,3,Yes,No,Regularly
+63,Female,No,Monsoon / Rainy,No,No,Yes,3,Yes,Yes,Regularly
+58,Male,No,Winter,No,Yes,No,3,Yes,No,Regularly
+65,Male,No,Monsoon / Rainy,No,No,No,4,No,No,Regularly
+57,Female,Yes,Winter,No,Yes,No,2,No,No,Occasionally
+47,Female,No,Monsoon / Rainy,No,No,Yes,4,Yes,No,Regularly
+43,Female,No,Monsoon / Rainy,Yes,Yes,Yes,1,Yes,No,Occasionally
+54,Female,No,Monsoon / Rainy,No,Yes,No,4,Yes,Yes,Regularly
+28,Female,Yes,Monsoon / Rainy,Yes,Yes,No,3,Yes,No,Occasionally
+41,Female,No,Winter,No,No,No,5,Yes,No,Occasionally
+47,Male,Yes,Monsoon / Rainy,Yes,No,No,2,No,No,Occasionally
+26,Female,Yes,Winter,Yes,No,No,4,Yes,No,Regularly
+61,Female,Yes,Winter,No,No,No,2,No,Yes,Regularly
+54,Female,Yes,Monsoon / Rainy,No,No,Yes,3,No,No,Regularly
+39,Female,Yes,Winter,Yes,No,No,4,No,Yes,Regularly
+37,Male,Yes,Winter,Yes,Yes,No,1,Yes,Yes,Occasionally
+22,Female,No,Monsoon / Rainy,No,Yes,No,4,Yes,No,Regularly
+38,Male,No,Monsoon / Rainy,No,No,No,3,No,Yes,Regularly
+48,Male,No,Monsoon / Rainy,No,No,Yes,3,Yes,No,Occasionally
+58,Male,No,Winter,No,No,Yes,3,Yes,Yes,Regularly
+65,Female,Yes,Monsoon / Rainy,No,Yes,No,4,No,No,Regularly
+27,Male,Yes,Monsoon / Rainy,Yes,No,No,3,Yes,No,Regularly
+51,Female,Yes,Monsoon / Rainy,No,Yes,Yes,2,Yes,No,Regularly
+63,Female,Yes,Monsoon / Rainy,No,No,No,5,No,No,Occasionally
+28,Male,Yes,Monsoon / Rainy,Yes,No,Yes,1,Yes,No,Regularly
+26,Female,No,Monsoon / Rainy,No,No,No,4,Yes,No,Regularly
+29,Male,Yes,Winter,Yes,No,Yes,1,Yes,No,Regularly
+35,Male,Yes,Monsoon / Rainy,No,No,Yes,2,Yes,No,Regularly
+18,Female,No,Monsoon / Rainy,No,Yes,No,4,No,No,Regularly
+36,Male,No,Winter,Yes,No,Yes,3,No,Yes,Regularly
+58,Male,No,Monsoon / Rainy,Yes,Yes,No,2,Yes,Yes,Regularly
+59,Female,Yes,Monsoon / Rainy,No,No,Yes,1,Yes,No,Regularly
+58,Female,No,Winter,Yes,No,Yes,1,No,Yes,Occasionally
+19,Male,Yes,Winter,Yes,Yes,Yes,3,Yes,Yes,Regularly
+46,Female,Yes,Monsoon / Rainy,Yes,Yes,Yes,1,Yes,Yes,Regularly
+34,Male,No,Winter,Yes,No,Yes,1,Yes,No,Regularly
+58,Male,Yes,Winter,Yes,No,No,3,No,No,Regularly
+27,Male,Yes,Monsoon / Rainy,No,Yes,No,2,No,No,Occasionally
+44,Male,Yes,Monsoon / Rainy,No,No,Yes,2,No,No,Occasionally
+36,Female,No,Winter,Yes,Yes,No,1,No,Yes,Regularly
+40,Female,No,Winter,Yes,No,Yes,4,No,No,Occasionally
+60,Female,Yes,Winter,No,Yes,No,1,No,No,Regularly
+32,Male,Yes,Monsoon / Rainy,Yes,Yes,Yes,3,Yes,Yes,Regularly
+48,Male,No,Winter,No,Yes,No,1,Yes,Yes,Regularly
+48,Male,No,Winter,Yes,No,Yes,4,Yes,No,Regularly
+41,Male,Yes,Monsoon / Rainy,No,No,No,3,No,No,Regularly
+47,Male,No,Monsoon / Rainy,Yes,Yes,Yes,3,No,Yes,Occasionally
+52,Female,Yes,Monsoon / Rainy,Yes,No,No,1,No,No,Occasionally
+58,Male,Yes,Winter,No,No,No,1,Yes,Yes,Occasionally
+64,Female,Yes,Winter,No,Yes,No,2,Yes,No,Occasionally
+45,Male,Yes,Monsoon / Rainy,Yes,No,No,4,Yes,No,Regularly
+47,Female,Yes,Monsoon / Rainy,No,Yes,No,2,Yes,Yes,Occasionally
+63,Male,No,Winter,No,Yes,No,3,No,No,Regularly
+50,Female,Yes,Winter,Yes,No,No,3,Yes,Yes,Regularly
+57,Male,Yes,Monsoon / Rainy,No,No,No,3,Yes,Yes,Occasionally
+31,Female,Yes,Winter,Yes,No,Yes,3,No,No,Regularly
+32,Female,Yes,Monsoon / Rainy,No,Yes,Yes,3,No,No,Occasionally
+47,Male,Yes,Monsoon / Rainy,No,No,No,1,No,No,Occasionally
+21,Male,Yes,Winter,Yes,No,No,5,Yes,Yes,Occasionally
+46,Male,No,Winter,Yes,No,Yes,5,No,No,Occasionally
+29,Female,No,Winter,No,No,No,1,Yes,Yes,Occasionally
+45,Male,No,Winter,No,Yes,No,4,No,Yes,Occasionally
+28,Male,Yes,Winter,Yes,No,Yes,4,Yes,Yes,Regularly
+51,Female,No,Monsoon / Rainy,No,No,Yes,1,No,Yes,Regularly
+63,Female,No,Monsoon / Rainy,No,No,Yes,2,No,Yes,Regularly
+25,Female,Yes,Monsoon / Rainy,Yes,Yes,Yes,1,No,Yes,Occasionally
+55,Female,Yes,Monsoon / Rainy,Yes,No,Yes,2,Yes,Yes,Regularly
+53,Female,Yes,Winter,No,Yes,Yes,5,No,Yes,Regularly
+52,Male,Yes,Monsoon / Rainy,Yes,No,Yes,4,No,Yes,Occasionally
+26,Male,Yes,Winter,Yes,Yes,No,1,No,No,Occasionally
+63,Female,No,Monsoon / Rainy,Yes,No,No,2,Yes,No,Regularly
+45,Female,No,Winter,No,No,No,4,No,No,Occasionally
+25,Female,No,Winter,No,Yes,Yes,4,Yes,Yes,Regularly
+20,Male,No,Monsoon / Rainy,Yes,Yes,No,3,No,No,Regularly
+22,Male,No,Monsoon / Rainy,Yes,No,No,3,No,No,Occasionally
+52,Male,Yes,Winter,No,Yes,No,4,Yes,No,Regularly
+49,Male,Yes,Monsoon / Rainy,Yes,Yes,No,4,No,Yes,Regularly
+26,Male,No,Winter,No,Yes,No,1,No,Yes,Regularly
+59,Male,Yes,Winter,No,Yes,Yes,5,No,No,Regularly
+55,Female,No,Winter,No,Yes,No,1,No,No,Occasionally
+47,Female,No,Monsoon / Rainy,No,Yes,Yes,4,No,No,Occasionally
+41,Male,Yes,Monsoon / Rainy,No,No,No,2,Yes,Yes,Occasionally
+35,Female,Yes,Monsoon / Rainy,Yes,No,No,2,No,No,Occasionally
+24,Male,No,Monsoon / Rainy,Yes,No,Yes,2,Yes,Yes,Occasionally
+49,Male,No,Winter,No,Yes,No,4,Yes,Yes,Occasionally
+31,Male,No,Winter,No,No,Yes,1,No,Yes,Regularly
+54,Female,No,Monsoon / Rainy,Yes,No,Yes,5,No,Yes,Regularly
+22,Female,No,Winter,Yes,Yes,Yes,2,Yes,Yes,Regularly
+18,Male,No,Monsoon / Rainy,Yes,No,No,2,No,No,Occasionally
+51,Male,No,Winter,No,Yes,Yes,2,Yes,No,Regularly
+33,Male,Yes,Monsoon / Rainy,Yes,Yes,No,3,No,No,Occasionally
+39,Female,No,Monsoon / Rainy,Yes,Yes,Yes,3,Yes,No,Regularly
+43,Female,No,Monsoon / Rainy,Yes,Yes,Yes,5,No,Yes,Occasionally
+20,Female,Yes,Winter,Yes,No,Yes,1,Yes,Yes,Regularly
+32,Female,Yes,Winter,Yes,No,Yes,1,No,Yes,Occasionally
+43,Female,No,Winter,Yes,Yes,Yes,2,No,No,Regularly
+38,Male,No,Monsoon / Rainy,No,Yes,Yes,2,Yes,Yes,Regularly
+45,Female,Yes,Winter,No,Yes,Yes,5,Yes,Yes,Occasionally
+22,Male,Yes,Winter,No,Yes,Yes,1,Yes,No,Occasionally
+40,Female,No,Winter,Yes,Yes,Yes,5,Yes,Yes,Regularly
+35,Male,Yes,Monsoon / Rainy,No,No,Yes,1,No,No,Regularly
+65,Female,No,Winter,No,Yes,No,1,Yes,No,Regularly
+58,Male,No,Winter,Yes,No,Yes,1,No,Yes,Regularly
+27,Male,Yes,Winter,No,Yes,Yes,5,No,Yes,Regularly
+46,Female,No,Winter,Yes,No,No,3,No,No,Regularly
+41,Female,No,Monsoon / Rainy,No,Yes,Yes,2,No,Yes,Regularly
+60,Female,No,Monsoon / Rainy,No,No,Yes,3,No,No,Regularly
+40,Male,Yes,Winter,Yes,Yes,Yes,5,Yes,Yes,Regularly
+63,Female,No,Winter,Yes,No,No,2,Yes,No,Occasionally
+32,Male,No,Monsoon / Rainy,No,Yes,Yes,2,No,No,Regularly
+57,Female,No,Monsoon / Rainy,Yes,Yes,Yes,4,No,No,Regularly
+22,Male,Yes,Monsoon / Rainy,Yes,Yes,No,4,No,Yes,Regularly
+52,Male,Yes,Monsoon / Rainy,No,No,No,5,No,No,Occasionally
+40,Male,Yes,Monsoon / Rainy,No,Yes,No,5,No,Yes,Occasionally
+64,Female,Yes,Monsoon / Rainy,No,Yes,Yes,4,No,No,Regularly
+25,Male,Yes,Winter,No,Yes,No,4,No,Yes,Occasionally
+21,Female,No,Monsoon / Rainy,Yes,No,Yes,5,Yes,Yes,Occasionally
+19,Male,Yes,Monsoon / Rainy,Yes,No,Yes,1,Yes,Yes,Occasionally
+20,Male,Yes,Monsoon / Rainy,Yes,No,No,5,Yes,No,Occasionally
+20,Male,No,Monsoon / Rainy,Yes,Yes,Yes,3,No,No,Occasionally
+19,Male,Yes,Monsoon / Rainy,Yes,No,No,3,No,Yes,Occasionally
+62,Male,No,Monsoon / Rainy,No,Yes,No,2,Yes,No,Occasionally
+52,Female,Yes,Monsoon / Rainy,No,No,Yes,1,Yes,No,Occasionally
+65,Male,No,Monsoon / Rainy,No,No,No,3,Yes,No,Regularly
+21,Female,Yes,Winter,No,Yes,No,4,No,No,Regularly
+35,Male,Yes,Winter,No,No,Yes,2,No,Yes,Regularly
+47,Male,No,Winter,Yes,No,No,5,Yes,Yes,Occasionally
+64,Male,No,Winter,Yes,No,No,3,No,Yes,Regularly
+58,Male,Yes,Monsoon / Rainy,No,No,No,1,Yes,No,Occasionally
+64,Male,No,Winter,No,No,Yes,1,Yes,Yes,Occasionally
+18,Female,Yes,Monsoon / Rainy,No,Yes,Yes,4,No,Yes,Occasionally
+43,Male,No,Winter,Yes,No,Yes,3,Yes,No,Regularly
+50,Female,Yes,Monsoon / Rainy,No,No,Yes,1,No,No,Occasionally
+22,Male,No,Winter,Yes,No,No,2,Yes,Yes,Regularly
+49,Male,Yes,Monsoon / Rainy,No,No,No,4,No,Yes,Regularly
+39,Female,Yes,Winter,Yes,No,No,3,No,No,Regularly
+57,Male,No,Winter,Yes,Yes,Yes,5,No,No,Occasionally
+21,Female,No,Monsoon / Rainy,Yes,Yes,No,2,No,No,Regularly
+22,Female,No,Winter,Yes,No,Yes,3,No,Yes,Regularly
+64,Male,No,Monsoon / Rainy,Yes,Yes,Yes,4,No,Yes,Occasionally
+41,Female,No,Winter,No,Yes,No,4,No,No,Occasionally
+27,Male,No,Winter,Yes,No,Yes,2,No,Yes,Regularly
+24,Female,Yes,Monsoon / Rainy,No,Yes,Yes,3,No,Yes,Occasionally
+47,Male,Yes,Monsoon / Rainy,No,No,No,2,No,No,Occasionally
+29,Female,No,Winter,Yes,Yes,No,1,No,No,Regularly
+63,Male,Yes,Winter,No,Yes,Yes,2,No,No,Regularly
+56,Female,Yes,Monsoon / Rainy,No,Yes,Yes,5,Yes,Yes,Occasionally
+55,Male,No,Monsoon / Rainy,No,Yes,No,2,Yes,Yes,Regularly
+41,Male,Yes,Monsoon / Rainy,No,No,Yes,2,Yes,Yes,Occasionally
+53,Male,Yes,Winter,No,Yes,Yes,3,No,No,Regularly
+21,Female,Yes,Monsoon / Rainy,Yes,No,Yes,5,No,Yes,Regularly
+28,Female,Yes,Winter,No,Yes,No,4,Yes,No,Regularly
+27,Male,No,Winter,No,Yes,No,1,Yes,No,Regularly
+26,Female,Yes,Monsoon / Rainy,Yes,Yes,No,5,No,Yes,Regularly
+51,Female,No,Winter,No,No,Yes,5,Yes,Yes,Regularly
+30,Female,Yes,Monsoon / Rainy,No,Yes,Yes,4,No,No,Regularly
+61,Female,Yes,Monsoon / Rainy,No,Yes,No,3,No,No,Regularly
+62,Male,Yes,Monsoon / Rainy,No,No,Yes,1,No,Yes,Regularly
+28,Female,Yes,Monsoon / Rainy,Yes,Yes,Yes,5,Yes,Yes,Occasionally
+21,Male,No,Monsoon / Rainy,Yes,No,Yes,1,Yes,Yes,Occasionally
+49,Male,Yes,Monsoon / Rainy,Yes,Yes,Yes,1,Yes,Yes,Regularly
+58,Male,Yes,Monsoon / Rainy,Yes,No,No,4,No,No,Occasionally
+46,Male,No,Monsoon / Rainy,No,Yes,No,1,No,Yes,Occasionally
+31,Female,No,Monsoon / Rainy,No,No,No,3,No,Yes,Occasionally
+62,Female,Yes,Monsoon / Rainy,No,Yes,Yes,4,No,No,Occasionally
+25,Male,Yes,Monsoon / Rainy,Yes,No,Yes,5,Yes,Yes,Regularly
+55,Male,Yes,Monsoon / Rainy,Yes,Yes,Yes,1,No,No,Occasionally
+21,Male,Yes,Winter,No,Yes,Yes,5,No,No,Occasionally
+42,Male,Yes,Monsoon / Rainy,No,No,No,5,Yes,No,Regularly
+44,Female,Yes,Winter,No,Yes,Yes,4,No,No,Regularly
+22,Female,Yes,Winter,Yes,No,Yes,1,Yes,No,Occasionally
+51,Female,No,Monsoon / Rainy,Yes,Yes,Yes,4,Yes,Yes,Regularly
+50,Male,No,Winter,Yes,Yes,Yes,2,Yes,No,Occasionally
+60,Male,Yes,Monsoon / Rainy,Yes,No,No,5,No,No,Regularly
+55,Male,Yes,Monsoon / Rainy,Yes,Yes,No,4,Yes,No,Occasionally
+27,Female,No,Winter,No,No,No,2,No,Yes,Occasionally
+38,Male,Yes,Monsoon / Rainy,No,Yes,Yes,1,No,No,Occasionally
+29,Female,No,Monsoon / Rainy,Yes,Yes,Yes,3,Yes,No,Occasionally
+31,Male,Yes,Monsoon / Rainy,Yes,Yes,Yes,4,Yes,Yes,Regularly
+34,Female,No,Monsoon / Rainy,Yes,Yes,Yes,2,No,No,Occasionally
+62,Female,No,Winter,No,Yes,Yes,4,Yes,No,Occasionally
+59,Female,No,Winter,No,No,Yes,5,Yes,No,Occasionally
+36,Male,Yes,Winter,No,No,No,3,No,No,Occasionally
+45,Female,No,Winter,No,No,No,4,No,Yes,Occasionally
+59,Male,Yes,Monsoon / Rainy,No,No,No,2,Yes,No,Occasionally
+33,Female,Yes,Winter,Yes,No,Yes,3,Yes,No,Regularly
+62,Female,No,Monsoon / Rainy,No,Yes,Yes,5,Yes,No,Occasionally
+22,Female,Yes,Winter,No,No,Yes,2,Yes,Yes,Regularly
+57,Female,No,Monsoon / Rainy,No,No,No,5,Yes,No,Occasionally
+21,Male,No,Monsoon / Rainy,No,No,Yes,2,No,Yes,Regularly
+40,Female,Yes,Monsoon / Rainy,Yes,No,Yes,2,Yes,Yes,Occasionally
+46,Male,Yes,Winter,Yes,No,Yes,1,Yes,No,Occasionally
+36,Female,Yes,Monsoon / Rainy,Yes,Yes,Yes,2,No,No,Regularly
+21,Female,Yes,Monsoon / Rainy,No,No,No,1,Yes,No,Regularly
+57,Male,No,Winter,Yes,Yes,Yes,3,No,Yes,Regularly
+45,Female,Yes,Monsoon / Rainy,No,Yes,Yes,5,No,No,Regularly
+36,Female,Yes,Monsoon / Rainy,No,No,No,5,Yes,Yes,Regularly
+54,Male,No,Monsoon / Rainy,Yes,Yes,No,2,Yes,Yes,Regularly
+63,Female,No,Monsoon / Rainy,No,No,No,2,No,Yes,Occasionally
+18,Male,No,Winter,No,No,Yes,5,Yes,No,Regularly
+57,Female,Yes,Winter,No,No,Yes,4,Yes,No,Occasionally
+33,Male,Yes,Monsoon / Rainy,No,No,Yes,4,Yes,No,Occasionally
+63,Male,Yes,Winter,Yes,Yes,Yes,2,No,Yes,Occasionally
+28,Female,No,Winter,No,Yes,No,1,Yes,Yes,Occasionally
+20,Female,Yes,Monsoon / Rainy,Yes,Yes,Yes,3,Yes,No,Occasionally
+58,Male,No,Winter,No,Yes,No,5,No,No,Occasionally
+64,Male,Yes,Monsoon / Rainy,No,No,Yes,5,Yes,No,Occasionally
+21,Female,No,Winter,No,No,Yes,5,Yes,No,Regularly
+63,Male,Yes,Winter,Yes,No,No,5,Yes,No,Occasionally
+25,Female,No,Winter,Yes,Yes,Yes,1,Yes,No,Occasionally
+52,Male,Yes,Winter,Yes,No,Yes,3,Yes,No,Regularly
+19,Female,Yes,Monsoon / Rainy,Yes,Yes,No,1,No,Yes,Occasionally
+26,Female,No,Monsoon / Rainy,No,Yes,Yes,4,No,Yes,Occasionally
+45,Female,No,Monsoon / Rainy,No,No,No,3,Yes,No,Regularly
+56,Female,Yes,Monsoon / Rainy,Yes,No,No,4,Yes,No,Occasionally
+50,Female,No,Monsoon / Rainy,No,Yes,Yes,3,Yes,Yes,Regularly
+40,Male,Yes,Monsoon / Rainy,Yes,No,No,2,No,No,Regularly
+24,Male,Yes,Winter,No,No,Yes,3,Yes,Yes,Regularly
+52,Male,No,Winter,Yes,Yes,Yes,2,No,Yes,Occasionally
+40,Male,Yes,Winter,No,Yes,Yes,4,No,Yes,Occasionally
+31,Male,No,Monsoon / Rainy,Yes,No,Yes,1,Yes,No,Occasionally
+30,Male,Yes,Winter,Yes,Yes,Yes,5,Yes,Yes,Regularly
+54,Male,No,Winter,No,Yes,No,3,No,No,Regularly
+38,Male,No,Monsoon / Rainy,Yes,Yes,Yes,3,Yes,No,Occasionally
+22,Female,Yes,Winter,No,Yes,Yes,3,Yes,Yes,Regularly
+20,Female,Yes,Monsoon / Rainy,Yes,No,No,4,Yes,No,Occasionally
+35,Male,Yes,Monsoon / Rainy,No,No,No,1,Yes,No,Regularly
+37,Female,Yes,Monsoon / Rainy,No,No,No,1,Yes,No,Regularly
+21,Male,Yes,Winter,Yes,No,Yes,3,Yes,No,Occasionally
+26,Male,Yes,Monsoon / Rainy,Yes,No,Yes,1,Yes,Yes,Regularly
+41,Female,No,Monsoon / Rainy,No,No,No,4,Yes,No,Occasionally
+36,Female,Yes,Winter,Yes,Yes,Yes,1,No,Yes,Regularly
+63,Female,No,Monsoon / Rainy,No,Yes,No,2,Yes,No,Occasionally
+30,Male,No,Monsoon / Rainy,No,Yes,Yes,3,No,No,Occasionally
+57,Male,Yes,Monsoon / Rainy,Yes,No,No,4,Yes,No,Regularly
+31,Female,No,Monsoon / Rainy,No,Yes,No,1,No,Yes,Occasionally
+21,Male,No,Monsoon / Rainy,No,No,No,2,Yes,Yes,Regularly
+18,Male,Yes,Winter,No,Yes,Yes,2,Yes,No,Occasionally
+37,Female,No,Winter,Yes,No,Yes,2,Yes,No,Occasionally
+40,Female,Yes,Winter,No,Yes,Yes,1,No,Yes,Occasionally
+62,Female,Yes,Monsoon / Rainy,No,No,No,2,No,Yes,Occasionally
+38,Female,No,Winter,Yes,No,Yes,4,Yes,Yes,Regularly
+53,Male,No,Monsoon / Rainy,No,No,No,3,Yes,Yes,Occasionally
+19,Male,No,Monsoon / Rainy,No,No,No,5,No,Yes,Occasionally
+64,Male,Yes,Monsoon / Rainy,No,No,No,2,No,Yes,Regularly
+31,Male,Yes,Winter,No,Yes,No,2,No,No,Occasionally
+54,Female,No,Winter,Yes,No,Yes,2,Yes,Yes,Regularly
+45,Female,Yes,Winter,No,No,No,3,No,No,Regularly
+36,Male,No,Winter,No,Yes,No,1,No,Yes,Occasionally
+51,Female,No,Monsoon / Rainy,Yes,Yes,Yes,4,No,Yes,Regularly
+30,Male,No,Winter,No,Yes,Yes,4,Yes,No,Occasionally
+44,Male,No,Winter,Yes,Yes,Yes,1,No,No,Regularly
+31,Female,Yes,Monsoon / Rainy,No,Yes,Yes,4,No,Yes,Occasionally
+30,Male,No,Winter,Yes,No,Yes,1,No,Yes,Regularly
+35,Male,Yes,Winter,Yes,No,No,1,No,Yes,Occasionally
+39,Male,No,Winter,Yes,No,No,4,Yes,Yes,Occasionally
+57,Female,Yes,Winter,No,No,No,5,No,No,Regularly
+55,Female,Yes,Monsoon / Rainy,No,No,Yes,1,No,Yes,Occasionally
+30,Female,Yes,Monsoon / Rainy,No,No,No,4,Yes,No,Occasionally
+53,Female,Yes,Winter,Yes,No,No,5,No,No,Regularly
+48,Female,Yes,Monsoon / Rainy,No,No,No,3,Yes,No,Occasionally
+43,Female,Yes,Monsoon / Rainy,No,Yes,Yes,1,No,No,Occasionally
+59,Male,Yes,Monsoon / Rainy,No,Yes,Yes,5,No,Yes,Occasionally
+63,Female,No,Monsoon / Rainy,No,No,Yes,4,No,No,Occasionally
+47,Male,Yes,Winter,Yes,No,No,3,Yes,No,Occasionally
+30,Male,No,Winter,No,No,No,1,Yes,Yes,Occasionally
+57,Female,No,Winter,Yes,No,No,3,No,Yes,Occasionally
+29,Male,Yes,Winter,Yes,No,Yes,5,No,No,Regularly
+20,Female,Yes,Monsoon / Rainy,No,Yes,Yes,5,Yes,Yes,Regularly
+30,Male,No,Monsoon / Rainy,No,No,No,5,No,Yes,Occasionally
+58,Male,No,Winter,No,Yes,No,1,Yes,Yes,Regularly
+63,Male,Yes,Winter,Yes,Yes,No,2,No,No,Regularly
+32,Male,Yes,Monsoon / Rainy,No,No,Yes,2,Yes,No,Occasionally
+29,Male,No,Monsoon / Rainy,Yes,No,Yes,5,Yes,Yes,Regularly
+25,Female,Yes,Winter,Yes,No,Yes,2,Yes,Yes,Occasionally
+20,Female,No,Monsoon / Rainy,Yes,Yes,No,4,Yes,No,Regularly
+50,Male,Yes,Monsoon / Rainy,Yes,No,Yes,3,No,No,Occasionally
+58,Female,Yes,Winter,Yes,Yes,Yes,3,Yes,No,Regularly
+45,Female,Yes,Monsoon / Rainy,No,Yes,Yes,4,No,Yes,Occasionally
+63,Female,Yes,Monsoon / Rainy,Yes,Yes,Yes,2,Yes,No,Occasionally
+38,Female,Yes,Monsoon / Rainy,No,Yes,Yes,2,Yes,No,Occasionally
+52,Male,Yes,Winter,Yes,No,Yes,2,No,No,Regularly
+29,Female,No,Monsoon / Rainy,Yes,No,Yes,3,Yes,Yes,Regularly
+58,Female,Yes,Winter,No,No,Yes,3,Yes,No,Occasionally
+32,Female,Yes,Monsoon / Rainy,No,Yes,Yes,3,Yes,Yes,Regularly
+19,Male,No,Winter,No,Yes,No,5,Yes,No,Occasionally
+41,Male,Yes,Monsoon / Rainy,Yes,Yes,No,2,Yes,Yes,Regularly
+65,Female,No,Monsoon / Rainy,No,No,Yes,3,No,No,Occasionally
+42,Male,No,Monsoon / Rainy,No,No,Yes,4,No,No,Regularly
+54,Female,No,Monsoon / Rainy,No,No,Yes,2,Yes,No,Occasionally
+59,Female,No,Winter,Yes,Yes,Yes,2,Yes,Yes,Regularly
+25,Female,No,Monsoon / Rainy,Yes,Yes,No,3,No,Yes,Regularly
+29,Female,No,Winter,No,No,Yes,5,No,Yes,Regularly
+56,Male,No,Monsoon / Rainy,Yes,No,Yes,1,Yes,No,Occasionally
+31,Female,Yes,Monsoon / Rainy,Yes,Yes,Yes,1,Yes,Yes,Occasionally
+48,Female,No,Winter,Yes,Yes,Yes,2,No,Yes,Regularly
+31,Male,No,Winter,Yes,Yes,No,3,Yes,Yes,Occasionally
+60,Male,No,Winter,Yes,No,Yes,2,Yes,No,Occasionally
+24,Male,Yes,Monsoon / Rainy,Yes,Yes,Yes,4,Yes,No,Occasionally
+22,Male,Yes,Monsoon / Rainy,No,No,Yes,2,No,No,Regularly
+26,Female,No,Winter,No,Yes,Yes,2,No,Yes,Occasionally
+60,Male,No,Winter,Yes,No,Yes,4,Yes,No,Regularly
+33,Female,No,Monsoon / Rainy,No,No,Yes,1,No,No,Occasionally
+21,Male,Yes,Winter,Yes,Yes,Yes,2,No,Yes,Regularly
+18,Female,Yes,Monsoon / Rainy,No,No,No,2,Yes,Yes,Regularly
+64,Male,No,Winter,No,Yes,Yes,3,Yes,Yes,Occasionally
+42,Male,No,Monsoon / Rainy,No,Yes,No,5,No,Yes,Occasionally
+63,Female,Yes,Winter,Yes,No,Yes,2,Yes,Yes,Occasionally
+32,Male,Yes,Winter,No,Yes,Yes,5,No,Yes,Occasionally
+32,Male,Yes,Monsoon / Rainy,No,Yes,No,4,Yes,Yes,Occasionally
+19,Male,No,Monsoon / Rainy,No,Yes,No,2,Yes,Yes,Regularly
+19,Female,No,Monsoon / Rainy,No,Yes,No,5,No,Yes,Occasionally
+56,Male,Yes,Winter,Yes,Yes,No,5,No,No,Regularly
+62,Male,Yes,Monsoon / Rainy,Yes,Yes,Yes,1,Yes,No,Regularly
+38,Female,No,Monsoon / Rainy,Yes,No,Yes,3,No,No,Regularly
+44,Female,Yes,Monsoon / Rainy,Yes,Yes,Yes,2,No,Yes,Occasionally
+34,Male,No,Winter,No,Yes,Yes,3,Yes,No,Regularly
+21,Female,Yes,Winter,Yes,Yes,No,1,No,No,Occasionally
+21,Female,No,Monsoon / Rainy,No,Yes,No,2,Yes,No,Regularly
+44,Female,No,Winter,No,No,No,3,No,No,Occasionally
+36,Male,No,Winter,No,Yes,No,3,No,No,Regularly
+31,Female,No,Winter,No,Yes,Yes,3,No,No,Occasionally
+34,Male,Yes,Winter,No,No,Yes,1,No,No,Occasionally
+35,Male,No,Monsoon / Rainy,Yes,No,No,1,Yes,Yes,Regularly
+27,Male,Yes,Winter,No,Yes,Yes,2,No,Yes,Regularly
+30,Male,Yes,Monsoon / Rainy,No,Yes,No,1,No,No,Occasionally
+24,Female,Yes,Monsoon / Rainy,No,Yes,No,5,No,No,Occasionally
+52,Female,Yes,Monsoon / Rainy,No,Yes,No,1,No,No,Regularly
+38,Male,No,Monsoon / Rainy,Yes,No,No,5,Yes,No,Occasionally
+60,Male,Yes,Monsoon / Rainy,Yes,No,No,5,No,Yes,Occasionally
+55,Female,Yes,Monsoon / Rainy,No,No,Yes,4,No,Yes,Occasionally
+59,Male,Yes,Monsoon / Rainy,No,Yes,Yes,5,No,No,Regularly
+19,Male,Yes,Monsoon / Rainy,No,No,Yes,5,No,Yes,Occasionally
+40,Male,No,Monsoon / Rainy,No,No,No,3,No,Yes,Regularly
+37,Male,Yes,Monsoon / Rainy,Yes,Yes,Yes,1,Yes,Yes,Occasionally
+50,Male,No,Winter,Yes,Yes,Yes,3,No,No,Occasionally
+23,Male,No,Monsoon / Rainy,Yes,No,No,5,Yes,Yes,Regularly
+47,Male,No,Monsoon / Rainy,No,Yes,No,4,No,No,Regularly
+54,Male,No,Monsoon / Rainy,No,Yes,Yes,5,Yes,No,Regularly
+48,Female,No,Monsoon / Rainy,Yes,No,Yes,4,Yes,Yes,Regularly
+18,Male,Yes,Monsoon / Rainy,Yes,Yes,No,3,Yes,Yes,Regularly
+20,Male,Yes,Winter,Yes,Yes,Yes,2,No,Yes,Occasionally
+22,Male,No,Winter,Yes,No,No,1,No,Yes,Regularly
+37,Male,No,Monsoon / Rainy,No,Yes,Yes,2,No,Yes,Occasionally
+20,Female,No,Winter,Yes,Yes,Yes,3,No,No,Occasionally
+38,Female,No,Winter,No,Yes,No,3,Yes,No,Occasionally
+45,Female,Yes,Monsoon / Rainy,Yes,No,Yes,3,No,No,Regularly
+55,Male,No,Winter,Yes,Yes,No,2,Yes,No,Occasionally
+34,Female,No,Winter,Yes,No,Yes,1,No,Yes,Occasionally
+56,Male,No,Monsoon / Rainy,Yes,No,Yes,5,Yes,No,Occasionally
+25,Male,No,Winter,No,No,Yes,2,Yes,Yes,Regularly
+46,Male,No,Monsoon / Rainy,Yes,No,Yes,4,No,No,Occasionally
+59,Male,No,Winter,No,No,Yes,2,No,No,Regularly
+39,Female,Yes,Monsoon / Rainy,Yes,Yes,No,3,Yes,No,Occasionally
+63,Male,No,Winter,No,Yes,No,4,Yes,No,Occasionally
+53,Male,No,Winter,No,Yes,No,2,Yes,No,Occasionally
+49,Male,Yes,Winter,Yes,No,Yes,5,No,No,Occasionally
+45,Male,Yes,Monsoon / Rainy,No,Yes,No,4,Yes,Yes,Regularly
+63,Female,Yes,Monsoon / Rainy,Yes,No,Yes,3,No,Yes,Regularly
+48,Female,Yes,Winter,No,No,No,1,Yes,Yes,Regularly
+58,Female,No,Monsoon / Rainy,Yes,No,Yes,1,No,No,Regularly
+43,Female,Yes,Winter,No,Yes,No,4,No,No,Regularly
+63,Female,No,Monsoon / Rainy,No,No,Yes,4,Yes,Yes,Occasionally
+39,Female,Yes,Winter,Yes,No,Yes,1,Yes,No,Occasionally
+58,Male,No,Monsoon / Rainy,Yes,No,Yes,5,Yes,Yes,Occasionally
+55,Male,No,Monsoon / Rainy,No,No,Yes,2,No,No,Regularly
+65,Male,Yes,Monsoon / Rainy,No,Yes,Yes,4,No,No,Regularly
+22,Female,Yes,Winter,No,No,No,1,Yes,Yes,Occasionally
+61,Male,No,Winter,Yes,No,No,1,No,Yes,Occasionally
+41,Female,No,Winter,Yes,Yes,No,5,No,Yes,Occasionally
+38,Male,No,Winter,Yes,Yes,Yes,4,No,Yes,Occasionally
+61,Male,Yes,Winter,No,No,No,1,Yes,Yes,Regularly
+38,Female,Yes,Monsoon / Rainy,No,Yes,No,1,No,No,Occasionally
+43,Female,Yes,Winter,No,Yes,No,2,No,No,Occasionally
+21,Female,No,Winter,No,No,No,4,Yes,No,Regularly
+42,Female,Yes,Winter,No,Yes,No,1,No,Yes,Regularly
+40,Female,No,Monsoon / Rainy,No,No,Yes,1,No,Yes,Occasionally
+26,Female,Yes,Monsoon / Rainy,Yes,Yes,No,3,No,Yes,Regularly
+60,Female,No,Monsoon / Rainy,No,No,Yes,4,No,Yes,Occasionally
+37,Male,Yes,Winter,No,No,Yes,5,No,No,Regularly
+36,Male,Yes,Monsoon / Rainy,No,Yes,Yes,4,No,Yes,Regularly
+55,Female,No,Monsoon / Rainy,No,No,No,4,Yes,No,Regularly
+56,Female,Yes,Winter,Yes,No,No,2,Yes,No,Occasionally
+32,Male,No,Monsoon / Rainy,Yes,Yes,No,2,No,Yes,Regularly
+44,Male,No,Winter,No,No,Yes,1,Yes,Yes,Occasionally
+45,Male,Yes,Winter,Yes,Yes,No,1,Yes,Yes,Regularly
+56,Male,No,Winter,Yes,No,No,2,No,No,Regularly
+56,Female,Yes,Monsoon / Rainy,Yes,No,No,4,No,No,Occasionally
+64,Female,No,Monsoon / Rainy,Yes,No,No,1,Yes,Yes,Occasionally
+18,Female,Yes,Monsoon / Rainy,No,No,No,4,Yes,No,Regularly
+42,Male,Yes,Winter,Yes,No,Yes,1,Yes,No,Regularly
+26,Male,Yes,Winter,Yes,No,Yes,5,Yes,No,Regularly
+30,Female,No,Monsoon / Rainy,No,No,No,1,Yes,Yes,Regularly
+36,Male,Yes,Monsoon / Rainy,No,No,No,4,No,Yes,Regularly
+20,Male,Yes,Winter,Yes,Yes,Yes,3,No,No,Regularly
+61,Female,No,Winter,Yes,Yes,No,5,No,No,Occasionally
+61,Female,No,Winter,Yes,No,Yes,1,Yes,No,Regularly
+42,Female,No,Monsoon / Rainy,Yes,No,No,2,No,No,Occasionally
+21,Male,No,Monsoon / Rainy,No,No,No,1,No,No,Regularly
+63,Male,No,Winter,Yes,No,Yes,3,Yes,No,Occasionally
+64,Male,Yes,Monsoon / Rainy,No,No,No,4,No,No,Occasionally
+63,Male,Yes,Winter,Yes,Yes,No,5,No,No,Regularly
+64,Female,Yes,Winter,No,No,Yes,5,No,No,Occasionally
+55,Female,Yes,Winter,No,No,No,1,No,Yes,Occasionally
+24,Female,No,Monsoon / Rainy,No,No,No,3,No,No,Regularly
+58,Male,No,Monsoon / Rainy,No,Yes,No,5,Yes,No,Occasionally
+20,Male,Yes,Winter,No,No,Yes,5,No,Yes,Regularly
+44,Male,Yes,Monsoon / Rainy,No,Yes,No,5,No,No,Occasionally
+22,Male,Yes,Monsoon / Rainy,No,Yes,Yes,5,Yes,Yes,Occasionally
+34,Male,No,Monsoon / Rainy,No,No,Yes,1,Yes,Yes,Occasionally
+33,Female,Yes,Winter,No,Yes,Yes,4,Yes,No,Regularly
+31,Female,Yes,Winter,No,Yes,Yes,5,Yes,No,Occasionally
+54,Female,Yes,Monsoon / Rainy,Yes,No,Yes,4,No,No,Occasionally
+36,Male,Yes,Monsoon / Rainy,Yes,Yes,Yes,5,Yes,No,Regularly
+41,Male,No,Winter,Yes,No,Yes,5,No,Yes,Occasionally
+40,Male,No,Monsoon / Rainy,No,No,No,2,No,No,Occasionally
+49,Male,No,Winter,Yes,Yes,Yes,4,No,No,Occasionally
+47,Male,Yes,Monsoon / Rainy,No,Yes,Yes,1,No,Yes,Occasionally
+26,Male,Yes,Monsoon / Rainy,Yes,No,No,1,Yes,No,Regularly
+58,Female,Yes,Winter,No,Yes,No,5,Yes,Yes,Occasionally
+30,Male,No,Monsoon / Rainy,No,Yes,No,2,No,Yes,Regularly
+24,Female,Yes,Monsoon / Rainy,No,Yes,Yes,4,No,Yes,Regularly
+19,Female,No,Monsoon / Rainy,Yes,No,No,1,No,Yes,Occasionally
+42,Male,No,Winter,No,Yes,No,3,No,No,Regularly
+61,Female,No,Monsoon / Rainy,Yes,Yes,Yes,5,No,No,Occasionally
+29,Male,No,Monsoon / Rainy,No,No,Yes,3,No,No,Regularly
+60,Male,Yes,Winter,No,No,Yes,1,No,Yes,Occasionally
+35,Female,No,Monsoon / Rainy,Yes,No,Yes,1,No,Yes,Occasionally
+29,Male,Yes,Winter,Yes,Yes,Yes,1,No,Yes,Occasionally
+27,Male,Yes,Monsoon / Rainy,No,No,No,2,No,Yes,Regularly
+36,Male,No,Monsoon / Rainy,Yes,Yes,Yes,3,No,Yes,Occasionally
+50,Female,Yes,Winter,No,Yes,No,5,No,No,Occasionally
+39,Male,Yes,Winter,No,No,Yes,1,Yes,No,Regularly
+64,Male,Yes,Monsoon / Rainy,Yes,No,No,2,No,No,Regularly
+32,Male,No,Monsoon / Rainy,No,Yes,No,2,Yes,No,Occasionally
+20,Female,Yes,Winter,No,Yes,Yes,2,Yes,Yes,Occasionally
+23,Female,Yes,Monsoon / Rainy,No,Yes,Yes,2,Yes,No,Occasionally
+38,Male,Yes,Monsoon / Rainy,No,Yes,No,1,Yes,No,Regularly
+40,Male,Yes,Monsoon / Rainy,No,No,Yes,1,Yes,Yes,Occasionally
+22,Male,No,Monsoon / Rainy,Yes,Yes,No,3,Yes,No,Regularly
+36,Female,No,Winter,Yes,No,Yes,2,Yes,No,Regularly
+55,Male,Yes,Monsoon / Rainy,No,Yes,Yes,1,Yes,No,Regularly
+35,Female,No,Monsoon / Rainy,No,Yes,No,2,No,Yes,Regularly
+65,Female,No,Monsoon / Rainy,Yes,No,No,2,Yes,Yes,Occasionally
+41,Female,Yes,Winter,Yes,Yes,Yes,4,No,No,Regularly
+24,Male,No,Monsoon / Rainy,No,No,No,5,No,Yes,Regularly
+51,Male,No,Winter,No,Yes,Yes,5,No,No,Regularly
+38,Female,No,Monsoon / Rainy,Yes,Yes,Yes,5,No,No,Regularly
+53,Male,No,Winter,No,No,Yes,3,No,No,Regularly
+22,Female,Yes,Winter,Yes,No,Yes,1,No,No,Occasionally
+39,Female,No,Winter,Yes,No,Yes,4,Yes,Yes,Occasionally
+22,Female,Yes,Winter,No,No,Yes,5,No,No,Occasionally
+33,Female,Yes,Winter,Yes,No,No,2,Yes,No,Regularly
+28,Male,No,Winter,No,No,No,3,Yes,No,Occasionally
+30,Male,No,Monsoon / Rainy,Yes,Yes,Yes,1,Yes,Yes,Occasionally
+48,Male,Yes,Monsoon / Rainy,Yes,Yes,No,4,No,No,Occasionally
+27,Female,No,Monsoon / Rainy,Yes,No,No,3,Yes,Yes,Regularly
+39,Male,Yes,Monsoon / Rainy,Yes,Yes,Yes,1,No,Yes,Regularly
+26,Male,No,Monsoon / Rainy,No,Yes,No,3,Yes,No,Regularly
+26,Female,Yes,Winter,Yes,No,Yes,2,Yes,No,Occasionally
+45,Male,Yes,Winter,Yes,Yes,Yes,4,Yes,No,Occasionally
+26,Female,Yes,Winter,Yes,No,Yes,5,Yes,No,Occasionally
+27,Male,Yes,Monsoon / Rainy,No,Yes,No,2,No,Yes,Occasionally
+59,Male,Yes,Winter,No,Yes,Yes,1,No,No,Occasionally
+26,Female,Yes,Monsoon / Rainy,Yes,Yes,Yes,1,Yes,Yes,Occasionally
+25,Male,Yes,Winter,No,No,Yes,2,Yes,No,Occasionally
+35,Male,No,Monsoon / Rainy,Yes,Yes,Yes,3,Yes,No,Occasionally
+29,Female,No,Monsoon / Rainy,Yes,Yes,No,4,Yes,No,Regularly
+42,Female,Yes,Winter,Yes,Yes,No,1,Yes,Yes,Occasionally
+43,Male,Yes,Winter,No,Yes,Yes,2,No,Yes,Regularly
+47,Male,Yes,Monsoon / Rainy,Yes,Yes,Yes,3,No,Yes,Occasionally
+47,Female,No,Winter,No,Yes,Yes,3,No,No,Regularly
+20,Male,No,Monsoon / Rainy,Yes,Yes,No,5,No,Yes,Regularly
+49,Male,Yes,Winter,No,Yes,Yes,5,Yes,No,Regularly
+53,Female,Yes,Winter,Yes,Yes,Yes,4,Yes,Yes,Occasionally
+50,Male,No,Winter,Yes,No,Yes,5,No,No,Regularly
+44,Female,Yes,Monsoon / Rainy,No,No,No,5,Yes,Yes,Regularly
+26,Female,Yes,Winter,Yes,Yes,Yes,3,Yes,No,Regularly
+21,Female,Yes,Winter,No,No,No,3,Yes,No,Occasionally
+45,Female,Yes,Winter,Yes,Yes,No,4,Yes,No,Regularly
+19,Male,Yes,Winter,Yes,No,Yes,3,No,No,Occasionally
+40,Male,No,Winter,No,No,Yes,5,Yes,Yes,Occasionally
+54,Female,No,Monsoon / Rainy,Yes,Yes,Yes,1,Yes,Yes,Occasionally
+33,Female,No,Monsoon / Rainy,No,No,No,3,Yes,No,Occasionally
+52,Female,Yes,Monsoon / Rainy,Yes,Yes,Yes,5,Yes,No,Occasionally
+26,Male,Yes,Monsoon / Rainy,No,Yes,No,5,No,No,Regularly
+35,Female,Yes,Monsoon / Rainy,Yes,Yes,Yes,3,Yes,Yes,Regularly
+24,Female,No,Monsoon / Rainy,Yes,Yes,Yes,4,No,Yes,Regularly
+22,Female,Yes,Winter,No,No,No,5,No,Yes,Regularly
+37,Female,Yes,Monsoon / Rainy,No,Yes,Yes,2,Yes,No,Occasionally
+52,Male,Yes,Winter,No,No,No,3,Yes,Yes,Regularly
+61,Female,Yes,Monsoon / Rainy,Yes,Yes,No,3,Yes,No,Occasionally
+40,Female,Yes,Winter,No,Yes,No,5,Yes,No,Regularly
+63,Female,No,Monsoon / Rainy,Yes,Yes,No,1,Yes,No,Regularly
+28,Female,Yes,Monsoon / Rainy,No,Yes,Yes,5,Yes,Yes,Regularly
+57,Male,No,Winter,No,No,No,3,No,No,Occasionally
+60,Female,No,Monsoon / Rainy,No,Yes,No,5,Yes,No,Occasionally
+49,Male,No,Monsoon / Rainy,Yes,No,No,3,No,No,Regularly
+23,Male,No,Monsoon / Rainy,No,No,No,3,Yes,No,Regularly
+33,Male,Yes,Monsoon / Rainy,Yes,No,Yes,4,Yes,No,Occasionally
+39,Female,No,Winter,No,No,No,4,Yes,Yes,Regularly
+59,Female,No,Winter,No,Yes,Yes,4,Yes,No,Occasionally
+49,Female,Yes,Winter,No,No,No,3,No,No,Occasionally
+25,Female,Yes,Monsoon / Rainy,Yes,Yes,Yes,2,No,Yes,Regularly
+51,Female,No,Monsoon / Rainy,Yes,Yes,Yes,2,No,Yes,Occasionally
+44,Female,No,Monsoon / Rainy,No,Yes,Yes,1,No,Yes,Regularly
+28,Female,No,Monsoon / Rainy,No,Yes,No,4,No,Yes,Occasionally
+47,Male,Yes,Winter,Yes,Yes,No,2,No,No,Regularly
+47,Female,No,Monsoon / Rainy,No,No,Yes,3,No,Yes,Occasionally
+26,Female,Yes,Monsoon / Rainy,No,Yes,No,4,Yes,No,Regularly
+60,Male,No,Winter,No,No,Yes,2,No,No,Occasionally
+31,Male,No,Winter,No,No,No,3,Yes,No,Regularly
+23,Female,Yes,Monsoon / Rainy,Yes,Yes,Yes,5,Yes,No,Regularly
+34,Female,Yes,Winter,Yes,No,Yes,3,Yes,No,Regularly
+54,Female,Yes,Monsoon / Rainy,No,No,No,2,Yes,Yes,Occasionally
+32,Male,Yes,Winter,No,Yes,Yes,3,Yes,Yes,Occasionally
+44,Male,No,Monsoon / Rainy,No,Yes,Yes,3,No,Yes,Occasionally
+53,Female,No,Monsoon / Rainy,Yes,No,No,5,No,No,Regularly
+50,Male,No,Monsoon / Rainy,Yes,No,No,1,Yes,Yes,Occasionally
+55,Female,No,Winter,Yes,Yes,Yes,3,No,Yes,Occasionally
+31,Male,Yes,Monsoon / Rainy,Yes,Yes,No,4,Yes,Yes,Regularly
+31,Female,Yes,Monsoon / Rainy,Yes,Yes,No,1,Yes,No,Regularly
+46,Male,Yes,Winter,Yes,Yes,Yes,3,Yes,No,Occasionally
+41,Male,Yes,Monsoon / Rainy,No,Yes,Yes,2,No,Yes,Regularly
+65,Male,Yes,Winter,No,Yes,No,2,Yes,No,Regularly
+39,Male,Yes,Monsoon / Rainy,No,No,Yes,2,Yes,No,Occasionally
+51,Female,No,Winter,No,No,No,1,No,No,Regularly
+24,Female,No,Winter,Yes,No,Yes,5,Yes,Yes,Occasionally
+19,Female,No,Monsoon / Rainy,No,No,Yes,5,No,Yes,Occasionally
+39,Male,Yes,Winter,Yes,No,No,5,Yes,Yes,Occasionally
+36,Male,No,Winter,Yes,No,No,1,No,No,Occasionally
+35,Female,Yes,Monsoon / Rainy,No,No,Yes,2,No,No,Regularly
+51,Female,No,Winter,Yes,No,No,5,No,No,Occasionally
+51,Female,No,Monsoon / Rainy,No,No,No,1,No,No,Regularly
+35,Male,Yes,Monsoon / Rainy,No,No,No,5,Yes,Yes,Regularly
+25,Male,No,Winter,No,Yes,Yes,5,No,Yes,Occasionally
+29,Male,No,Winter,No,No,No,5,Yes,Yes,Occasionally
+37,Male,No,Winter,No,Yes,Yes,5,No,Yes,Regularly
+22,Female,No,Winter,No,No,Yes,3,No,Yes,Regularly
+50,Male,No,Monsoon / Rainy,No,No,No,5,Yes,No,Regularly
+48,Female,Yes,Winter,No,No,No,2,No,No,Regularly
+33,Female,Yes,Winter,Yes,Yes,Yes,5,Yes,Yes,Regularly
+44,Male,No,Monsoon / Rainy,Yes,Yes,No,3,No,No,Regularly
+39,Female,Yes,Monsoon / Rainy,Yes,No,Yes,2,Yes,Yes,Regularly
+26,Female,No,Winter,No,No,No,3,Yes,No,Regularly
+21,Female,Yes,Winter,No,No,No,5,Yes,Yes,Occasionally
+28,Female,No,Monsoon / Rainy,No,Yes,No,5,No,No,Occasionally
+38,Female,Yes,Monsoon / Rainy,Yes,Yes,No,5,No,Yes,Regularly
+47,Male,No,Monsoon / Rainy,No,Yes,No,1,No,Yes,Occasionally
+56,Female,Yes,Monsoon / Rainy,No,Yes,No,1,Yes,No,Occasionally
+31,Male,No,Winter,Yes,No,No,3,No,Yes,Occasionally
+51,Female,No,Monsoon / Rainy,No,No,No,2,Yes,No,Regularly
+52,Female,No,Winter,No,Yes,Yes,2,No,Yes,Occasionally
+53,Male,Yes,Monsoon / Rainy,Yes,No,Yes,5,Yes,Yes,Regularly
+27,Male,No,Monsoon / Rainy,No,Yes,No,4,Yes,No,Regularly
+49,Female,No,Monsoon / Rainy,Yes,Yes,No,1,No,No,Occasionally
+23,Male,Yes,Monsoon / Rainy,Yes,Yes,Yes,5,Yes,Yes,Regularly
+64,Male,Yes,Winter,No,No,No,1,Yes,No,Regularly
+23,Male,Yes,Monsoon / Rainy,No,Yes,No,3,No,Yes,Regularly

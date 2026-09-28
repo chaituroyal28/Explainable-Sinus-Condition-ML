@@ -1,0 +1,7 @@
+Model,Accuracy Mean,Accuracy Std,Precision Mean,Precision Std,Recall Mean,Recall Std,F1 Mean,F1 Std,ROC-AUC Mean,ROC-AUC Std
+Logistic Regression,48.4,2.58,48.57,2.59,49.4,4.83,48.93,3.49,48.17,3.34
+Decision Tree,49.6,3.23,49.81,3.31,44.24,3.43,46.83,3.24,49.44,1.83
+Random Forest,48.9,2.29,49.17,2.06,48.81,0.68,48.97,1.3,47.82,2.97
+SVM,50.8,1.33,50.88,1.22,56.97,4.07,53.7,2.23,51.65,0.98
+XGBoost,47.5,2.0,47.64,2.11,47.81,4.61,47.67,3.23,45.96,4.14
+CatBoost,48.5,2.55,48.73,2.43,48.41,2.21,48.56,2.22,46.91,3.49
