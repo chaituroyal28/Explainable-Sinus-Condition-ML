@@ -8,3 +8,4 @@ catboost
 shap
 joblib
 jupyter
+Flask==3.1.3

@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Prediction Results | SinusPredict AI
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for(
+            'static',
+            filename='css/style.css'
+        ) }}"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+     ===================================================== -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a
+            href="/"
+            class="brand"
+        >
+
+            <div class="brand-logo">
+                S
+            </div>
+
+            <div>
+
+                <div class="brand-title">
+                    SinusPredict AI
+                </div>
+
+                <div class="brand-subtitle">
+                    Sinus Condition Analyzer
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="/">
+                Home
+            </a>
+
+            <a href="/analyze">
+                Analyze
+            </a>
+
+            <a href="/insights">
+                Insights
+            </a>
+
+            <a href="/models">
+                Model Lab
+            </a>
+
+            <a href="/research">
+                Research
+            </a>
+
+            <a href="/about">
+                About
+            </a>
+
+        </nav>
+
+
+        <button
+            id="themeToggle"
+            class="theme-toggle"
+        >
+            ◐
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+     ===================================================== -->
+
+<main class="prediction-page">
+
+
+    <!-- HEADER -->
+
+    <section class="prediction-header">
+
+        <div class="section-eyebrow">
+            AI ANALYSIS COMPLETE
+        </div>
+
+        <h1>
+            Your Prediction Results
+        </h1>
+
+        <p>
+            The tuned Decision Tree model has analyzed
+            your self-reported survey responses.
+        </p>
+
+    </section>
+
+
+
+    <!-- =================================================
+         RESULT CARD
+         ================================================= -->
+
+    <section class="prediction-result-card">
+
+
+        <div>
+
+            <div class="prediction-label">
+                MODEL PREDICTION
+            </div>
+
+
+            <div
+                id="predictionValue"
+                class="prediction-value"
+            >
+                —
+            </div>
+
+
+            <p
+                id="predictionMessage"
+                class="prediction-message"
+            >
+                Generating result...
+            </p>
+
+        </div>
+
+
+
+        <div class="prediction-probability">
+
+            <div
+                id="probabilityRing"
+                class="probability-ring"
+            >
+
+                <div class="probability-inner">
+
+                    <span id="probabilityValue">
+                        —
+                    </span>
+
+                    <small>
+                        model probability
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         MODEL INFORMATION
+         ================================================= -->
+
+    <section class="result-section">
+
+        <div class="section-heading">
+
+            <div>
+
+                <div class="section-eyebrow">
+                    MODEL INFORMATION
+                </div>
+
+                <h2>
+                    How this result was generated
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="result-info-grid">
+
+
+            <div class="result-info-card">
+
+                <span>
+                    Model
+                </span>
+
+                <strong>
+                    Tuned Decision Tree
+                </strong>
+
+            </div>
+
+
+            <div class="result-info-card">
+
+                <span>
+                    Test F1 Score
+                </span>
+
+                <strong>
+                    56.90%
+                </strong>
+
+            </div>
+
+
+            <div class="result-info-card">
+
+                <span>
+                    Test ROC-AUC
+                </span>
+
+                <strong>
+                    53.68%
+                </strong>
+
+            </div>
+
+
+            <div class="result-info-card">
+
+                <span>
+                    Model Type
+                </span>
+
+                <strong>
+                    Supervised Classification
+                </strong>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SURVEY SUMMARY
+         ================================================= -->
+
+    <section class="result-section">
+
+        <div class="section-heading">
+
+            <div>
+
+                <div class="section-eyebrow">
+                    YOUR RESPONSES
+                </div>
+
+                <h2>
+                    Survey Summary
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="surveySummary"
+            class="result-summary-grid"
+        >
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         EXPLAINABILITY
+         ================================================= -->
+
+    <section class="result-section">
+
+        <div class="section-heading">
+
+            <div>
+
+                <div class="section-eyebrow">
+                    EXPLAINABILITY
+                </div>
+
+                <h2>
+                    How the model reached this prediction
+                </h2>
+
+                <p>
+                    <p>
+                        The chart below groups the model's SHAP contributions
+                        by the original survey features used in your response.
+                    </p>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="explanation-card">
+
+
+            <div class="explanation-intro">
+
+                <div class="placeholder-icon">
+                    AI
+                </div>
+
+                <div>
+
+                    <h3>
+                        Feature Contributions
+                    </h3>
+
+                    <p>
+                        Positive values support the model's
+                        Yes class, while negative values
+                        support the No class.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="featureContributions"
+                class="feature-contributions"
+            >
+
+                <div class="loading-explanation">
+                    Generating explanation...
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         HISTORY
+         ================================================= -->
+
+    <section class="result-section">
+
+        <div class="section-heading">
+
+            <div>
+
+                <div class="section-eyebrow">
+                    LOCAL HISTORY
+                </div>
+
+                <h2>
+                    Previous Analyses
+                </h2>
+
+                <p>
+                    Your prediction history is stored only
+                    in this browser.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="predictionHistory"
+            class="history-list"
+        >
+        </div>
+
+
+        <div class="history-actions">
+
+            <button
+                id="clearHistory"
+                class="btn btn-secondary"
+            >
+                Clear History
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         DISCLAIMER
+         ================================================= -->
+
+    <section class="prediction-disclaimer">
+
+        <strong>
+            Important:
+        </strong>
+
+        SinusPredict AI provides a machine-learning
+        prediction based on self-reported survey data.
+        It is <strong>not a medical diagnosis</strong>
+        and should not replace professional medical advice.
+
+    </section>
+
+
+
+    <!-- =================================================
+         ACTIONS
+         ================================================= -->
+
+    <div class="prediction-actions">
+
+        <a
+            href="/analyze"
+            class="btn btn-secondary"
+        >
+            Start New Analysis
+        </a>
+
+
+        <button
+            id="downloadCsv"
+            class="btn btn-secondary"
+        >
+            Download CSV
+        </button>
+
+
+        <button
+            id="printResult"
+            class="btn btn-primary"
+        >
+            Print / Save PDF
+        </button>
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer class="footer">
+
+    <div class="footer-inner">
+
+        <div>
+
+            <strong>
+                SinusPredict AI
+            </strong>
+
+            <p>
+                Survey-Based Sinus Condition Analyzer
+            </p>
+
+        </div>
+
+
+        <div>
+            Academic Machine Learning Project
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<script
+    src="{{ url_for(
+        'static',
+        filename='js/app.js'
+    ) }}"
+></script>
+
+
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+
+        // =================================================
+        // LOAD RESULT
+        // =================================================
+
+        const stored =
+            localStorage.getItem(
+                "sinuspredict-result"
+            );
+
+
+        if (!stored) {
+
+            window.location.href =
+                "/analyze";
+
+            return;
+
+        }
+
+
+        const result =
+            JSON.parse(stored);
+
+
+
+        // =================================================
+        // BASIC RESULT
+        // =================================================
+
+        const predictionValue =
+            document.getElementById(
+                "predictionValue"
+            );
+
+        const predictionMessage =
+            document.getElementById(
+                "predictionMessage"
+            );
+
+        const probabilityValue =
+            document.getElementById(
+                "probabilityValue"
+            );
+
+        const probabilityRing =
+            document.getElementById(
+                "probabilityRing"
+            );
+
+
+        predictionValue.textContent =
+            result.prediction;
+
+
+        predictionMessage.textContent =
+            result.prediction === "Yes"
+                ? "The model predicts a positive self-reported sinus-condition outcome."
+                : "The model predicts a negative self-reported sinus-condition outcome.";
+
+
+        probabilityValue.textContent =
+            `${Number(result.probability).toFixed(2)}%`;
+
+
+
+        // =================================================
+        // DYNAMIC PROBABILITY RING
+        // =================================================
+
+        const probability =
+            Math.max(
+                0,
+                Math.min(
+                    100,
+                    Number(result.probability)
+                )
+            );
+
+
+        const degrees =
+            probability * 3.6;
+
+
+        probabilityRing.style.background = `
+            conic-gradient(
+                #28a6a6 0deg,
+                #28a6a6 ${degrees}deg,
+                #e6eef1 ${degrees}deg,
+                #e6eef1 360deg
+            )
+        `;
+
+
+
+        // =================================================
+        // SURVEY SUMMARY
+        // =================================================
+
+        const summary =
+            document.getElementById(
+                "surveySummary"
+            );
+
+
+        summary.innerHTML = "";
+
+
+        Object.entries(
+            result.inputs
+        ).forEach(
+            ([key, value]) => {
+
+                const card =
+                    document.createElement(
+                        "div"
+                    );
+
+                card.className =
+                    "result-info-card";
+
+
+                card.innerHTML = `
+
+                    <span>
+                        ${key}
+                    </span>
+
+                    <strong>
+                        ${value}
+                    </strong>
+
+                `;
+
+
+                summary.appendChild(
+                    card
+                );
+
+            }
+        );
+
+
+
+        // =================================================
+        // SHAP
+        // =================================================
+
+       // =================================================
+// SHAP — GROUPED ORIGINAL SURVEY FEATURES
+// =================================================
+
+const explanationContainer =
+    document.getElementById("featureContributions");
+
+explanationContainer.innerHTML = "";
+
+if (
+    result.explanation &&
+    result.explanation.length > 0
+) {
+
+    result.explanation
+        .slice(0, 8)
+        .forEach((item) => {
+
+            const row =
+                document.createElement("div");
+
+            row.className =
+                "contribution-row";
+
+            const value =
+                Number(item.value) || 0;
+
+            const directionClass =
+                value >= 0
+                    ? "positive"
+                    : "negative";
+
+            const direction =
+                value >= 0
+                    ? "Supports Yes"
+                    : "Supports No";
+
+            const strength =
+                Number(item.strength) || 0;
+
+            const category =
+                item.category
+                    ? `
+                        <span class="contribution-category">
+                            ${item.category}
+                        </span>
+                      `
+                    : "";
+
+            row.innerHTML = `
+
+                <div class="contribution-header">
+
+                    <span class="contribution-feature">
+
+                        ${item.feature}
+
+                        ${category}
+
+                    </span>
+
+                    <span
+                        class="
+                            contribution-value
+                            ${directionClass}
+                        "
+                    >
+
+                        ${value >= 0 ? "+" : ""}
+                        ${value.toFixed(4)}
+
+                    </span>
+
+                </div>
+
+
+                <div class="contribution-bar-track">
+
+                    <div
+                        class="
+                            contribution-bar
+                            ${directionClass}
+                        "
+                        style="
+                            width:${strength}%;
+                        "
+                    ></div>
+
+                </div>
+
+
+                <div
+                    class="
+                        contribution-direction
+                        ${directionClass}
+                    "
+                >
+
+                    ${direction}
+
+                </div>
+
+            `;
+
+            explanationContainer.appendChild(row);
+
+        });
+
+} else {
+
+    explanationContainer.innerHTML = `
+
+        <div class="loading-explanation">
+
+            No feature contributions were returned
+            for this prediction.
+
+        </div>
+
+    `;
+
+}
+
+
+        // =================================================
+        // CSV DOWNLOAD
+        // =================================================
+
+        const downloadCsv =
+            document.getElementById(
+                "downloadCsv"
+            );
+
+
+        downloadCsv.addEventListener(
+            "click",
+            () => {
+
+
+                const rows = [
+
+                    [
+                        "Field",
+                        "Value"
+                    ],
+
+                    [
+                        "Prediction",
+                        result.prediction
+                    ],
+
+                    [
+                        "Model Probability",
+                        `${result.probability}%`
+                    ],
+
+                    [
+                        "Model",
+                        result.model
+                    ],
+
+                    [
+                        "Test F1",
+                        `${result.test_f1}%`
+                    ],
+
+                    [
+                        "Test ROC-AUC",
+                        `${result.test_roc_auc}%`
+                    ]
+
+                ];
+
+
+                Object.entries(
+                    result.inputs
+                ).forEach(
+                    ([key, value]) => {
+
+                        rows.push([
+                            key,
+                            value
+                        ]);
+
+                    }
+                );
+
+
+                const csv =
+                    rows
+                        .map(
+                            row =>
+                                row
+                                    .map(
+                                        value =>
+                                            `"${String(value)
+                                                .replace(
+                                                    /"/g,
+                                                    '""'
+                                                )}"`
+                                    )
+                                    .join(",")
+                        )
+                        .join("\n");
+
+
+                const blob =
+                    new Blob(
+                        [csv],
+                        {
+                            type:
+                                "text/csv;charset=utf-8;"
+                        }
+                    );
+
+
+                const url =
+                    URL.createObjectURL(
+                        blob
+                    );
+
+
+                const link =
+                    document.createElement(
+                        "a"
+                    );
+
+
+                link.href = url;
+
+                link.download =
+                    "sinuspredict-result.csv";
+
+
+                document.body.appendChild(
+                    link
+                );
+
+                link.click();
+
+                link.remove();
+
+
+                URL.revokeObjectURL(
+                    url
+                );
+
+            }
+        );
+
+
+
+        // =================================================
+        // PRINT / SAVE PDF
+        // =================================================
+
+        document
+            .getElementById("printResult")
+            .addEventListener(
+                "click",
+                () => {
+
+                    window.print();
+
+                }
+            );
+
+
+
+        // =================================================
+        // HISTORY
+        // =================================================
+
+        const historyContainer =
+            document.getElementById(
+                "predictionHistory"
+            );
+
+
+        const clearHistory =
+            document.getElementById(
+                "clearHistory"
+            );
+
+
+        function renderHistory() {
+
+            const history =
+                JSON.parse(
+                    localStorage.getItem(
+                        "sinuspredict-history"
+                    ) || "[]"
+                );
+
+
+            historyContainer.innerHTML =
+                "";
+
+
+            if (!history.length) {
+
+                historyContainer.innerHTML = `
+
+                    <div class="history-empty">
+
+                        No previous analyses yet.
+
+                    </div>
+
+                `;
+
+                return;
+
+            }
+
+
+            history.forEach(
+                (item) => {
+
+                    const card =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    card.className =
+                        "history-card";
+
+
+                    const date =
+                        new Date(
+                            item.timestamp
+                        );
+
+
+                    card.innerHTML = `
+
+                        <div>
+
+                            <strong>
+                                ${item.prediction}
+                            </strong>
+
+                            <span>
+                                ${date.toLocaleString()}
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            ${Number(
+                                item.probability
+                            ).toFixed(2)}%
+
+                        </div>
+
+
+                        <button
+                            class="history-delete"
+                            data-id="${item.id}"
+                        >
+                            Delete
+                        </button>
+
+                    `;
+
+
+                    historyContainer.appendChild(
+                        card
+                    );
+
+                }
+            );
+
+
+            document
+                .querySelectorAll(
+                    ".history-delete"
+                )
+                .forEach(
+                    button => {
+
+                        button.addEventListener(
+                            "click",
+                            () => {
+
+                                const id =
+                                    Number(
+                                        button.dataset.id
+                                    );
+
+
+                                let history =
+                                    JSON.parse(
+                                        localStorage.getItem(
+                                            "sinuspredict-history"
+                                        ) || "[]"
+                                    );
+
+
+                                history =
+                                    history.filter(
+                                        item =>
+                                            item.id !== id
+                                    );
+
+
+                                localStorage.setItem(
+                                    "sinuspredict-history",
+                                    JSON.stringify(
+                                        history
+                                    )
+                                );
+
+
+                                renderHistory();
+
+                            }
+                        );
+
+                    }
+                );
+
+        }
+
+
+        renderHistory();
+
+
+
+        // =================================================
+        // CLEAR HISTORY
+        // =================================================
+
+        clearHistory.addEventListener(
+            "click",
+            () => {
+
+                localStorage.removeItem(
+                    "sinuspredict-history"
+                );
+
+                renderHistory();
+
+            }
+        );
+
+
+    }
+
+);
+
+</script>
+
+
+</body>
+
+</html>

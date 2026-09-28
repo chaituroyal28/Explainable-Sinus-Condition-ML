@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SinusPredict AI | Sinus Condition Analyzer</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+
+            <a href="/" class="brand">
+                <span class="brand-icon">S</span>
+
+                <div>
+                    <strong>SinusPredict AI</strong>
+                    <small>Condition Analyzer</small>
+                </div>
+            </a>
+
+            <nav class="nav-links">
+                <a href="/" class="active">Home</a>
+                <a href="/analyze">Analyze</a>
+                <a href="/insights">Insights</a>
+                <a href="/models">Model Lab</a>
+                <a href="/research">Research</a>
+                <a href="/about">About</a>
+            </nav>
+
+            <button
+                class="theme-toggle"
+                id="themeToggle"
+                type="button"
+                aria-label="Toggle theme"
+            >
+                ◐
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- Hero -->
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="badge">
+                    <span class="status-dot"></span>
+                    Explainable Machine Learning
+                </div>
+
+                <h1>
+                    Understand your
+                    <span>sinus survey</span>
+                    with AI.
+                </h1>
+
+                <p class="hero-description">
+                    SinusPredict AI analyzes survey-based demographic,
+                    symptom, allergy, environmental and medication
+                    information using machine learning.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a href="/analyze" class="btn btn-primary">
+                        Start Analysis
+                        <span>→</span>
+                    </a>
+
+                    <a href="/insights" class="btn btn-secondary">
+                        Explore Insights
+                    </a>
+
+                </div>
+
+                <p class="hero-note">
+                    Survey-based machine-learning prediction ·
+                    Not a medical diagnosis
+                </p>
+
+            </div>
+
+
+            <!-- Hero visual -->
+            <div class="hero-visual">
+
+                <div class="prediction-card">
+
+                    <div class="card-header">
+                        <div>
+                            <span class="eyebrow">
+                                AI ANALYSIS
+                            </span>
+
+                            <h3>Prediction Overview</h3>
+                        </div>
+
+                        <span class="live-badge">
+                            LIVE
+                        </span>
+                    </div>
+
+
+                    <div class="prediction-ring">
+
+                        <div class="ring-content">
+                            <span>AI</span>
+                            <strong>56.9%</strong>
+                            <small>Test F1</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="metric-grid">
+
+                        <div class="metric">
+                            <strong>1,000</strong>
+                            <span>Clean Records</span>
+                        </div>
+
+                        <div class="metric">
+                            <strong>10</strong>
+                            <span>Input Features</span>
+                        </div>
+
+                        <div class="metric">
+                            <strong>6</strong>
+                            <span>ML Models</span>
+                        </div>
+
+                        <div class="metric">
+                            <strong>SHAP</strong>
+                            <span>Explainability</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- How it works -->
+        <section class="section">
+
+            <div class="section-heading">
+                <span class="eyebrow">HOW IT WORKS</span>
+
+                <h2>
+                    From survey response to
+                    explainable prediction.
+                </h2>
+
+                <p>
+                    A simple workflow powered by the machine-learning
+                    pipeline developed for this project.
+                </p>
+            </div>
+
+
+            <div class="steps-grid">
+
+                <article class="step-card">
+
+                    <span class="step-number">01</span>
+
+                    <div class="step-icon">
+                        01
+                    </div>
+
+                    <h3>Enter Information</h3>
+
+                    <p>
+                        Provide demographic, symptom, allergy,
+                        environmental and medication responses.
+                    </p>
+
+                </article>
+
+
+                <article class="step-card">
+
+                    <span class="step-number">02</span>
+
+                    <div class="step-icon">
+                        02
+                    </div>
+
+                    <h3>Run ML Analysis</h3>
+
+                    <p>
+                        The processed survey data is evaluated
+                        using the selected machine-learning model.
+                    </p>
+
+                </article>
+
+
+                <article class="step-card">
+
+                    <span class="step-number">03</span>
+
+                    <div class="step-icon">
+                        03
+                    </div>
+
+                    <h3>Understand Results</h3>
+
+                    <p>
+                        Explore the prediction, model-estimated
+                        probability and explainability information.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Project statistics -->
+        <section class="stats-section">
+
+            <div class="section-heading compact">
+                <span class="eyebrow">PROJECT SNAPSHOT</span>
+
+                <h2>
+                    Built from your actual ML experiment.
+                </h2>
+            </div>
+
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <strong>1,006</strong>
+                    <span>Original Records</span>
+                </div>
+
+                <div class="stat-card">
+                    <strong>1,000</strong>
+                    <span>Clean Records</span>
+                </div>
+
+                <div class="stat-card">
+                    <strong>6</strong>
+                    <span>Models Evaluated</span>
+                </div>
+
+                <div class="stat-card">
+                    <strong>5-Fold</strong>
+                    <span>Cross Validation</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Research -->
+        <section class="research-preview">
+
+            <div>
+
+                <span class="eyebrow">
+                    EXPLAINABLE AI
+                </span>
+
+                <h2>
+                    Don't just see the prediction.
+                    Understand the model.
+                </h2>
+
+                <p>
+                    Explore SHAP-based feature attribution,
+                    permutation importance, model comparison,
+                    evaluation metrics and the complete methodology.
+                </p>
+
+                <a href="/research" class="text-link">
+                    Explore research →
+                </a>
+
+            </div>
+
+            <div class="research-card">
+
+                <div class="bar-row">
+                    <span>Age</span>
+                    <div class="bar">
+                        <i style="width: 90%"></i>
+                    </div>
+                </div>
+
+                <div class="bar-row">
+                    <span>Sinus Issues</span>
+                    <div class="bar">
+                        <i style="width: 65%"></i>
+                    </div>
+                </div>
+
+                <div class="bar-row">
+                    <span>Facial Pain</span>
+                    <div class="bar">
+                        <i style="width: 50%"></i>
+                    </div>
+                </div>
+
+                <div class="bar-row">
+                    <span>Severity</span>
+                    <div class="bar">
+                        <i style="width: 45%"></i>
+                    </div>
+                </div>
+
+                <small>
+                    Illustrative visualization of model attribution
+                </small>
+
+            </div>
+
+        </section>
+
+
+        <!-- Disclaimer -->
+        <section class="disclaimer">
+
+            <div class="disclaimer-icon">
+                !
+            </div>
+
+            <div>
+
+                <strong>
+                    Important information
+                </strong>
+
+                <p>
+                    SinusPredict AI is an academic machine-learning
+                    project based on self-reported survey data.
+                    Its predictions are not medical diagnoses and
+                    should not be used as a substitute for professional
+                    medical advice.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div>
+            <strong>SinusPredict AI</strong>
+            <span> · Survey-Based Sinus Condition Analyzer</span>
+        </div>
+
+        <span>
+            Explainable Machine Learning Project
+        </span>
+
+    </footer>
+
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+</html>

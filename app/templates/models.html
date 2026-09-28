@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Model Lab | SinusPredict AI</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+    <style>
+
+        /* =====================================================
+           MODEL LAB
+        ===================================================== */
+
+        .model-lab-page {
+            min-height: 100vh;
+            padding: 70px 24px 100px;
+        }
+
+        .model-lab-container {
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        .model-lab-header {
+            max-width: 850px;
+            margin-bottom: 42px;
+        }
+
+        .model-lab-header h1 {
+            font-size: clamp(42px, 6vw, 72px);
+            line-height: 1.02;
+            margin: 12px 0 20px;
+            letter-spacing: -0.04em;
+        }
+
+        .model-lab-header p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--text-muted, #718096);
+            max-width: 760px;
+        }
+
+        .model-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 28px;
+        }
+
+        .model-tab {
+            border: 1px solid var(--border, #dce5eb);
+            background: var(--surface, #ffffff);
+            color: var(--text, #102a43);
+            padding: 13px 18px;
+            border-radius: 999px;
+            font: inherit;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.25s ease;
+        }
+
+        .model-tab:hover {
+            transform: translateY(-2px);
+        }
+
+        .model-tab.active {
+            background: #2ca6a6;
+            color: white;
+            border-color: #2ca6a6;
+            box-shadow: 0 10px 25px rgba(44, 166, 166, 0.18);
+        }
+
+        .model-panel {
+            background: var(--surface, #ffffff);
+            border: 1px solid var(--border, #dce5eb);
+            border-radius: 28px;
+            padding: 34px;
+            box-shadow: 0 18px 55px rgba(16, 42, 67, 0.07);
+            margin-bottom: 30px;
+        }
+
+        .model-panel-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .model-panel-top h2 {
+            margin: 8px 0 8px;
+            font-size: 34px;
+        }
+
+        .model-description {
+            color: var(--text-muted, #718096);
+            line-height: 1.65;
+            max-width: 700px;
+        }
+
+        .live-badge {
+            flex-shrink: 0;
+            padding: 10px 14px;
+            border-radius: 999px;
+            background: #e5f7f4;
+            color: #157a78;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+        }
+
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 14px;
+            margin-bottom: 30px;
+        }
+
+        .metric-card {
+            border: 1px solid var(--border, #dce5eb);
+            border-radius: 18px;
+            padding: 20px;
+            background: var(--surface-soft, #f8fafc);
+        }
+
+        .metric-card span {
+            display: block;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-muted, #718096);
+            margin-bottom: 10px;
+        }
+
+        .metric-card strong {
+            font-size: 27px;
+            color: var(--text, #102a43);
+        }
+
+        .model-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+        }
+
+        .detail-card {
+            border: 1px solid var(--border, #dce5eb);
+            border-radius: 20px;
+            padding: 24px;
+        }
+
+        .detail-card h3 {
+            margin: 0 0 18px;
+            font-size: 18px;
+        }
+
+        .parameter-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border, #e6edf2);
+        }
+
+        .parameter-row:last-child {
+            border-bottom: none;
+        }
+
+        .parameter-row span {
+            color: var(--text-muted, #718096);
+        }
+
+        .parameter-row strong {
+            text-align: right;
+        }
+
+        .comparison-section {
+            margin-top: 50px;
+        }
+
+        .comparison-section h2 {
+            font-size: 34px;
+            margin-bottom: 8px;
+        }
+
+        .comparison-section > p {
+            color: var(--text-muted, #718096);
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .comparison-card {
+            background: var(--surface, #ffffff);
+            border: 1px solid var(--border, #dce5eb);
+            border-radius: 24px;
+            padding: 28px;
+            margin-bottom: 18px;
+        }
+
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 180px 1fr 75px;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 17px;
+        }
+
+        .comparison-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .comparison-model {
+            font-weight: 750;
+        }
+
+        .comparison-track {
+            height: 12px;
+            border-radius: 999px;
+            background: #e8eef1;
+            overflow: hidden;
+        }
+
+        .comparison-fill {
+            height: 100%;
+            width: 0;
+            border-radius: inherit;
+            background: #2ca6a6;
+            transition: width 0.8s ease;
+        }
+
+        .comparison-value {
+            text-align: right;
+            font-weight: 800;
+        }
+
+        .methodology-note {
+            margin-top: 30px;
+            padding: 24px;
+            border-radius: 20px;
+            background: #fff8df;
+            border: 1px solid #ead9a0;
+            color: #705719;
+            line-height: 1.65;
+        }
+
+        .model-footnote {
+            color: var(--text-muted, #718096);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-top: 22px;
+        }
+
+        @media (max-width: 900px) {
+
+            .metric-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .model-detail-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 650px) {
+
+            .model-lab-page {
+                padding: 45px 16px 70px;
+            }
+
+            .model-panel {
+                padding: 22px;
+                border-radius: 22px;
+            }
+
+            .model-panel-top {
+                flex-direction: column;
+            }
+
+            .metric-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .comparison-row {
+                grid-template-columns: 125px 1fr 60px;
+                gap: 10px;
+            }
+
+            .model-tab {
+                font-size: 13px;
+                padding: 10px 14px;
+            }
+
+        }
+
+        @media (max-width: 430px) {
+
+            .metric-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .comparison-row {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
+
+            .comparison-value {
+                text-align: left;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a
+            href="{{ url_for('home') }}"
+            class="brand"
+        >
+
+            <div class="brand-logo">
+                S
+            </div>
+
+            <div>
+
+                <div class="brand-title">
+                    SinusPredict AI
+                </div>
+
+                <div class="brand-subtitle">
+                    Sinus Condition Analyzer
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="{{ url_for('home') }}">
+                Home
+            </a>
+
+            <a href="{{ url_for('analyze') }}">
+                Analyze
+            </a>
+
+            <a href="{{ url_for('insights') }}">
+                Insights
+            </a>
+
+            <a
+                href="{{ url_for('models') }}"
+                class="active"
+            >
+                Model Lab
+            </a>
+
+            <a href="{{ url_for('research') }}">
+                Research
+            </a>
+
+            <a href="{{ url_for('about') }}">
+                About
+            </a>
+
+        </nav>
+
+
+        <button
+            id="themeToggle"
+            class="theme-toggle"
+            aria-label="Toggle theme"
+        >
+            ◐
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MODEL LAB
+===================================================== -->
+
+<main class="model-lab-page">
+
+    <div class="model-lab-container">
+
+
+        <!-- HEADER -->
+
+        <section class="model-lab-header">
+
+            <div class="section-eyebrow">
+                MACHINE LEARNING MODEL LAB
+            </div>
+
+            <h1>
+                Explore the
+                <span class="accent-text">
+                    Six Models
+                </span>
+            </h1>
+
+            <p>
+                Compare the machine-learning models evaluated
+                on the cleaned Sinus Survey dataset. Select a
+                model to inspect its evaluation metrics and
+                configuration.
+            </p>
+
+        </section>
+
+
+
+        <!-- MODEL TABS -->
+
+        <div
+            class="model-tabs"
+            id="modelTabs"
+        ></div>
+
+
+
+        <!-- SELECTED MODEL -->
+
+        <section class="model-panel">
+
+            <div class="model-panel-top">
+
+                <div>
+
+                    <div class="section-eyebrow">
+                        SELECTED MODEL
+                    </div>
+
+                    <h2 id="modelName">
+                        Decision Tree
+                    </h2>
+
+                    <p
+                        id="modelDescription"
+                        class="model-description"
+                    ></p>
+
+                </div>
+
+                <div
+                    id="liveBadge"
+                    class="live-badge"
+                    style="display:none;"
+                >
+                    LIVE PREDICTION MODEL
+                </div>
+
+            </div>
+
+
+            <!-- METRICS -->
+
+            <div
+                class="metric-grid"
+                id="metricGrid"
+            ></div>
+
+
+            <!-- DETAILS -->
+
+            <div class="model-detail-grid">
+
+                <div class="detail-card">
+
+                    <h3>
+                        Model Information
+                    </h3>
+
+                    <div id="modelInfo"></div>
+
+                </div>
+
+
+                <div class="detail-card">
+
+                    <h3>
+                        Configuration
+                    </h3>
+
+                    <div id="modelParameters"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             COMPARISON
+        ================================================= -->
+
+        <section class="comparison-section">
+
+            <div class="section-eyebrow">
+                TEST-SET COMPARISON
+            </div>
+
+            <h2>
+                Model Performance
+            </h2>
+
+            <p>
+                Compare the F1 scores obtained by the six
+                evaluated models on the held-out test set.
+            </p>
+
+
+            <div class="comparison-card">
+
+                <div id="comparisonRows"></div>
+
+            </div>
+
+
+            <div class="methodology-note">
+
+                <strong>
+                    Important:
+                </strong>
+
+                These metrics describe performance on this
+                project's held-out survey test set. They do not
+                represent clinical diagnostic accuracy and should
+                not be interpreted as medical-performance
+                guarantees.
+
+            </div>
+
+
+            <p class="model-footnote">
+
+                The tuned Decision Tree is used for live
+                predictions in SinusPredict AI. Its held-out
+                test-set F1 score was 56.90%, the highest F1
+                observed among the six evaluated models in this
+                project.
+
+            </p>
+
+        </section>
+
+
+    </div>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="footer-inner">
+
+        <div>
+
+            <strong>
+                SinusPredict AI
+            </strong>
+
+            <p>
+                Survey-Based Sinus Condition Analyzer
+            </p>
+
+        </div>
+
+        <div>
+            Academic Machine Learning Project
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<script
+    src="{{ url_for('static', filename='js/app.js') }}"
+></script>
+
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+
+        /*
+        =====================================================
+        VERIFIED PROJECT RESULTS
+        =====================================================
+        */
+
+        const models = {
+
+            "Logistic Regression": {
+
+                description:
+                    "A linear classification model used as a baseline for predicting the self-reported sinus-condition outcome.",
+
+                accuracy: 51.00,
+                precision: 50.93,
+                recall: 55.00,
+                f1: 52.88,
+                roc_auc: 49.63,
+
+                info: [
+                    ["Model Type", "Linear Classification"],
+                    ["Evaluation", "Held-out Test Set"],
+                    ["Role", "Baseline Model"]
+                ],
+
+                parameters: [
+                    ["Evaluation Metric", "F1 Score"],
+                    ["Cross Validation", "5-Fold Stratified"],
+                    ["Tuning", "Randomized Search"]
+                ]
+
+            },
+
+
+            "Decision Tree": {
+
+                description:
+                    "A tree-based supervised classifier that learns decision rules from the survey features. The tuned Decision Tree is the live prediction model used by SinusPredict AI.",
+
+                accuracy: 48.50,
+                precision: 48.92,
+                recall: 68.00,
+                f1: 56.90,
+                roc_auc: 53.68,
+
+                live: true,
+
+                info: [
+                    ["Model Type", "Tree-Based Classification"],
+                    ["Evaluation", "Held-out Test Set"],
+                    ["Role", "Live Prediction Model"]
+                ],
+
+                parameters: [
+                    ["Criterion", "gini"],
+                    ["Max Depth", "5"],
+                    ["Min Samples Leaf", "5"],
+                    ["Min Samples Split", "2"]
+                ]
+
+            },
+
+
+            "Random Forest": {
+
+                description:
+                    "An ensemble of decision trees that combines multiple tree predictions to produce a classification result.",
+
+                accuracy: 46.00,
+                precision: 46.36,
+                recall: 51.00,
+                f1: 48.57,
+                roc_auc: 46.12,
+
+                info: [
+                    ["Model Type", "Tree Ensemble"],
+                    ["Evaluation", "Held-out Test Set"],
+                    ["Role", "Comparison Model"]
+                ],
+
+                parameters: [
+                    ["Evaluation Metric", "F1 Score"],
+                    ["Cross Validation", "5-Fold Stratified"],
+                    ["Tuning", "Randomized Search"]
+                ]
+
+            },
+
+
+            "SVM": {
+
+                description:
+                    "A support-vector classification model using a nonlinear RBF decision boundary.",
+
+                accuracy: 51.50,
+                precision: 51.58,
+                recall: 49.00,
+                f1: 50.26,
+                roc_auc: 50.94,
+
+                info: [
+                    ["Model Type", "Support Vector Machine"],
+                    ["Evaluation", "Held-out Test Set"],
+                    ["Role", "Comparison Model"]
+                ],
+
+                parameters: [
+                    ["Kernel", "RBF"],
+                    ["Evaluation Metric", "F1 Score"],
+                    ["Cross Validation", "5-Fold Stratified"],
+                    ["Tuning", "Randomized Search"]
+                ]
+
+            },
+
+
+            "XGBoost": {
+
+                description:
+                    "A gradient-boosted tree ensemble evaluated as an additional nonlinear classification model.",
+
+                accuracy: 46.50,
+                precision: 46.79,
+                recall: 51.00,
+                f1: 48.80,
+                roc_auc: 47.97,
+
+                info: [
+                    ["Model Type", "Gradient Boosting"],
+                    ["Evaluation", "Held-out Test Set"],
+                    ["Role", "Comparison Model"]
+                ],
+
+                parameters: [
+                    ["Evaluation Metric", "F1 Score"],
+                    ["Cross Validation", "5-Fold Stratified"],
+                    ["Tuning", "Randomized Search"]
+                ]
+
+            },
+
+
+            "CatBoost": {
+
+                description:
+                    "A gradient-boosting classification model included in the comparative model evaluation.",
+
+                accuracy: 44.50,
+                precision: 44.76,
+                recall: 47.00,
+                f1: 45.85,
+                roc_auc: 47.04,
+
+                info: [
+                    ["Model Type", "Gradient Boosting"],
+                    ["Evaluation", "Held-out Test Set"],
+                    ["Role", "Comparison Model"]
+                ],
+
+                parameters: [
+                    ["Evaluation Metric", "F1 Score"],
+                    ["Cross Validation", "5-Fold Stratified"],
+                    ["Tuning", "Randomized Search"]
+                ]
+
+            }
+
+        };
+
+
+
+        /*
+        =====================================================
+        CREATE TABS
+        =====================================================
+        */
+
+        const tabs =
+            document.getElementById(
+                "modelTabs"
+            );
+
+
+        Object.keys(models).forEach(
+            (name, index) => {
+
+                const button =
+                    document.createElement(
+                        "button"
+                    );
+
+                button.className =
+                    "model-tab";
+
+                button.textContent =
+                    name;
+
+                button.dataset.model =
+                    name;
+
+                if (index === 1) {
+
+                    button.classList.add(
+                        "active"
+                    );
+
+                }
+
+                button.addEventListener(
+                    "click",
+                    () => {
+
+                        document
+                            .querySelectorAll(
+                                ".model-tab"
+                            )
+                            .forEach(
+                                tab =>
+                                    tab.classList.remove(
+                                        "active"
+                                    )
+                            );
+
+                        button.classList.add(
+                            "active"
+                        );
+
+                        renderModel(
+                            name
+                        );
+
+                    }
+                );
+
+                tabs.appendChild(
+                    button
+                );
+
+            }
+        );
+
+
+
+        /*
+        =====================================================
+        RENDER SELECTED MODEL
+        =====================================================
+        */
+
+        function renderModel(name) {
+
+            const model =
+                models[name];
+
+
+            document.getElementById(
+                "modelName"
+            ).textContent =
+                name;
+
+
+            document.getElementById(
+                "modelDescription"
+            ).textContent =
+                model.description;
+
+
+            const liveBadge =
+                document.getElementById(
+                    "liveBadge"
+                );
+
+
+            liveBadge.style.display =
+                model.live
+                    ? "block"
+                    : "none";
+
+
+            /*
+            METRICS
+            */
+
+            const metrics = [
+
+                ["Accuracy", model.accuracy],
+                ["Precision", model.precision],
+                ["Recall", model.recall],
+                ["F1 Score", model.f1],
+                ["ROC-AUC", model.roc_auc]
+
+            ];
+
+
+            const metricGrid =
+                document.getElementById(
+                    "metricGrid"
+                );
+
+
+            metricGrid.innerHTML = "";
+
+
+            metrics.forEach(
+                ([label, value]) => {
+
+                    const card =
+                        document.createElement(
+                            "div"
+                        );
+
+                    card.className =
+                        "metric-card";
+
+                    card.innerHTML = `
+
+                        <span>
+                            ${label}
+                        </span>
+
+                        <strong>
+                            ${value.toFixed(2)}%
+                        </strong>
+
+                    `;
+
+                    metricGrid.appendChild(
+                        card
+                    );
+
+                }
+            );
+
+
+
+            /*
+            MODEL INFORMATION
+            */
+
+            const modelInfo =
+                document.getElementById(
+                    "modelInfo"
+                );
+
+
+            modelInfo.innerHTML = "";
+
+
+            model.info.forEach(
+                ([key, value]) => {
+
+                    const row =
+                        document.createElement(
+                            "div"
+                        );
+
+                    row.className =
+                        "parameter-row";
+
+                    row.innerHTML = `
+
+                        <span>
+                            ${key}
+                        </span>
+
+                        <strong>
+                            ${value}
+                        </strong>
+
+                    `;
+
+                    modelInfo.appendChild(
+                        row
+                    );
+
+                }
+            );
+
+
+
+            /*
+            PARAMETERS
+            */
+
+            const modelParameters =
+                document.getElementById(
+                    "modelParameters"
+                );
+
+
+            modelParameters.innerHTML = "";
+
+
+            model.parameters.forEach(
+                ([key, value]) => {
+
+                    const row =
+                        document.createElement(
+                            "div"
+                        );
+
+                    row.className =
+                        "parameter-row";
+
+                    row.innerHTML = `
+
+                        <span>
+                            ${key}
+                        </span>
+
+                        <strong>
+                            ${value}
+                        </strong>
+
+                    `;
+
+                    modelParameters.appendChild(
+                        row
+                    );
+
+                }
+            );
+
+        }
+
+
+
+        /*
+        =====================================================
+        COMPARISON CHART
+        =====================================================
+        */
+
+        const comparisonRows =
+            document.getElementById(
+                "comparisonRows"
+            );
+
+
+        const sortedModels =
+            Object.entries(models)
+                .sort(
+                    (a, b) =>
+                        b[1].f1 - a[1].f1
+                );
+
+
+        sortedModels.forEach(
+            ([name, model]) => {
+
+                const row =
+                    document.createElement(
+                        "div"
+                    );
+
+                row.className =
+                    "comparison-row";
+
+                row.innerHTML = `
+
+                    <div class="comparison-model">
+                        ${name}
+                    </div>
+
+                    <div class="comparison-track">
+
+                        <div
+                            class="comparison-fill"
+                            style="width:${model.f1}%"
+                        ></div>
+
+                    </div>
+
+                    <div class="comparison-value">
+                        ${model.f1.toFixed(2)}%
+                    </div>
+
+                `;
+
+                comparisonRows.appendChild(
+                    row
+                );
+
+            }
+        );
+
+
+
+        /*
+        =====================================================
+        INITIAL MODEL
+        =====================================================
+        */
+
+        renderModel(
+            "Decision Tree"
+        );
+
+    }
+
+);
+
+</script>
+
+</body>
+</html>

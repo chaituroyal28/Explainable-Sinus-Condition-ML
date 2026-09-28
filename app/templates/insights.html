@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Insights | SinusPredict AI</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+    <style>
+
+        .insights-page {
+            min-height: 100vh;
+            padding: 70px 24px 100px;
+        }
+
+        .insights-container {
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        .insights-header {
+            max-width: 850px;
+            margin-bottom: 45px;
+        }
+
+        .insights-header h1 {
+            font-size: clamp(42px, 6vw, 72px);
+            line-height: 1.02;
+            letter-spacing: -0.04em;
+            margin: 12px 0 20px;
+        }
+
+        .insights-header p {
+            color: var(--text-muted, #718096);
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        /* =====================================================
+           OVERVIEW
+        ===================================================== */
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 45px;
+        }
+
+        .overview-card {
+            background: var(--surface, #ffffff);
+            border: 1px solid var(--border, #dce5eb);
+            border-radius: 20px;
+            padding: 24px;
+        }
+
+        .overview-card span {
+            display: block;
+            color: var(--text-muted, #718096);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .overview-card strong {
+            font-size: 30px;
+        }
+
+        /* =====================================================
+           SECTION
+        ===================================================== */
+
+        .insight-section {
+            margin-top: 55px;
+        }
+
+        .section-title {
+            margin-bottom: 25px;
+        }
+
+        .section-title .eyebrow {
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: .1em;
+            color: #277f82;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            margin: 8px 0;
+        }
+
+        .section-title p {
+            color: var(--text-muted, #718096);
+            line-height: 1.65;
+        }
+
+        /* =====================================================
+           DATASET CARD
+        ===================================================== */
+
+        .dataset-card {
+            background: var(--surface, #ffffff);
+            border: 1px solid var(--border, #dce5eb);
+            border-radius: 25px;
+            padding: 30px;
+        }
+
+        .dataset-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .dataset-table td {
+            padding: 15px 10px;
+            border-bottom: 1px solid var(--border, #e6edf2);
+        }
+
+        .dataset-table td:first-child {
+            color: var(--text-muted, #718096);
+        }
+
+        .dataset-table td:last-child {
+            text-align: right;
+            font-weight: 750;
+        }
+
+        /* =====================================================
+           EDA EXPLORER
+        ===================================================== */
+
+        .eda-card {
+            background: var(--surface, #ffffff);
+            border: 1px solid var(--border, #dce5eb);
+            border-radius: 25px;
+            padding: 30px;
+        }
+
+        .eda-selector {
+            width: 100%;
+            padding: 15px 16px;
+            border-radius: 14px;
+            border: 1px solid var(--border, #dce5eb);
+            background: var(--surface-soft, #f8fafc);
+            color: var(--text, #102a43);
+            font: inherit;
+            margin-bottom: 30px;
+        }
+
+        .eda-title {
+            font-size: 22px;
+            margin-bottom: 22px;
+        }
+
+        .bar-row {
+            margin-bottom: 20px;
+        }
+
+        .bar-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .bar-track {
+            height: 13px;
+            background: #e8eef1;
+            border-radius: 999px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            width: 0;
+            border-radius: inherit;
+            background: #4aa8a8;
+            transition: width .7s ease;
+        }
+
+        /* =====================================================
+           NUMERICAL INSIGHTS
+        ===================================================== */
+
+        .numeric-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .numeric-card {
+            background: var(--surface, #ffffff);
+            border: 1px solid var(--border, #dce5eb);
+            border-radius: 22px;
+            padding: 25px;
+        }
+
+        .numeric-card h3 {
+            margin-top: 0;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .stat-box {
+            background: var(--surface-soft, #f8fafc);
+            border-radius: 14px;
+            padding: 14px;
+        }
+
+        .stat-box span {
+            display: block;
+            color: var(--text-muted, #718096);
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .stat-box strong {
+            font-size: 18px;
+        }
+
+        /* =====================================================
+           MODEL PERFORMANCE
+        ===================================================== */
+
+        .performance-card {
+            background: var(--surface, #ffffff);
+            border: 1px solid var(--border, #dce5eb);
+            border-radius: 25px;
+            padding: 30px;
+            overflow-x: auto;
+        }
+
+        .performance-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 750px;
+        }
+
+        .performance-table th,
+        .performance-table td {
+            padding: 16px 12px;
+            border-bottom: 1px solid var(--border, #e6edf2);
+            text-align: right;
+        }
+
+        .performance-table th:first-child,
+        .performance-table td:first-child {
+            text-align: left;
+        }
+
+        .performance-table th {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            color: var(--text-muted, #718096);
+        }
+
+        .live-model-row {
+            background: #eefafa;
+        }
+
+        /* =====================================================
+           EXPLAINABILITY
+        ===================================================== */
+
+        .importance-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .importance-card {
+            background: var(--surface, #ffffff);
+            border: 1px solid var(--border, #dce5eb);
+            border-radius: 22px;
+            padding: 25px;
+        }
+
+        .importance-card h3 {
+            margin-top: 0;
+        }
+
+        .importance-item {
+            margin-bottom: 17px;
+        }
+
+        .importance-label {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            font-weight: 700;
+            margin-bottom: 7px;
+        }
+
+        .importance-track {
+            height: 10px;
+            background: #e8eef1;
+            border-radius: 999px;
+            overflow: hidden;
+        }
+
+        .importance-fill {
+            height: 100%;
+            background: #4aa8a8;
+            border-radius: inherit;
+        }
+
+        .info-note {
+            margin-top: 25px;
+            padding: 22px;
+            border-radius: 18px;
+            background: #fff8df;
+            border: 1px solid #ead9a0;
+            color: #705719;
+            line-height: 1.65;
+        }
+
+        @media (max-width: 900px) {
+
+            .overview-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .numeric-grid,
+            .importance-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .insights-page {
+                padding: 45px 16px 70px;
+            }
+
+            .overview-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .dataset-card,
+            .eda-card,
+            .performance-card,
+            .importance-card {
+                padding: 20px;
+            }
+
+            .stat-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a
+            href="{{ url_for('home') }}"
+            class="brand"
+        >
+
+            <div class="brand-logo">
+                S
+            </div>
+
+            <div>
+
+                <div class="brand-title">
+                    SinusPredict AI
+                </div>
+
+                <div class="brand-subtitle">
+                    Sinus Condition Analyzer
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="{{ url_for('home') }}">
+                Home
+            </a>
+
+            <a href="{{ url_for('analyze') }}">
+                Analyze
+            </a>
+
+            <a
+                href="{{ url_for('insights') }}"
+                class="active"
+            >
+                Insights
+            </a>
+
+            <a href="{{ url_for('models') }}">
+                Model Lab
+            </a>
+
+            <a href="{{ url_for('research') }}">
+                Research
+            </a>
+
+            <a href="{{ url_for('about') }}">
+                About
+            </a>
+
+        </nav>
+
+
+        <button
+            id="themeToggle"
+            class="theme-toggle"
+        >
+            ◐
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<main class="insights-page">
+
+<div class="insights-container">
+
+
+    <!-- =====================================================
+         HEADER
+    ===================================================== -->
+
+    <section class="insights-header">
+
+        <div class="section-eyebrow">
+            DATASET & MODEL INSIGHTS
+        </div>
+
+        <h1>
+            Explore the
+            <span class="accent-text">
+                Sinus Survey
+            </span>
+        </h1>
+
+        <p>
+            Explore the cleaned survey dataset, descriptive
+            statistics, feature distributions, model evaluation
+            results and explainability findings used in the
+            SinusPredict AI project.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         OVERVIEW
+    ===================================================== -->
+
+    <section class="overview-grid">
+
+        <div class="overview-card">
+            <span>Original Records</span>
+            <strong>1,006</strong>
+        </div>
+
+        <div class="overview-card">
+            <span>Clean Records</span>
+            <strong>1,000</strong>
+        </div>
+
+        <div class="overview-card">
+            <span>Input Features</span>
+            <strong>10</strong>
+        </div>
+
+        <div class="overview-card">
+            <span>Dataset Columns</span>
+            <strong>11</strong>
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DATASET OVERVIEW
+    ===================================================== -->
+
+    <section class="insight-section">
+
+        <div class="section-title">
+
+            <div class="eyebrow">
+                A. DATASET OVERVIEW
+            </div>
+
+            <h2>
+                Dataset Summary
+            </h2>
+
+            <p>
+                The original survey contained 1,006 records.
+                Six duplicate rows were removed, producing the
+                cleaned dataset used for modeling.
+            </p>
+
+        </div>
+
+
+        <div class="dataset-card">
+
+            <table class="dataset-table">
+
+                <tr>
+                    <td>Original dataset size</td>
+                    <td>1,006 × 11</td>
+                </tr>
+
+                <tr>
+                    <td>Cleaned dataset size</td>
+                    <td>1,000 × 11</td>
+                </tr>
+
+                <tr>
+                    <td>Duplicate rows removed</td>
+                    <td>6</td>
+                </tr>
+
+                <tr>
+                    <td>Missing values after cleaning</td>
+                    <td>0</td>
+                </tr>
+
+                <tr>
+                    <td>Self-reported diagnosis: Yes</td>
+                    <td>502 (50.2%)</td>
+                </tr>
+
+                <tr>
+                    <td>Self-reported diagnosis: No</td>
+                    <td>498 (49.8%)</td>
+                </tr>
+
+                <tr>
+                    <td>Age range</td>
+                    <td>18–65 years</td>
+                </tr>
+
+                <tr>
+                    <td>Training set</td>
+                    <td>800 records</td>
+                </tr>
+
+                <tr>
+                    <td>Test set</td>
+                    <td>200 records</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EDA EXPLORER
+    ===================================================== -->
+
+    <section class="insight-section">
+
+        <div class="section-title">
+
+            <div class="eyebrow">
+                B. EDA EXPLORER
+            </div>
+
+            <h2>
+                Feature Distributions
+            </h2>
+
+            <p>
+                Select a feature to explore its distribution in
+                the cleaned survey dataset.
+            </p>
+
+        </div>
+
+
+        <div class="eda-card">
+
+            <select
+                id="featureSelector"
+                class="eda-selector"
+            ></select>
+
+
+            <h3
+                id="edaTitle"
+                class="eda-title"
+            ></h3>
+
+
+            <div id="edaBars"></div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         NUMERICAL FEATURES
+    ===================================================== -->
+
+    <section class="insight-section">
+
+        <div class="section-title">
+
+            <div class="eyebrow">
+                NUMERICAL ANALYSIS
+            </div>
+
+            <h2>
+                Numerical Feature Summary
+            </h2>
+
+        </div>
+
+
+        <div class="numeric-grid">
+
+
+            <div class="numeric-card">
+
+                <h3>
+                    Age
+                </h3>
+
+                <div class="stat-grid">
+
+                    <div class="stat-box">
+                        <span>Mean</span>
+                        <strong>41.53</strong>
+                    </div>
+
+                    <div class="stat-box">
+                        <span>Median</span>
+                        <strong>41</strong>
+                    </div>
+
+                    <div class="stat-box">
+                        <span>Std</span>
+                        <strong>14.04</strong>
+                    </div>
+
+                    <div class="stat-box">
+                        <span>Minimum</span>
+                        <strong>18</strong>
+                    </div>
+
+                    <div class="stat-box">
+                        <span>Q1</span>
+                        <strong>30</strong>
+                    </div>
+
+                    <div class="stat-box">
+                        <span>Maximum</span>
+                        <strong>65</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="numeric-card">
+
+                <h3>
+                    Sinus Severity (1–5)
+                </h3>
+
+                <div class="stat-grid">
+
+                    <div class="stat-box">
+                        <span>Mean</span>
+                        <strong>2.95</strong>
+                    </div>
+
+                    <div class="stat-box">
+                        <span>Median</span>
+                        <strong>3</strong>
+                    </div>
+
+                    <div class="stat-box">
+                        <span>Std</span>
+                        <strong>1.44</strong>
+                    </div>
+
+                    <div class="stat-box">
+                        <span>Minimum</span>
+                        <strong>1</strong>
+                    </div>
+
+                    <div class="stat-box">
+                        <span>Q1</span>
+                        <strong>2</strong>
+                    </div>
+
+                    <div class="stat-box">
+                        <span>Maximum</span>
+                        <strong>5</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MODEL PERFORMANCE
+    ===================================================== -->
+
+    <section class="insight-section">
+
+        <div class="section-title">
+
+            <div class="eyebrow">
+                C. MODEL PERFORMANCE
+            </div>
+
+            <h2>
+                Six-Model Evaluation
+            </h2>
+
+            <p>
+                Results below are from the held-out test set used
+                in the project evaluation.
+            </p>
+
+        </div>
+
+
+        <div class="performance-card">
+
+            <table class="performance-table">
+
+                <thead>
+
+                    <tr>
+                        <th>Model</th>
+                        <th>Accuracy</th>
+                        <th>Precision</th>
+                        <th>Recall</th>
+                        <th>F1</th>
+                        <th>ROC-AUC</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Logistic Regression</td>
+                        <td>51.00%</td>
+                        <td>50.93%</td>
+                        <td>55.00%</td>
+                        <td>52.88%</td>
+                        <td>49.63%</td>
+                    </tr>
+
+                    <tr class="live-model-row">
+                        <td>
+                            <strong>Decision Tree</strong>
+                        </td>
+                        <td>48.50%</td>
+                        <td>48.92%</td>
+                        <td>68.00%</td>
+                        <td><strong>56.90%</strong></td>
+                        <td>53.68%</td>
+                    </tr>
+
+                    <tr>
+                        <td>Random Forest</td>
+                        <td>46.00%</td>
+                        <td>46.36%</td>
+                        <td>51.00%</td>
+                        <td>48.57%</td>
+                        <td>46.12%</td>
+                    </tr>
+
+                    <tr>
+                        <td>SVM</td>
+                        <td>51.50%</td>
+                        <td>51.58%</td>
+                        <td>49.00%</td>
+                        <td>50.26%</td>
+                        <td>50.94%</td>
+                    </tr>
+
+                    <tr>
+                        <td>XGBoost</td>
+                        <td>46.50%</td>
+                        <td>46.79%</td>
+                        <td>51.00%</td>
+                        <td>48.80%</td>
+                        <td>47.97%</td>
+                    </tr>
+
+                    <tr>
+                        <td>CatBoost</td>
+                        <td>44.50%</td>
+                        <td>44.76%</td>
+                        <td>47.00%</td>
+                        <td>45.85%</td>
+                        <td>47.04%</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <div class="info-note">
+
+            <strong>Interpretation:</strong>
+
+            The tuned Decision Tree achieved the highest
+            held-out test-set F1 score among the six evaluated
+            models at 56.90%. These results describe this survey
+            dataset and do not represent clinical diagnostic
+            accuracy.
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         STATISTICAL ANALYSIS
+    ===================================================== -->
+
+    <section class="insight-section">
+
+        <div class="section-title">
+
+            <div class="eyebrow">
+                STATISTICAL ANALYSIS
+            </div>
+
+            <h2>
+                Categorical Feature Associations
+            </h2>
+
+            <p>
+                Chi-square tests were used to examine associations
+                between categorical survey variables and the
+                self-reported diagnosis target.
+            </p>
+
+        </div>
+
+
+        <div class="performance-card">
+
+            <table class="performance-table">
+
+                <thead>
+
+                    <tr>
+                        <th>Feature</th>
+                        <th>Chi-square</th>
+                        <th>p-value</th>
+                        <th>Result at α = 0.05</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Gender</td>
+                        <td>0.4788</td>
+                        <td>0.4890</td>
+                        <td>Not significant</td>
+                    </tr>
+
+                    <tr>
+                        <td>Regular Sinus Issues</td>
+                        <td>0.0000</td>
+                        <td>0.9972</td>
+                        <td>Not significant</td>
+                    </tr>
+
+                    <tr>
+                        <td>Most Problematic Season</td>
+                        <td>0.6874</td>
+                        <td>0.4071</td>
+                        <td>Not significant</td>
+                    </tr>
+
+                    <tr>
+                        <td>Triggered by External Factors</td>
+                        <td>3.4003</td>
+                        <td>0.0652</td>
+                        <td>Not significant</td>
+                    </tr>
+
+                    <tr>
+                        <td>Known Allergy</td>
+                        <td>0.3964</td>
+                        <td>0.5290</td>
+                        <td>Not significant</td>
+                    </tr>
+
+                    <tr>
+                        <td>Doctor Consulted</td>
+                        <td>0.0968</td>
+                        <td>0.7556</td>
+                        <td>Not significant</td>
+                    </tr>
+
+                    <tr>
+                        <td>Headaches / Facial Pain</td>
+                        <td>0.6678</td>
+                        <td>0.4138</td>
+                        <td>Not significant</td>
+                    </tr>
+
+                    <tr>
+                        <td>Medication Frequency</td>
+                        <td>0.0612</td>
+                        <td>0.8046</td>
+                        <td>Not significant</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <div class="info-note">
+
+            <strong>Statistical interpretation:</strong>
+
+            No statistically significant association was detected
+            at the 5% significance level for the categorical
+            variables tested. This does not prove that the
+            variables have no relationship with the target.
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EXPLAINABILITY
+    ===================================================== -->
+
+    <section class="insight-section">
+
+        <div class="section-title">
+
+            <div class="eyebrow">
+                E. EXPLAINABILITY
+            </div>
+
+            <h2>
+                What Influenced the Model?
+            </h2>
+
+            <p>
+                Explainability methods provide model-level and
+                prediction-level information about how features
+                contributed to the Decision Tree predictions.
+            </p>
+
+        </div>
+
+
+        <div class="importance-grid">
+
+
+            <div class="importance-card">
+
+                <h3>
+                    Permutation Importance
+                </h3>
+
+                <div id="permutationImportance"></div>
+
+            </div>
+
+
+            <div class="importance-card">
+
+                <h3>
+                    SHAP Overview
+                </h3>
+
+                <div id="shapImportance"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="info-note">
+
+            <strong>Important:</strong>
+
+            Feature importance and SHAP values describe model
+            behavior. They are not evidence of causation and
+            should not be interpreted as medical risk factors.
+
+        </div>
+
+    </section>
+
+
+</div>
+
+</main>
+
+
+
+<footer class="footer">
+
+    <div class="footer-inner">
+
+        <div>
+
+            <strong>
+                SinusPredict AI
+            </strong>
+
+            <p>
+                Survey-Based Sinus Condition Analyzer
+            </p>
+
+        </div>
+
+        <div>
+            Academic Machine Learning Project
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<script
+    src="{{ url_for('static', filename='js/app.js') }}"
+></script>
+
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+
+        /* =================================================
+           EDA DATA
+        ================================================= */
+
+        const edaData = {
+
+            "Diagnosed with Sinus Condition": [
+                ["Yes", 502],
+                ["No", 498]
+            ],
+
+            "Gender": [
+                ["Female", 510],
+                ["Male", 496]
+            ],
+
+            "Regular Sinus Issues": [
+                ["Yes", 517],
+                ["No", 489]
+            ],
+
+            "Most Problematic Season": [
+                ["Monsoon / Rainy", 534],
+                ["Winter", 472]
+            ],
+
+            "Triggered by External Factors": [
+                ["No", 542],
+                ["Yes", 464]
+            ],
+
+            "Known Allergy": [
+                ["No", 507],
+                ["Yes", 499]
+            ],
+
+            "Doctor Consulted (Past Year)": [
+                ["Yes", 520],
+                ["No", 486]
+            ],
+
+            "Sinus Severity (1-5)": [
+                ["1", 226],
+                ["2", 188],
+                ["3", 205],
+                ["4", 184],
+                ["5", 203]
+            ],
+
+            "Headaches or Facial Pain": [
+                ["No", 514],
+                ["Yes", 492]
+            ],
+
+            "Medication Frequency": [
+                ["Occasionally", 523],
+                ["Regularly", 483]
+            ]
+
+        };
+
+
+        const selector =
+            document.getElementById(
+                "featureSelector"
+            );
+
+        const title =
+            document.getElementById(
+                "edaTitle"
+            );
+
+        const bars =
+            document.getElementById(
+                "edaBars"
+            );
+
+
+        Object.keys(edaData).forEach(
+            feature => {
+
+                const option =
+                    document.createElement(
+                        "option"
+                    );
+
+                option.value = feature;
+                option.textContent = feature;
+
+                selector.appendChild(
+                    option
+                );
+
+            }
+        );
+
+
+        function renderEDA(feature) {
+
+            const values =
+                edaData[feature];
+
+            title.textContent =
+                feature;
+
+            bars.innerHTML = "";
+
+
+            const total =
+                values.reduce(
+                    (sum, item) =>
+                        sum + item[1],
+                    0
+                );
+
+
+            values.forEach(
+                ([label, count]) => {
+
+                    const percentage =
+                        count / total * 100;
+
+
+                    const row =
+                        document.createElement(
+                            "div"
+                        );
+
+                    row.className =
+                        "bar-row";
+
+
+                    row.innerHTML = `
+
+                        <div class="bar-header">
+
+                            <span>
+                                ${label}
+                            </span>
+
+                            <span>
+                                ${count}
+                                (${percentage.toFixed(2)}%)
+                            </span>
+
+                        </div>
+
+                        <div class="bar-track">
+
+                            <div
+                                class="bar-fill"
+                                style="width:${percentage}%"
+                            ></div>
+
+                        </div>
+
+                    `;
+
+
+                    bars.appendChild(row);
+
+                }
+            );
+
+        }
+
+
+        selector.addEventListener(
+            "change",
+            () => {
+
+                renderEDA(
+                    selector.value
+                );
+
+            }
+        );
+
+
+        renderEDA(
+            selector.value
+        );
+
+
+
+        /* =================================================
+           PERMUTATION IMPORTANCE
+        ================================================= */
+
+        const permutation = [
+
+            ["Age", 0.036546],
+            ["Medication Frequency", 0.009621],
+            ["Gender", 0],
+            ["Most Problematic Season", 0],
+            ["Doctor Consulted", 0],
+            ["Triggered by External Factors", -0.000963],
+            ["Known Allergy", -0.001536],
+            ["Headaches or Facial Pain", -0.002843],
+            ["Sinus Severity", -0.003288],
+            ["Regular Sinus Issues", -0.015649]
+
+        ];
+
+
+        const permutationContainer =
+            document.getElementById(
+                "permutationImportance"
+            );
+
+
+        const maxPermutation =
+            Math.max(
+                ...permutation.map(
+                    item =>
+                        Math.abs(item[1])
+                )
+            );
+
+
+        permutation.forEach(
+            ([feature, value]) => {
+
+                const row =
+                    document.createElement(
+                        "div"
+                    );
+
+                row.className =
+                    "importance-item";
+
+
+                const width =
+                    maxPermutation > 0
+                        ? Math.abs(value) /
+                          maxPermutation *
+                          100
+                        : 0;
+
+
+                row.innerHTML = `
+
+                    <div class="importance-label">
+
+                        <span>
+                            ${feature}
+                        </span>
+
+                        <span>
+                            ${value.toFixed(4)}
+                        </span>
+
+                    </div>
+
+                    <div class="importance-track">
+
+                        <div
+                            class="importance-fill"
+                            style="width:${width}%"
+                        ></div>
+
+                    </div>
+
+                `;
+
+
+                permutationContainer.appendChild(
+                    row
+                );
+
+            }
+        );
+
+
+
+        /* =================================================
+           SHAP IMPORTANCE
+        ================================================= */
+
+        const shapValues = [
+
+            ["Age", 0.051637],
+            ["Regular Sinus Issues = Yes", 0.026117],
+            ["Headaches or Facial Pain = Yes", 0.019355],
+            ["Sinus Severity", 0.018509],
+            ["Headaches or Facial Pain = No", 0.013388],
+            ["Triggered by External Factors = No", 0.012760],
+            ["Known Allergy = Yes", 0.011923],
+            ["Medication Frequency = Occasionally", 0.005377],
+            ["Medication Frequency = Regularly", 0.003018],
+            ["Doctor Consulted = No", 0.002690]
+
+        ];
+
+
+        const shapContainer =
+            document.getElementById(
+                "shapImportance"
+            );
+
+
+        const maxShap =
+            Math.max(
+                ...shapValues.map(
+                    item =>
+                        item[1]
+                )
+            );
+
+
+        shapValues.forEach(
+            ([feature, value]) => {
+
+                const row =
+                    document.createElement(
+                        "div"
+                    );
+
+                row.className =
+                    "importance-item";
+
+
+                const width =
+                    value / maxShap * 100;
+
+
+                row.innerHTML = `
+
+                    <div class="importance-label">
+
+                        <span>
+                            ${feature}
+                        </span>
+
+                        <span>
+                            ${value.toFixed(4)}
+                        </span>
+
+                    </div>
+
+                    <div class="importance-track">
+
+                        <div
+                            class="importance-fill"
+                            style="width:${width}%"
+                        ></div>
+
+                    </div>
+
+                `;
+
+
+                shapContainer.appendChild(
+                    row
+                );
+
+            }
+        );
+
+    }
+
+);
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,2483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Analyze | SinusPredict AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+        /* =========================================================
+           ANALYZE PAGE
+        ========================================================= */
+
+        .analyze-page {
+            min-height: calc(100vh - 90px);
+            padding: 45px 20px 70px;
+        }
+
+        .analyze-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        .analyze-header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .analyze-header .eyebrow {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .analyze-header h1 {
+            margin: 0 0 12px;
+        }
+
+        .analyze-header p {
+            max-width: 720px;
+            margin: 0 auto;
+            color: #718398;
+            line-height: 1.7;
+        }
+
+        /* =========================================================
+           PROGRESS
+        ========================================================= */
+
+        .wizard-progress {
+            background: #ffffff;
+            border: 1px solid #dce7ec;
+            border-radius: 22px;
+            padding: 24px 28px;
+            margin-bottom: 25px;
+            box-shadow: 0 14px 35px rgba(21, 48, 74, 0.06);
+        }
+
+        .progress-line {
+            height: 5px;
+            background: #e7eef1;
+            border-radius: 20px;
+            margin: 0 7% -18px;
+            position: relative;
+            top: 22px;
+            z-index: 0;
+        }
+
+        .progress-line-fill {
+            height: 100%;
+            width: 25%;
+            background: linear-gradient(90deg, #3996a1, #56b7bd);
+            border-radius: 20px;
+            transition: width 0.35s ease;
+        }
+
+        .progress-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            position: relative;
+            z-index: 1;
+        }
+
+        .progress-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: #7b8da0;
+            font-size: 13px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .progress-number {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #edf3f5;
+            border: 3px solid #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .progress-step.active {
+            color: #247e89;
+        }
+
+        .progress-step.active .progress-number {
+            background: #3d9ca5;
+            color: white;
+            transform: scale(1.08);
+        }
+
+        .progress-step.completed {
+            color: #247e89;
+        }
+
+        .progress-step.completed .progress-number {
+            background: #d9f1f2;
+            color: #247e89;
+        }
+
+        /* =========================================================
+           WIZARD CARD
+        ========================================================= */
+
+        .wizard-card {
+            background: #ffffff;
+            border: 1px solid #dce7ec;
+            border-radius: 26px;
+            padding: 38px;
+            box-shadow: 0 18px 50px rgba(21, 48, 74, 0.07);
+        }
+
+        .step-panel {
+            display: none;
+            animation: analyzeFade 0.3s ease;
+        }
+
+        .step-panel.active {
+            display: block;
+        }
+
+        @keyframes analyzeFade {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* =========================================================
+           STEP HEADER
+        ========================================================= */
+
+        .step-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 8px;
+        }
+
+        .step-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: #e7f5f6;
+            color: #27838d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            font-weight: 800;
+        }
+
+        .step-title h2 {
+            margin: 0;
+        }
+
+        .step-description {
+            color: #718398;
+            margin: 0 0 30px;
+            line-height: 1.6;
+        }
+
+        /* =========================================================
+           FORM
+        ========================================================= */
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-label {
+            font-size: 14px;
+            font-weight: 700;
+            color: #1b334e;
+            line-height: 1.5;
+        }
+
+        .required {
+            color: #d25b5b;
+        }
+
+        .form-help {
+            font-size: 12px;
+            color: #8191a3;
+            line-height: 1.5;
+        }
+
+        .form-control {
+            width: 100%;
+            min-height: 52px;
+            border: 1px solid #d5e1e6;
+            border-radius: 13px;
+            padding: 0 15px;
+            background: #fbfdfe;
+            color: #1c344e;
+            font-size: 15px;
+            font-family: inherit;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        .form-control:focus {
+            border-color: #3c9da6;
+            box-shadow: 0 0 0 4px rgba(60, 157, 166, 0.10);
+        }
+
+        /* =========================================================
+           OPTIONS
+        ========================================================= */
+
+        .option-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .option-card {
+            position: relative;
+        }
+
+        .option-card input {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .option-label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 56px;
+            padding: 12px 16px;
+            border: 1px solid #d5e1e6;
+            border-radius: 14px;
+            background: #fbfdfe;
+            cursor: pointer;
+            font-weight: 600;
+            color: #304760;
+            transition: all 0.2s ease;
+            box-sizing: border-box;
+        }
+
+        .option-label:hover {
+            border-color: #63aeb5;
+            transform: translateY(-1px);
+        }
+
+        .option-card input:checked + .option-label {
+            border-color: #3c9da6;
+            background: #eaf7f8;
+            color: #227b84;
+            box-shadow: 0 0 0 2px rgba(60, 157, 166, 0.10);
+        }
+
+        /* =========================================================
+           SYMPTOM CHECKLIST
+        ========================================================= */
+
+        .symptom-checklist {
+            margin-top: 5px;
+            padding: 20px;
+            border: 1px solid #dce9ec;
+            border-radius: 16px;
+            background: #f8fcfc;
+        }
+
+        .symptom-checklist h3 {
+            margin: 0 0 15px;
+            font-size: 15px;
+            color: #24445f;
+        }
+
+        .symptom-checklist label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            color: #50657a;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .symptom-checklist label:hover {
+            color: #247e89;
+        }
+
+        .symptom-checklist input[type="checkbox"] {
+            width: 17px;
+            height: 17px;
+            margin: 0;
+            accent-color: #3c9da6;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .symptom-checklist-note {
+            margin: 16px 0 0;
+            padding-top: 14px;
+            border-top: 1px solid #e1ecee;
+            color: #788a9a;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        /* =========================================================
+           SEVERITY
+        ========================================================= */
+
+        .severity-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .severity-grid .option-label {
+            flex-direction: column;
+            min-height: 78px;
+            text-align: center;
+            padding: 8px;
+        }
+
+        .severity-number {
+            font-size: 21px;
+            font-weight: 800;
+        }
+
+        .severity-text {
+            font-size: 11px;
+            color: #7b8da0;
+        }
+
+        /* =========================================================
+           DEMO MODE
+        ========================================================= */
+
+        .demo-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding: 15px 18px;
+            border-radius: 15px;
+            background: #edf8f8;
+            border: 1px solid #d3eeee;
+        }
+
+        .demo-text strong {
+            display: block;
+            color: #246e76;
+            margin-bottom: 3px;
+        }
+
+        .demo-text span {
+            color: #708694;
+            font-size: 12px;
+        }
+
+        .demo-btn {
+            white-space: nowrap;
+            border: 1px solid #abd7da;
+            background: white;
+            color: #287d85;
+            border-radius: 10px;
+            padding: 9px 14px;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        .demo-btn:hover {
+            background: #f5ffff;
+        }
+
+        /* =========================================================
+           REVIEW
+        ========================================================= */
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .review-item {
+            padding: 16px 18px;
+            background: #f5f9fa;
+            border: 1px solid #e2ecef;
+            border-radius: 13px;
+        }
+
+        .review-label {
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #8091a2;
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+
+        .review-value {
+            color: #1b334e;
+            font-weight: 700;
+        }
+
+        /* =========================================================
+           DISCLAIMER
+        ========================================================= */
+
+        .analyze-disclaimer {
+            margin-top: 22px;
+            padding: 16px 18px;
+            border-radius: 14px;
+            background: #fff9ed;
+            border: 1px solid #f1e2bd;
+            color: #7a6740;
+            font-size: 12px;
+            line-height: 1.65;
+        }
+
+        /* =========================================================
+           BUTTONS
+        ========================================================= */
+
+        .wizard-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 1px solid #e5edef;
+        }
+
+        .action-right {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-secondary {
+            background: #f1f6f7;
+            color: #304760;
+            border: 1px solid #dce7eb;
+        }
+
+        .btn-secondary:hover {
+            background: #e8f1f3;
+        }
+
+        .btn:disabled {
+            opacity: 0.65;
+            cursor: wait;
+        }
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 800px) {
+
+            .analyze-page {
+                padding: 28px 15px 50px;
+            }
+
+            .wizard-card {
+                padding: 24px;
+            }
+
+            .form-grid,
+            .review-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .option-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .progress-step span:last-child {
+                display: none;
+            }
+
+            .progress-line {
+                margin-left: 9%;
+                margin-right: 9%;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .wizard-card {
+                padding: 18px;
+                border-radius: 20px;
+            }
+
+            .wizard-progress {
+                padding: 18px 12px;
+            }
+
+            .severity-grid {
+                gap: 5px;
+            }
+
+            .severity-grid .option-label {
+                padding: 6px 3px;
+            }
+
+            .severity-text {
+                font-size: 9px;
+            }
+
+            .wizard-actions {
+                flex-direction: column;
+                gap: 15px;
+                align-items: stretch;
+            }
+
+            .action-right {
+                width: 100%;
+            }
+
+            .action-right .btn {
+                flex: 1;
+            }
+
+            .demo-bar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="{{ url_for('home') }}" class="brand">
+
+            <div class="brand-icon">
+                S
+            </div>
+
+            <div>
+                <div class="brand-name">
+                    SinusPredict AI
+                </div>
+
+                <div class="brand-subtitle">
+                    Sinus Condition Analyzer
+                </div>
+            </div>
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="{{ url_for('home') }}">
+                Home
+            </a>
+
+            <a href="{{ url_for('analyze') }}" class="active">
+                Analyze
+            </a>
+
+            <a href="{{ url_for('insights') }}">
+                Insights
+            </a>
+
+            <a href="{{ url_for('models') }}">
+                Model Lab
+            </a>
+
+            <a href="{{ url_for('research') }}">
+                Research
+            </a>
+
+            <a href="{{ url_for('about') }}">
+                About
+            </a>
+
+        </nav>
+
+
+        <button
+            id="themeToggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle theme">
+
+            ◐
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main class="analyze-page">
+
+    <div class="analyze-container">
+
+
+        <!-- =====================================================
+             PAGE HEADER
+        ====================================================== -->
+
+        <section class="analyze-header">
+
+            <span class="eyebrow">
+                AI-ASSISTED SURVEY ANALYSIS
+            </span>
+
+            <h1>
+                Analyze Your
+                <span class="accent-text">
+                    Sinus Survey
+                </span>
+            </h1>
+
+            <p>
+                Enter your survey information step by step.
+                SinusPredict AI will process your responses using
+                the project's trained machine-learning model.
+            </p>
+
+        </section>
+
+
+        <!-- =====================================================
+             PROGRESS
+        ====================================================== -->
+
+        <section class="wizard-progress">
+
+            <div class="progress-line">
+
+                <div
+                    id="progressFill"
+                    class="progress-line-fill">
+                </div>
+
+            </div>
+
+
+            <div class="progress-steps">
+
+                <div
+                    class="progress-step active"
+                    data-step="1">
+
+                    <div class="progress-number">
+                        1
+                    </div>
+
+                    <span>
+                        Personal Profile
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="progress-step"
+                    data-step="2">
+
+                    <div class="progress-number">
+                        2
+                    </div>
+
+                    <span>
+                        Sinus Symptoms & Environment
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="progress-step"
+                    data-step="3">
+
+                    <div class="progress-number">
+                        3
+                    </div>
+
+                    <span>
+                        Symptoms & Treatment
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="progress-step"
+                    data-step="4">
+
+                    <div class="progress-number">
+                        4
+                    </div>
+
+                    <span>
+                        Review & Predict
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             WIZARD CARD
+        ====================================================== -->
+
+        <section class="wizard-card">
+
+
+            <!-- DEMO MODE -->
+
+            <div class="demo-bar">
+
+                <div class="demo-text">
+
+                    <strong>
+                        Demo Mode
+                    </strong>
+
+                    <span>
+                        Use realistic sample survey values
+                        to explore the interface.
+                    </span>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="demo-btn"
+                    id="demoModeBtn">
+
+                    Fill Sample
+
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 FORM
+            ================================================== -->
+
+            <form id="predictionForm">
+
+
+                <!-- =================================================
+                     STEP 1
+                ================================================== -->
+
+                <div
+                    class="step-panel active"
+                    data-panel="1">
+
+                    <div class="step-title">
+
+                        <div class="step-icon">
+                            01
+                        </div>
+
+                        <h2>
+                            Personal Profile
+                        </h2>
+
+                    </div>
+
+
+                    <p class="step-description">
+                        Start with basic demographic information.
+                    </p>
+
+
+                    <div class="form-grid">
+
+
+                        <!-- AGE -->
+
+                        <div class="form-group">
+
+                            <label
+                                class="form-label"
+                                for="age">
+
+                                Age
+                                <span class="required">*</span>
+
+                            </label>
+
+
+                            <input
+                                id="age"
+                                name="Age"
+                                type="number"
+                                min="18"
+                                max="65"
+                                class="form-control"
+                                placeholder="Enter age"
+                                required>
+
+
+                            <span class="form-help">
+                                Accepted range: 18–65 years.
+                            </span>
+
+                        </div>
+
+
+                        <!-- GENDER -->
+
+                        <div class="form-group">
+
+                            <div class="form-label">
+
+                                Gender
+                                <span class="required">*</span>
+
+                            </div>
+
+
+                            <div class="option-grid">
+
+
+                                <div class="option-card">
+
+                                    <input
+                                        type="radio"
+                                        id="genderFemale"
+                                        name="Gender"
+                                        value="Female"
+                                        required>
+
+                                    <label
+                                        class="option-label"
+                                        for="genderFemale">
+
+                                        Female
+
+                                    </label>
+
+                                </div>
+
+
+                                <div class="option-card">
+
+                                    <input
+                                        type="radio"
+                                        id="genderMale"
+                                        name="Gender"
+                                        value="Male">
+
+                                    <label
+                                        class="option-label"
+                                        for="genderMale">
+
+                                        Male
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     STEP 2
+                ================================================== -->
+
+                <div
+                    class="step-panel"
+                    data-panel="2">
+
+                    <div class="step-title">
+
+                        <div class="step-icon">
+                            02
+                        </div>
+
+                        <h2>
+                            Sinus Symptoms & Environment
+                        </h2>
+
+                    </div>
+
+
+                    <p class="step-description">
+                        Tell us about recurring sinus-related symptoms
+                        and environmental factors.
+                    </p>
+
+
+                    <div class="form-grid">
+
+
+                        <!-- REGULAR SINUS ISSUES -->
+
+                        <div class="form-group">
+
+                            <div class="form-label">
+
+                                Do you regularly experience
+                                sinus-related symptoms?
+
+                                <span class="required">*</span>
+
+                            </div>
+
+
+                            <div class="option-grid">
+
+                                <div class="option-card">
+
+                                    <input
+                                        type="radio"
+                                        id="regularNo"
+                                        name="Regular Sinus Issues"
+                                        value="No"
+                                        required>
+
+                                    <label
+                                        class="option-label"
+                                        for="regularNo">
+
+                                        No
+
+                                    </label>
+
+                                </div>
+
+
+                                <div class="option-card">
+
+                                    <input
+                                        type="radio"
+                                        id="regularYes"
+                                        name="Regular Sinus Issues"
+                                        value="Yes">
+
+                                    <label
+                                        class="option-label"
+                                        for="regularYes">
+
+                                        Yes
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+
+                            <span class="form-help">
+                                Consider recurring nasal congestion,
+                                facial pressure, headache, or related discomfort.
+                            </span>
+
+                        </div>
+
+
+                        <!-- SEASON -->
+
+                        <div class="form-group">
+
+                            <label
+                                class="form-label"
+                                for="season">
+
+                                Most Problematic Season
+                                <span class="required">*</span>
+
+                            </label>
+
+
+                            <select
+                                id="season"
+                                name="Most Problematic Season"
+                                class="form-control"
+                                required>
+
+                                <option value="">
+                                    Select season
+                                </option>
+
+                                <option value="Monsoon / Rainy">
+                                    Monsoon / Rainy
+                                </option>
+
+                                <option value="Winter">
+                                    Winter
+                                </option>
+
+                            </select>
+
+
+                            <span class="form-help">
+                                Select the season in which symptoms
+                                are usually more noticeable.
+                            </span>
+
+                        </div>
+
+
+                        <!-- EXTERNAL FACTORS -->
+
+                        <div class="form-group">
+
+                            <div class="form-label">
+
+                                Triggered by External Factors
+
+                                <span class="required">*</span>
+
+                            </div>
+
+
+                            <div class="option-grid">
+
+                                <div class="option-card">
+
+                                    <input
+                                        type="radio"
+                                        id="externalNo"
+                                        name="Triggered by External Factors"
+                                        value="No"
+                                        required>
+
+                                    <label
+                                        class="option-label"
+                                        for="externalNo">
+
+                                        No
+
+                                    </label>
+
+                                </div>
+
+
+                                <div class="option-card">
+
+                                    <input
+                                        type="radio"
+                                        id="externalYes"
+                                        name="Triggered by External Factors"
+                                        value="Yes">
+
+                                    <label
+                                        class="option-label"
+                                        for="externalYes">
+
+                                        Yes
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+
+                            <span class="form-help">
+                                Examples can include dust, pollution,
+                                weather changes, or strong smells.
+                            </span>
+
+                        </div>
+
+
+                        <!-- ALLERGY -->
+
+                        <div class="form-group">
+
+                            <div class="form-label">
+
+                                Known Allergy
+
+                                <span class="required">*</span>
+
+                            </div>
+
+
+                            <div class="option-grid">
+
+                                <div class="option-card">
+
+                                    <input
+                                        type="radio"
+                                        id="allergyNo"
+                                        name="Known Allergy"
+                                        value="No"
+                                        required>
+
+                                    <label
+                                        class="option-label"
+                                        for="allergyNo">
+
+                                        No
+
+                                    </label>
+
+                                </div>
+
+
+                                <div class="option-card">
+
+                                    <input
+                                        type="radio"
+                                        id="allergyYes"
+                                        name="Known Allergy"
+                                        value="Yes">
+
+                                    <label
+                                        class="option-label"
+                                        for="allergyYes">
+
+                                        Yes
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+
+                            <span class="form-help">
+                                Select Yes if you have a known allergy.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="analyze-disclaimer">
+
+                        <strong>
+                            About this survey:
+                        </strong>
+
+                        SinusPredict AI does not ask you to diagnose yourself.
+                        It analyzes self-reported survey responses and predicts
+                        whether your response pattern is associated with a
+                        previously reported sinus-condition diagnosis in the
+                        research dataset.
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     STEP 3
+                ================================================== -->
+
+                <div
+                    class="step-panel"
+                    data-panel="3">
+
+
+                    <div class="step-title">
+
+                        <div class="step-icon">
+                            03
+                        </div>
+
+                        <h2>
+                            Symptoms & Treatment
+                        </h2>
+
+                    </div>
+
+
+                    <p class="step-description">
+                        Add information about symptoms, severity,
+                        medical consultation and medication frequency.
+                    </p>
+
+
+                    <div class="form-grid">
+
+
+                        <!-- DOCTOR CONSULTED -->
+
+                        <div class="form-group">
+
+                            <div class="form-label">
+
+                                Doctor Consulted (Past Year)
+
+                                <span class="required">*</span>
+
+                            </div>
+
+
+                            <span class="form-help">
+                                Have you consulted a doctor for
+                                sinus-related symptoms during the past year?
+                            </span>
+
+
+                            <div class="option-grid">
+
+                                <div class="option-card">
+
+                                    <input
+                                        type="radio"
+                                        id="doctorNo"
+                                        name="Doctor Consulted (Past Year)"
+                                        value="No"
+                                        required>
+
+                                    <label
+                                        class="option-label"
+                                        for="doctorNo">
+
+                                        No
+
+                                    </label>
+
+                                </div>
+
+
+                                <div class="option-card">
+
+                                    <input
+                                        type="radio"
+                                        id="doctorYes"
+                                        name="Doctor Consulted (Past Year)"
+                                        value="Yes">
+
+                                    <label
+                                        class="option-label"
+                                        for="doctorYes">
+
+                                        Yes
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- HEADACHES / FACIAL PAIN -->
+
+                        <div class="form-group">
+
+                            <div class="form-label">
+
+                                Headaches or Facial Pain
+
+                                <span class="required">*</span>
+
+                            </div>
+
+
+                            <span class="form-help">
+                                Report whether you experience
+                                headaches or facial pain.
+                            </span>
+
+
+                            <div class="option-grid">
+
+                                <div class="option-card">
+
+                                    <input
+                                        type="radio"
+                                        id="headacheNo"
+                                        name="Headaches or Facial Pain"
+                                        value="No"
+                                        required>
+
+                                    <label
+                                        class="option-label"
+                                        for="headacheNo">
+
+                                        No
+
+                                    </label>
+
+                                </div>
+
+
+                                <div class="option-card">
+
+                                    <input
+                                        type="radio"
+                                        id="headacheYes"
+                                        name="Headaches or Facial Pain"
+                                        value="Yes">
+
+                                    <label
+                                        class="option-label"
+                                        for="headacheYes">
+
+                                        Yes
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             SYMPTOM CHECKLIST
+                             INFORMATIONAL ONLY
+                        ================================================== -->
+
+                        <div class="form-group full-width">
+
+                            <div class="form-label">
+                                Symptoms to consider
+                            </div>
+
+
+                            <div class="symptom-checklist">
+
+                                <h3>
+                                    Symptoms to consider
+                                </h3>
+
+
+                                <label>
+                                    <input type="checkbox">
+                                    Nasal congestion / blocked nose
+                                </label>
+
+
+                                <label>
+                                    <input type="checkbox">
+                                    Runny or thick nasal discharge
+                                </label>
+
+
+                                <label>
+                                    <input type="checkbox">
+                                    Facial pressure or facial pain
+                                </label>
+
+
+                                <label>
+                                    <input type="checkbox">
+                                    Headache
+                                </label>
+
+
+                                <label>
+                                    <input type="checkbox">
+                                    Postnasal drip
+                                </label>
+
+
+                                <label>
+                                    <input type="checkbox">
+                                    Reduced sense of smell or taste
+                                </label>
+
+
+                                <label>
+                                    <input type="checkbox">
+                                    Fever
+                                </label>
+
+
+                                <label>
+                                    <input type="checkbox">
+                                    Ear pressure or pain
+                                </label>
+
+
+                                <label>
+                                    <input type="checkbox">
+                                    Upper tooth pain
+                                </label>
+
+
+                                <label>
+                                    <input type="checkbox">
+                                    Fatigue
+                                </label>
+
+
+                                <label>
+                                    <input type="checkbox">
+                                    Persistent cough
+                                </label>
+
+
+                                <label>
+                                    <input type="checkbox">
+                                    Sore throat
+                                </label>
+
+
+                                <label>
+                                    <input type="checkbox">
+                                    Bad breath
+                                </label>
+
+
+                                <p class="symptom-checklist-note">
+
+                                    Use this checklist only as a guide
+                                    before rating your symptoms.
+
+                                    These symptoms do not by themselves
+                                    indicate a diagnosis.
+
+                                </p>
+
+                            </div>
+
+
+                            <!-- SEVERITY -->
+
+                            <div
+                                class="form-label"
+                                style="margin-top: 20px;">
+
+                                Rate your symptoms from
+                                1 (very low) to 5 (very high)
+
+                                <span class="required">*</span>
+
+                            </div>
+
+
+                            <span class="form-help">
+
+                                Select the level that best describes
+                                your overall symptom severity.
+
+                            </span>
+
+
+                            <div class="severity-grid">
+
+
+                                <!-- 1 -->
+
+                                <div class="option-card">
+
+                                    <input
+                                        type="radio"
+                                        id="severity1"
+                                        name="Sinus Severity (1-5)"
+                                        value="1"
+                                        required>
+
+                                    <label
+                                        class="option-label"
+                                        for="severity1">
+
+                                        <span class="severity-number">
+                                            1
+                                        </span>
+
+                                        <span class="severity-text">
+                                            Very Low
+                                        </span>
+
+                                    </label>
+
+                                </div>
+
+
+                                <!-- 2 -->
+
+                                <div class="option-card">
+
+                                    <input
+                                        type="radio"
+                                        id="severity2"
+                                        name="Sinus Severity (1-5)"
+                                        value="2">
+
+                                    <label
+                                        class="option-label"
+                                        for="severity2">
+
+                                        <span class="severity-number">
+                                            2
+                                        </span>
+
+                                        <span class="severity-text">
+                                            Low
+                                        </span>
+
+                                    </label>
+
+                                </div>
+
+
+                                <!-- 3 -->
+
+                                <div class="option-card">
+
+                                    <input
+                                        type="radio"
+                                        id="severity3"
+                                        name="Sinus Severity (1-5)"
+                                        value="3">
+
+                                    <label
+                                        class="option-label"
+                                        for="severity3">
+
+                                        <span class="severity-number">
+                                            3
+                                        </span>
+
+                                        <span class="severity-text">
+                                            Moderate
+                                        </span>
+
+                                    </label>
+
+                                </div>
+
+
+                                <!-- 4 -->
+
+                                <div class="option-card">
+
+                                    <input
+                                        type="radio"
+                                        id="severity4"
+                                        name="Sinus Severity (1-5)"
+                                        value="4">
+
+                                    <label
+                                        class="option-label"
+                                        for="severity4">
+
+                                        <span class="severity-number">
+                                            4
+                                        </span>
+
+                                        <span class="severity-text">
+                                            High
+                                        </span>
+
+                                    </label>
+
+                                </div>
+
+
+                                <!-- 5 -->
+
+                                <div class="option-card">
+
+                                    <input
+                                        type="radio"
+                                        id="severity5"
+                                        name="Sinus Severity (1-5)"
+                                        value="5">
+
+                                    <label
+                                        class="option-label"
+                                        for="severity5">
+
+                                        <span class="severity-number">
+                                            5
+                                        </span>
+
+                                        <span class="severity-text">
+                                            Very High
+                                        </span>
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- MEDICATION -->
+
+                        <div class="form-group full-width">
+
+                            <div class="form-label">
+
+                                Medication Frequency
+
+                                <span class="required">*</span>
+
+                            </div>
+
+
+                            <span class="form-help">
+                                How often do you take medication
+                                for these symptoms?
+                            </span>
+
+
+                            <div class="option-grid">
+
+                                <div class="option-card">
+
+                                    <input
+                                        type="radio"
+                                        id="medOccasionally"
+                                        name="Medication Frequency"
+                                        value="Occasionally"
+                                        required>
+
+                                    <label
+                                        class="option-label"
+                                        for="medOccasionally">
+
+                                        Occasionally
+
+                                    </label>
+
+                                </div>
+
+
+                                <div class="option-card">
+
+                                    <input
+                                        type="radio"
+                                        id="medRegularly"
+                                        name="Medication Frequency"
+                                        value="Regularly">
+
+                                    <label
+                                        class="option-label"
+                                        for="medRegularly">
+
+                                        Regularly
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     STEP 4
+                ================================================== -->
+
+                <div
+                    class="step-panel"
+                    data-panel="4">
+
+
+                    <div class="step-title">
+
+                        <div class="step-icon">
+                            04
+                        </div>
+
+                        <h2>
+                            Review & Predict
+                        </h2>
+
+                    </div>
+
+
+                    <p class="step-description">
+                        Review your survey responses before running
+                        the machine-learning prediction.
+                    </p>
+
+
+                    <div
+                        id="reviewGrid"
+                        class="review-grid">
+                    </div>
+
+
+                    <div class="analyze-disclaimer">
+
+                        <strong>
+                            Important:
+                        </strong>
+
+                        SinusPredict AI provides a
+                        <strong>
+                            machine-learning prediction
+                        </strong>
+                        based on self-reported survey data.
+
+                        It is
+                        <strong>
+                            not a medical diagnosis
+                        </strong>
+                        and should not replace professional
+                        medical advice.
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     ACTION BUTTONS
+                ================================================== -->
+
+                <div class="wizard-actions">
+
+
+                    <button
+                        type="button"
+                        id="backBtn"
+                        class="btn btn-secondary"
+                        style="visibility: hidden;">
+
+                        ← Back
+
+                    </button>
+
+
+                    <div class="action-right">
+
+
+                        <button
+                            type="button"
+                            id="nextBtn"
+                            class="btn btn-primary">
+
+                            Continue →
+
+                        </button>
+
+
+                        <button
+                            type="submit"
+                            id="predictBtn"
+                            class="btn btn-primary"
+                            style="display: none;">
+
+                            Analyze with AI
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </form>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<!-- =========================================================
+     GLOBAL JAVASCRIPT
+========================================================= -->
+
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+
+<!-- =========================================================
+     ANALYZE JAVASCRIPT
+========================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    /* =====================================================
+       STATE
+    ===================================================== */
+
+    let currentStep = 1;
+    const totalSteps = 4;
+
+
+    /* =====================================================
+       ELEMENTS
+    ===================================================== */
+
+    const form =
+        document.getElementById("predictionForm");
+
+    const panels =
+        document.querySelectorAll(".step-panel");
+
+    const progressSteps =
+        document.querySelectorAll(".progress-step");
+
+    const progressFill =
+        document.getElementById("progressFill");
+
+    const nextBtn =
+        document.getElementById("nextBtn");
+
+    const backBtn =
+        document.getElementById("backBtn");
+
+    const predictBtn =
+        document.getElementById("predictBtn");
+
+    const reviewGrid =
+        document.getElementById("reviewGrid");
+
+    const demoBtn =
+        document.getElementById("demoModeBtn");
+
+
+    /* =====================================================
+       SHOW STEP
+    ===================================================== */
+
+    function showStep(step) {
+
+        currentStep = step;
+
+
+        panels.forEach(panel => {
+
+            panel.classList.toggle(
+                "active",
+                Number(panel.dataset.panel) === step
+            );
+
+        });
+
+
+        progressSteps.forEach(item => {
+
+            const number =
+                Number(item.dataset.step);
+
+
+            item.classList.toggle(
+                "active",
+                number === step
+            );
+
+
+            item.classList.toggle(
+                "completed",
+                number < step
+            );
+
+        });
+
+
+        progressFill.style.width =
+            `${step * 25}%`;
+
+
+        backBtn.style.visibility =
+            step === 1
+                ? "hidden"
+                : "visible";
+
+
+        nextBtn.style.display =
+            step === totalSteps
+                ? "none"
+                : "inline-flex";
+
+
+        predictBtn.style.display =
+            step === totalSteps
+                ? "inline-flex"
+                : "none";
+
+
+        if (step === totalSteps) {
+            updateReview();
+        }
+
+    }
+
+
+    /* =====================================================
+       VALIDATION
+    ===================================================== */
+
+    function validateCurrentStep() {
+
+        const panel =
+            document.querySelector(
+                `.step-panel[data-panel="${currentStep}"]`
+            );
+
+
+        if (!panel) {
+            return false;
+        }
+
+
+        /*
+         * The symptom checklist is intentionally excluded.
+         * It is informational only and is not an ML input.
+         */
+
+        const fields =
+            panel.querySelectorAll(
+                "input:not([type='checkbox']), select"
+            );
+
+
+        for (const field of fields) {
+
+            if (!field.checkValidity()) {
+
+                field.reportValidity();
+
+                return false;
+
+            }
+
+        }
+
+
+        return true;
+
+    }
+
+
+    /* =====================================================
+       NEXT
+    ===================================================== */
+
+    nextBtn.addEventListener("click", () => {
+
+        if (!validateCurrentStep()) {
+            return;
+        }
+
+
+        if (currentStep < totalSteps) {
+
+            showStep(
+                currentStep + 1
+            );
+
+        }
+
+    });
+
+
+    /* =====================================================
+       BACK
+    ===================================================== */
+
+    backBtn.addEventListener("click", () => {
+
+        if (currentStep > 1) {
+
+            showStep(
+                currentStep - 1
+            );
+
+        }
+
+    });
+
+
+    /* =====================================================
+       GET VALUE
+    ===================================================== */
+
+    function getValue(name) {
+
+        const selector =
+            `[name="${CSS.escape(name)}"]`;
+
+
+        const checked =
+            form.querySelector(
+                `${selector}:checked`
+            );
+
+
+        if (checked) {
+            return checked.value;
+        }
+
+
+        const field =
+            form.querySelector(selector);
+
+
+        return field
+            ? field.value
+            : "";
+
+    }
+
+
+    /* =====================================================
+       REVIEW
+    ===================================================== */
+
+    function updateReview() {
+
+        const values = [
+
+            [
+                "Age",
+                getValue("Age")
+            ],
+
+            [
+                "Gender",
+                getValue("Gender")
+            ],
+
+            [
+                "Known Allergy",
+                getValue("Known Allergy")
+            ],
+
+            [
+                "Medication Frequency",
+                getValue("Medication Frequency")
+            ],
+
+            [
+                "Most Problematic Season",
+                getValue("Most Problematic Season")
+            ],
+
+            [
+                "Regular Sinus Issues",
+                getValue("Regular Sinus Issues")
+            ],
+
+            [
+                "Sinus Severity (1-5)",
+                getValue("Sinus Severity (1-5)")
+            ],
+
+            [
+                "Triggered by External Factors",
+                getValue("Triggered by External Factors")
+            ],
+
+            [
+                "Doctor Consulted (Past Year)",
+                getValue("Doctor Consulted (Past Year)")
+            ],
+
+            [
+                "Headaches or Facial Pain",
+                getValue("Headaches or Facial Pain")
+            ]
+
+        ];
+
+
+        reviewGrid.innerHTML = "";
+
+
+        values.forEach(([label, value]) => {
+
+            const item =
+                document.createElement("div");
+
+            item.className =
+                "review-item";
+
+
+            const labelElement =
+                document.createElement("span");
+
+            labelElement.className =
+                "review-label";
+
+            labelElement.textContent =
+                label;
+
+
+            const valueElement =
+                document.createElement("span");
+
+            valueElement.className =
+                "review-value";
+
+            valueElement.textContent =
+                value || "Not provided";
+
+
+            item.appendChild(
+                labelElement
+            );
+
+            item.appendChild(
+                valueElement
+            );
+
+
+            reviewGrid.appendChild(
+                item
+            );
+
+        });
+
+    }
+
+
+    /* =====================================================
+       DEMO MODE
+    ===================================================== */
+
+    demoBtn.addEventListener("click", () => {
+
+        document.getElementById("age").value =
+            35;
+
+
+        document.getElementById("genderFemale").checked =
+            true;
+
+
+        document.getElementById("regularYes").checked =
+            true;
+
+
+        document.getElementById("season").value =
+            "Monsoon / Rainy";
+
+
+        document.getElementById("externalYes").checked =
+            true;
+
+
+        document.getElementById("allergyYes").checked =
+            true;
+
+
+        document.getElementById("doctorYes").checked =
+            true;
+
+
+        document.getElementById("severity3").checked =
+            true;
+
+
+        document.getElementById("headacheYes").checked =
+            true;
+
+
+        document.getElementById("medOccasionally").checked =
+            true;
+
+
+        demoBtn.textContent =
+            "Sample Loaded ✓";
+
+
+        setTimeout(() => {
+
+            demoBtn.textContent =
+                "Fill Sample";
+
+        }, 1800);
+
+    });
+
+
+    /* =====================================================
+       FORM SUBMISSION
+    ===================================================== */
+
+    form.addEventListener("submit", async (event) => {
+
+        event.preventDefault();
+
+
+        if (!validateCurrentStep()) {
+            return;
+        }
+
+
+        const formData =
+            new FormData(form);
+
+
+        /*
+         * These are the EXACT 10 features
+         * expected by the existing ML model.
+         */
+
+        const data = {
+
+            "Age":
+                formData.get("Age"),
+
+            "Gender":
+                formData.get("Gender"),
+
+            "Regular Sinus Issues":
+                formData.get(
+                    "Regular Sinus Issues"
+                ),
+
+            "Most Problematic Season":
+                formData.get(
+                    "Most Problematic Season"
+                ),
+
+            "Triggered by External Factors":
+                formData.get(
+                    "Triggered by External Factors"
+                ),
+
+            "Known Allergy":
+                formData.get(
+                    "Known Allergy"
+                ),
+
+            "Doctor Consulted (Past Year)":
+                formData.get(
+                    "Doctor Consulted (Past Year)"
+                ),
+
+            "Sinus Severity (1-5)":
+                formData.get(
+                    "Sinus Severity (1-5)"
+                ),
+
+            "Headaches or Facial Pain":
+                formData.get(
+                    "Headaches or Facial Pain"
+                ),
+
+            "Medication Frequency":
+                formData.get(
+                    "Medication Frequency"
+                )
+
+        };
+
+
+        /* =================================================
+           LOADING
+        ================================================= */
+
+        predictBtn.disabled =
+            true;
+
+        predictBtn.textContent =
+            "Analyzing...";
+
+
+        try {
+
+            /* =============================================
+               API REQUEST
+            ============================================= */
+
+            const response =
+                await fetch(
+                    "/api/predict",
+                    {
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type":
+                                "application/json"
+                        },
+
+                        body:
+                            JSON.stringify(data)
+                    }
+                );
+
+
+            if (!response.ok) {
+
+                throw new Error(
+                    `Server error (${response.status})`
+                );
+
+            }
+
+
+            const result =
+                await response.json();
+
+
+            if (!result.success) {
+
+                throw new Error(
+                    result.error ||
+                    "Prediction failed."
+                );
+
+            }
+
+
+            /* =============================================
+               SAVE RESULT
+            ============================================= */
+
+            localStorage.setItem(
+                "sinuspredict-result",
+                JSON.stringify(result)
+            );
+
+
+            /* =============================================
+               HISTORY
+            ============================================= */
+
+            const history =
+                JSON.parse(
+                    localStorage.getItem(
+                        "sinuspredict-history"
+                    ) || "[]"
+                );
+
+
+            history.unshift({
+
+                id:
+                    Date.now(),
+
+                timestamp:
+                    new Date().toISOString(),
+
+                prediction:
+                    result.prediction,
+
+                probability:
+                    result.probability,
+
+                inputs:
+                    result.inputs,
+
+                explanation:
+                    result.explanation
+
+            });
+
+
+            localStorage.setItem(
+                "sinuspredict-history",
+                JSON.stringify(
+                    history.slice(0, 20)
+                )
+            );
+
+
+            /* =============================================
+               RESULT PAGE
+            ============================================= */
+
+            window.location.href =
+                "/prediction";
+
+
+        } catch (error) {
+
+            console.error(
+                "Prediction error:",
+                error
+            );
+
+
+            alert(
+                "Unable to generate prediction.\n\n" +
+                error.message
+            );
+
+
+        } finally {
+
+            predictBtn.disabled =
+                false;
+
+            predictBtn.textContent =
+                "Analyze with AI";
+
+        }
+
+    });
+
+
+    /* =====================================================
+       INITIALIZE
+    ===================================================== */
+
+    showStep(1);
+
+});
+
+</script>
+
+</body>
+</html>

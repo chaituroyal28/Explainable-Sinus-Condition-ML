@@ -1,0 +1,1803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Research | SinusPredict AI</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+    <style>
+        /* =====================================================
+           RESEARCH PAGE
+        ===================================================== */
+
+        .research-page {
+            padding: 90px 24px 100px;
+        }
+
+        .research-container {
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        .research-hero {
+            max-width: 900px;
+            margin-bottom: 70px;
+        }
+
+        .research-eyebrow,
+        .section-eyebrow {
+            display: block;
+            margin-bottom: 16px;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 1.8px;
+            color: var(--accent, #3f9fa5);
+        }
+
+        .research-hero h1 {
+            margin: 0 0 22px;
+            font-size: clamp(44px, 6vw, 76px);
+            line-height: 1.02;
+            letter-spacing: -3px;
+        }
+
+        .research-hero h1 span {
+            color: var(--accent, #3f9fa5);
+        }
+
+        .research-hero p {
+            max-width: 850px;
+            margin: 0;
+            font-size: 19px;
+            line-height: 1.8;
+            color: var(--muted-text, #71829a);
+        }
+
+        .research-section {
+            margin-bottom: 80px;
+        }
+
+        .research-section h2 {
+            margin: 0 0 14px;
+            font-size: 38px;
+            line-height: 1.15;
+            letter-spacing: -1px;
+        }
+
+        .research-section > p {
+            max-width: 850px;
+            color: var(--muted-text, #71829a);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .research-card {
+            margin-top: 28px;
+            padding: 34px;
+            border: 1px solid var(--border-color, #dce5ec);
+            border-radius: 24px;
+            background: var(--card-bg, #ffffff);
+            box-shadow: 0 16px 40px rgba(28, 55, 85, 0.06);
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+            margin-top: 28px;
+        }
+
+        .research-mini-card {
+            padding: 28px;
+            border: 1px solid var(--border-color, #dce5ec);
+            border-radius: 20px;
+            background: var(--card-bg, #ffffff);
+        }
+
+        .research-mini-card h3 {
+            margin: 0 0 12px;
+            font-size: 21px;
+        }
+
+        .research-mini-card p {
+            margin: 0;
+            color: var(--muted-text, #71829a);
+            line-height: 1.75;
+        }
+
+        .pipeline {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 14px;
+            margin-top: 32px;
+        }
+
+        .pipeline-step {
+            position: relative;
+            padding: 24px 18px;
+            border: 1px solid var(--border-color, #dce5ec);
+            border-radius: 18px;
+            background: var(--card-bg, #ffffff);
+            text-align: center;
+        }
+
+        .pipeline-number {
+            width: 38px;
+            height: 38px;
+            margin: 0 auto 14px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: rgba(76, 171, 174, 0.13);
+            color: var(--accent, #3f9fa5);
+            font-weight: 800;
+        }
+
+        .pipeline-step h3 {
+            margin: 0 0 8px;
+            font-size: 16px;
+        }
+
+        .pipeline-step p {
+            margin: 0;
+            color: var(--muted-text, #71829a);
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 14px;
+            margin-top: 28px;
+        }
+
+        .metric-card {
+            padding: 24px 18px;
+            border: 1px solid var(--border-color, #dce5ec);
+            border-radius: 18px;
+            background: var(--card-bg, #ffffff);
+        }
+
+        .metric-card span {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            color: var(--muted-text, #71829a);
+            text-transform: uppercase;
+        }
+
+        .metric-card strong {
+            font-size: 27px;
+            color: var(--heading-text, #172f4d);
+        }
+
+        .model-table-wrap {
+            margin-top: 30px;
+            overflow-x: auto;
+            border: 1px solid var(--border-color, #dce5ec);
+            border-radius: 22px;
+            background: var(--card-bg, #ffffff);
+        }
+
+        .model-table {
+            width: 100%;
+            min-width: 720px;
+            border-collapse: collapse;
+        }
+
+        .model-table th,
+        .model-table td {
+            padding: 18px 20px;
+            border-bottom: 1px solid var(--border-color, #dce5ec);
+            text-align: left;
+        }
+
+        .model-table th {
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--muted-text, #71829a);
+        }
+
+        .model-table td {
+            font-size: 14px;
+        }
+
+        .model-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .live-row {
+            background: rgba(76, 171, 174, 0.08);
+        }
+
+        .live-badge {
+            display: inline-block;
+            margin-left: 8px;
+            padding: 5px 9px;
+            border-radius: 999px;
+            background: rgba(76, 171, 174, 0.13);
+            color: var(--accent, #3f9fa5);
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: .7px;
+        }
+
+        .method-list {
+            display: grid;
+            gap: 14px;
+            margin-top: 28px;
+        }
+
+        .method-item {
+            display: grid;
+            grid-template-columns: 46px 1fr;
+            gap: 18px;
+            padding: 22px;
+            border: 1px solid var(--border-color, #dce5ec);
+            border-radius: 18px;
+            background: var(--card-bg, #ffffff);
+        }
+
+        .method-icon {
+            width: 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            background: rgba(76, 171, 174, 0.12);
+            color: var(--accent, #3f9fa5);
+            font-weight: 800;
+        }
+
+        .method-item h3 {
+            margin: 0 0 7px;
+            font-size: 17px;
+        }
+
+        .method-item p {
+            margin: 0;
+            color: var(--muted-text, #71829a);
+            line-height: 1.7;
+        }
+
+        .literature-card {
+            position: relative;
+            padding: 34px;
+            border: 1px solid var(--border-color, #dce5ec);
+            border-radius: 24px;
+            background: var(--card-bg, #ffffff);
+        }
+
+        .literature-card .tag {
+            display: inline-block;
+            margin-bottom: 18px;
+            padding: 7px 11px;
+            border-radius: 999px;
+            background: rgba(76, 171, 174, 0.12);
+            color: var(--accent, #3f9fa5);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .literature-card h3 {
+            margin: 0 0 12px;
+            font-size: 23px;
+            line-height: 1.4;
+        }
+
+        .literature-card .authors {
+            margin-bottom: 20px;
+            color: var(--muted-text, #71829a);
+            font-size: 14px;
+        }
+
+        .literature-card p {
+            margin: 0 0 16px;
+            color: var(--muted-text, #71829a);
+            line-height: 1.8;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+            margin-top: 28px;
+        }
+
+        .comparison-card {
+            padding: 30px;
+            border-radius: 22px;
+            border: 1px solid var(--border-color, #dce5ec);
+            background: var(--card-bg, #ffffff);
+        }
+
+        .comparison-card h3 {
+            margin: 0 0 18px;
+            font-size: 21px;
+        }
+
+        .comparison-card ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .comparison-card li {
+            margin-bottom: 11px;
+            color: var(--muted-text, #71829a);
+            line-height: 1.65;
+        }
+
+        .explain-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+            margin-top: 28px;
+        }
+
+        .explain-card {
+            padding: 28px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color, #dce5ec);
+            background: var(--card-bg, #ffffff);
+        }
+
+        .explain-card h3 {
+            margin: 0 0 12px;
+            font-size: 20px;
+        }
+
+        .explain-card p {
+            margin: 0;
+            color: var(--muted-text, #71829a);
+            line-height: 1.75;
+        }
+
+        .limitations {
+            padding: 34px;
+            border: 1px solid #ead7a0;
+            border-radius: 24px;
+            background: #fff9e8;
+        }
+
+        .limitations h2 {
+            color: #725714;
+        }
+
+        .limitations ul {
+            margin: 22px 0 0;
+            padding-left: 22px;
+        }
+
+        .limitations li {
+            margin-bottom: 12px;
+            color: #725714;
+            line-height: 1.7;
+        }
+
+        .research-note {
+            margin-top: 22px;
+            padding: 20px 22px;
+            border-left: 4px solid var(--accent, #3f9fa5);
+            border-radius: 0 14px 14px 0;
+            background: rgba(76, 171, 174, 0.07);
+            color: var(--muted-text, #71829a);
+            line-height: 1.7;
+        }
+
+        .references {
+            display: grid;
+            gap: 15px;
+            margin-top: 28px;
+        }
+
+        .reference-item {
+            padding: 20px 22px;
+            border: 1px solid var(--border-color, #dce5ec);
+            border-radius: 16px;
+            background: var(--card-bg, #ffffff);
+            color: var(--muted-text, #71829a);
+            line-height: 1.7;
+        }
+
+        .reference-item strong {
+            color: var(--heading-text, #172f4d);
+        }
+
+        .research-disclaimer {
+            margin-top: 40px;
+            padding: 24px 26px;
+            border: 1px solid #ead7a0;
+            border-radius: 20px;
+            background: #fff9e8;
+            color: #725714;
+            line-height: 1.75;
+        }
+
+        @media (max-width: 950px) {
+
+            .pipeline {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .metric-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+        }
+
+        @media (max-width: 720px) {
+
+            .research-page {
+                padding: 60px 18px 80px;
+            }
+
+            .research-hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .research-grid,
+            .comparison-grid,
+            .explain-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pipeline {
+                grid-template-columns: 1fr;
+            }
+
+            .metric-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .research-card,
+            .literature-card,
+            .limitations {
+                padding: 24px;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+
+            .metric-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .research-section h2 {
+                font-size: 30px;
+            }
+
+            .method-item {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media print {
+
+            .navbar,
+            .theme-toggle,
+            .footer {
+                display: none !important;
+            }
+
+            .research-page {
+                padding: 20px;
+            }
+
+            .research-card,
+            .research-mini-card,
+            .literature-card,
+            .comparison-card,
+            .explain-card,
+            .method-item,
+            .metric-card {
+                box-shadow: none;
+                break-inside: avoid;
+            }
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="{{ url_for('home') }}" class="brand">
+
+            <div class="brand-icon">
+                S
+            </div>
+
+            <div>
+
+                <div class="brand-name">
+                    SinusPredict AI
+                </div>
+
+                <div class="brand-subtitle">
+                    Sinus Condition Analyzer
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="{{ url_for('home') }}">
+                Home
+            </a>
+
+            <a href="{{ url_for('analyze') }}">
+                Analyze
+            </a>
+
+            <a href="{{ url_for('insights') }}">
+                Insights
+            </a>
+
+            <a href="{{ url_for('models') }}">
+                Model Lab
+            </a>
+
+            <a
+                href="{{ url_for('research') }}"
+                class="active"
+            >
+                Research
+            </a>
+
+            <a href="{{ url_for('about') }}">
+                About
+            </a>
+
+        </nav>
+
+
+        <button
+            id="themeToggle"
+            class="theme-toggle"
+            aria-label="Toggle theme"
+        >
+            ◐
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="research-page">
+
+    <div class="research-container">
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section class="research-hero">
+
+            <span class="research-eyebrow">
+                TECHNICAL & ACADEMIC RESEARCH
+            </span>
+
+            <h1>
+                From Survey Data
+                <span>to Explainable ML</span>
+            </h1>
+
+            <p>
+                SinusPredict AI is an academic machine-learning
+                project that investigates whether demographic,
+                symptom, allergy, environmental and treatment-related
+                survey responses can be used to model a
+                self-reported sinus-condition outcome.
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             01 — RESEARCH QUESTION
+        ================================================== -->
+
+        <section class="research-section">
+
+            <span class="section-eyebrow">
+                01. RESEARCH QUESTION
+            </span>
+
+            <h2>
+                What does this project investigate?
+            </h2>
+
+            <p>
+                The project evaluates whether supervised machine
+                learning can identify patterns in a cleaned
+                self-reported Sinus Survey dataset and predict the
+                survey's reported diagnosis outcome.
+            </p>
+
+
+            <div class="research-card">
+
+                <h3>
+                    Project framing
+                </h3>
+
+                <p>
+                    The target variable is
+                    <strong>
+                        Diagnosed with Sinus Condition
+                    </strong>.
+                    This is a self-reported survey outcome and is
+                    therefore treated as a machine-learning target,
+                    not as a medically verified diagnosis.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             02 — DATASET
+        ================================================== -->
+
+        <section class="research-section">
+
+            <span class="section-eyebrow">
+                02. DATASET
+            </span>
+
+            <h2>
+                The Sinus Survey
+            </h2>
+
+            <p>
+                The original dataset contained 1,006 records and
+                11 columns. Six duplicate rows were removed before
+                modeling, producing the cleaned dataset used in
+                analysis.
+            </p>
+
+
+            <div class="research-grid">
+
+                <div class="research-mini-card">
+
+                    <h3>
+                        Dataset size
+                    </h3>
+
+                    <p>
+                        1,006 original records →
+                        1,000 cleaned records.
+                    </p>
+
+                </div>
+
+
+                <div class="research-mini-card">
+
+                    <h3>
+                        Input variables
+                    </h3>
+
+                    <p>
+                        10 predictor variables were used to model
+                        the self-reported diagnosis target.
+                    </p>
+
+                </div>
+
+
+                <div class="research-mini-card">
+
+                    <h3>
+                        Age range
+                    </h3>
+
+                    <p>
+                        Survey respondents range from
+                        18 to 65 years.
+                    </p>
+
+                </div>
+
+
+                <div class="research-mini-card">
+
+                    <h3>
+                        Missing values
+                    </h3>
+
+                    <p>
+                        No missing values remained after the
+                        dataset cleaning stage.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             03 — FEATURES
+        ================================================== -->
+
+        <section class="research-section">
+
+            <span class="section-eyebrow">
+                03. INPUT FEATURES
+            </span>
+
+            <h2>
+                What information enters the model?
+            </h2>
+
+            <div class="research-card">
+
+                <div class="research-grid">
+
+                    <div class="research-mini-card">
+                        <h3>Demographic</h3>
+                        <p>
+                            Age and Gender.
+                        </p>
+                    </div>
+
+                    <div class="research-mini-card">
+                        <h3>Sinus history</h3>
+                        <p>
+                            Regular Sinus Issues and
+                            Sinus Severity (1–5).
+                        </p>
+                    </div>
+
+                    <div class="research-mini-card">
+                        <h3>Environmental factors</h3>
+                        <p>
+                            Most Problematic Season and
+                            Triggered by External Factors.
+                        </p>
+                    </div>
+
+                    <div class="research-mini-card">
+                        <h3>Allergy & treatment</h3>
+                        <p>
+                            Known Allergy, Doctor Consulted,
+                            Headaches / Facial Pain and
+                            Medication Frequency.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             04 — METHODOLOGY
+        ================================================== -->
+
+        <section class="research-section">
+
+            <span class="section-eyebrow">
+                04. METHODOLOGY
+            </span>
+
+            <h2>
+                Machine-learning workflow
+            </h2>
+
+            <p>
+                The project follows a structured supervised-learning
+                workflow from data cleaning through model comparison
+                and explainability.
+            </p>
+
+
+            <div class="pipeline">
+
+                <div class="pipeline-step">
+
+                    <div class="pipeline-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Cleaning
+                    </h3>
+
+                    <p>
+                        Remove duplicate survey rows.
+                    </p>
+
+                </div>
+
+
+                <div class="pipeline-step">
+
+                    <div class="pipeline-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Preprocessing
+                    </h3>
+
+                    <p>
+                        Scale numerical features and
+                        one-hot encode categorical features.
+                    </p>
+
+                </div>
+
+
+                <div class="pipeline-step">
+
+                    <div class="pipeline-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Training
+                    </h3>
+
+                    <p>
+                        Train six supervised classification
+                        models.
+                    </p>
+
+                </div>
+
+
+                <div class="pipeline-step">
+
+                    <div class="pipeline-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Evaluation
+                    </h3>
+
+                    <p>
+                        Compare Accuracy, Precision,
+                        Recall, F1 and ROC-AUC.
+                    </p>
+
+                </div>
+
+
+                <div class="pipeline-step">
+
+                    <div class="pipeline-number">
+                        05
+                    </div>
+
+                    <h3>
+                        Explainability
+                    </h3>
+
+                    <p>
+                        Use SHAP and permutation importance
+                        to inspect model behavior.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             05 — TRAIN TEST
+        ================================================== -->
+
+        <section class="research-section">
+
+            <span class="section-eyebrow">
+                05. EXPERIMENT DESIGN
+            </span>
+
+            <h2>
+                Training and evaluation
+            </h2>
+
+            <div class="research-grid">
+
+                <div class="research-mini-card">
+
+                    <h3>
+                        Stratified split
+                    </h3>
+
+                    <p>
+                        The cleaned dataset was divided into
+                        800 training records and 200 held-out
+                        test records using stratification.
+                    </p>
+
+                </div>
+
+
+                <div class="research-mini-card">
+
+                    <h3>
+                        Cross-validation
+                    </h3>
+
+                    <p>
+                        Five-fold stratified cross-validation
+                        was used during model evaluation and
+                        hyperparameter tuning.
+                    </p>
+
+                </div>
+
+
+                <div class="research-mini-card">
+
+                    <h3>
+                        Hyperparameter tuning
+                    </h3>
+
+                    <p>
+                        Randomized search was used to explore
+                        model configurations using F1 score
+                        as the tuning metric.
+                    </p>
+
+                </div>
+
+
+                <div class="research-mini-card">
+
+                    <h3>
+                        Held-out evaluation
+                    </h3>
+
+                    <p>
+                        Final model performance was measured
+                        on the 200-record test set that was
+                        not used for model fitting.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             06 — MODELS
+        ================================================== -->
+
+        <section class="research-section">
+
+            <span class="section-eyebrow">
+                06. MODEL COMPARISON
+            </span>
+
+            <h2>
+                Six classification models
+            </h2>
+
+            <p>
+                Six models were evaluated using the same cleaned
+                survey dataset and held-out test set.
+            </p>
+
+
+            <div class="model-table-wrap">
+
+                <table class="model-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>Model</th>
+                            <th>Accuracy</th>
+                            <th>Precision</th>
+                            <th>Recall</th>
+                            <th>F1</th>
+                            <th>ROC-AUC</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Logistic Regression</td>
+                            <td>51.00%</td>
+                            <td>50.93%</td>
+                            <td>55.00%</td>
+                            <td>52.88%</td>
+                            <td>49.63%</td>
+                        </tr>
+
+
+                        <tr class="live-row">
+
+                            <td>
+                                <strong>
+                                    Decision Tree
+                                </strong>
+
+                                <span class="live-badge">
+                                    LIVE MODEL
+                                </span>
+                            </td>
+
+                            <td>48.50%</td>
+                            <td>48.92%</td>
+                            <td>68.00%</td>
+                            <td>
+                                <strong>
+                                    56.90%
+                                </strong>
+                            </td>
+                            <td>53.68%</td>
+
+                        </tr>
+
+
+                        <tr>
+                            <td>Random Forest</td>
+                            <td>46.00%</td>
+                            <td>46.36%</td>
+                            <td>51.00%</td>
+                            <td>48.57%</td>
+                            <td>46.12%</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>SVM</td>
+                            <td>51.50%</td>
+                            <td>51.58%</td>
+                            <td>49.00%</td>
+                            <td>50.26%</td>
+                            <td>50.94%</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>XGBoost</td>
+                            <td>46.50%</td>
+                            <td>46.79%</td>
+                            <td>51.00%</td>
+                            <td>48.80%</td>
+                            <td>47.97%</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>CatBoost</td>
+                            <td>44.50%</td>
+                            <td>44.76%</td>
+                            <td>47.00%</td>
+                            <td>45.85%</td>
+                            <td>47.04%</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <div class="research-note">
+
+                The tuned Decision Tree achieved the highest
+                held-out test-set F1 score among the six evaluated
+                models at 56.90%. This is a dataset-specific
+                evaluation result and should not be interpreted
+                as clinical diagnostic accuracy.
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             07 — DECISION TREE
+        ================================================== -->
+
+        <section class="research-section">
+
+            <span class="section-eyebrow">
+                07. LIVE MODEL
+            </span>
+
+            <h2>
+                Tuned Decision Tree
+            </h2>
+
+            <p>
+                The web application uses the tuned Decision Tree
+                for live survey predictions.
+            </p>
+
+
+            <div class="metric-grid">
+
+                <div class="metric-card">
+                    <span>Accuracy</span>
+                    <strong>48.50%</strong>
+                </div>
+
+                <div class="metric-card">
+                    <span>Precision</span>
+                    <strong>48.92%</strong>
+                </div>
+
+                <div class="metric-card">
+                    <span>Recall</span>
+                    <strong>68.00%</strong>
+                </div>
+
+                <div class="metric-card">
+                    <span>F1 Score</span>
+                    <strong>56.90%</strong>
+                </div>
+
+                <div class="metric-card">
+                    <span>ROC-AUC</span>
+                    <strong>53.68%</strong>
+                </div>
+
+            </div>
+
+
+            <div class="research-card">
+
+                <h3>
+                    Tuned configuration
+                </h3>
+
+                <div class="research-grid">
+
+                    <div class="research-mini-card">
+                        <h3>Criterion</h3>
+                        <p>gini</p>
+                    </div>
+
+                    <div class="research-mini-card">
+                        <h3>Maximum depth</h3>
+                        <p>5</p>
+                    </div>
+
+                    <div class="research-mini-card">
+                        <h3>Minimum samples split</h3>
+                        <p>2</p>
+                    </div>
+
+                    <div class="research-mini-card">
+                        <h3>Minimum samples leaf</h3>
+                        <p>5</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             08 — EXPLAINABILITY
+        ================================================== -->
+
+        <section class="research-section">
+
+            <span class="section-eyebrow">
+                08. EXPLAINABLE AI
+            </span>
+
+            <h2>
+                Understanding model behavior
+            </h2>
+
+            <p>
+                Explainability was included so that the system does
+                not only return a prediction, but also provides
+                information about which transformed features
+                influenced model behavior.
+            </p>
+
+
+            <div class="explain-grid">
+
+                <div class="explain-card">
+
+                    <h3>
+                        SHAP
+                    </h3>
+
+                    <p>
+                        SHAP values are used to attribute the model's
+                        prediction to individual transformed features.
+                        Positive values support the model's Yes class,
+                        while negative values support the No class.
+                    </p>
+
+                </div>
+
+
+                <div class="explain-card">
+
+                    <h3>
+                        Permutation importance
+                    </h3>
+
+                    <p>
+                        Permutation importance measures how model
+                        performance changes when a feature's values
+                        are shuffled. It provides a model-level
+                        importance view rather than a causal effect.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="research-note">
+
+                In the project's permutation-importance analysis,
+                Age had the largest mean importance, followed by
+                Medication Frequency. In the SHAP summary, Age had
+                the largest mean absolute SHAP value among the
+                transformed features.
+
+                These results describe model behavior and are not
+                evidence that these variables cause sinus conditions.
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             09 — STATISTICAL ANALYSIS
+        ================================================== -->
+
+        <section class="research-section">
+
+            <span class="section-eyebrow">
+                09. STATISTICAL ANALYSIS
+            </span>
+
+            <h2>
+                Categorical feature associations
+            </h2>
+
+            <p>
+                Chi-square tests were used to examine associations
+                between categorical survey variables and the
+                self-reported diagnosis target.
+            </p>
+
+
+            <div class="research-card">
+
+                <div class="model-table-wrap">
+
+                    <table class="model-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>Feature</th>
+                                <th>Chi-square</th>
+                                <th>p-value</th>
+                                <th>Result at α = 0.05</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>Gender</td>
+                                <td>0.4788</td>
+                                <td>0.4890</td>
+                                <td>Not significant</td>
+                            </tr>
+
+                            <tr>
+                                <td>Regular Sinus Issues</td>
+                                <td>0.0000</td>
+                                <td>0.9972</td>
+                                <td>Not significant</td>
+                            </tr>
+
+                            <tr>
+                                <td>Most Problematic Season</td>
+                                <td>0.6874</td>
+                                <td>0.4071</td>
+                                <td>Not significant</td>
+                            </tr>
+
+                            <tr>
+                                <td>Triggered by External Factors</td>
+                                <td>3.4003</td>
+                                <td>0.0652</td>
+                                <td>Not significant</td>
+                            </tr>
+
+                            <tr>
+                                <td>Known Allergy</td>
+                                <td>0.3964</td>
+                                <td>0.5290</td>
+                                <td>Not significant</td>
+                            </tr>
+
+                            <tr>
+                                <td>Doctor Consulted</td>
+                                <td>0.0968</td>
+                                <td>0.7556</td>
+                                <td>Not significant</td>
+                            </tr>
+
+                            <tr>
+                                <td>Headaches / Facial Pain</td>
+                                <td>0.6678</td>
+                                <td>0.4138</td>
+                                <td>Not significant</td>
+                            </tr>
+
+                            <tr>
+                                <td>Medication Frequency</td>
+                                <td>0.0612</td>
+                                <td>0.8046</td>
+                                <td>Not significant</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <div class="research-note">
+
+                No statistically significant association was
+                detected at the 5% significance level for the
+                categorical variables tested. This does not prove
+                that the variables have no relationship with the
+                target.
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             10 — RELATED WORK
+        ================================================== -->
+
+        <section class="research-section">
+
+            <span class="section-eyebrow">
+                10. RELATED WORK
+            </span>
+
+            <h2>
+                Previous research
+            </h2>
+
+            <p>
+                Existing research demonstrates that machine
+                learning has been explored for sinus-related
+                analysis using medical imaging and other data
+                sources.
+            </p>
+
+
+            <div class="literature-card">
+
+                <span class="tag">
+                    RELATED LITERATURE · 2024
+                </span>
+
+                <h3>
+                    Machine Learning-Based Approach For
+                    Sinus Detection In Medical Imaging
+                </h3>
+
+                <div class="authors">
+                    Karthikeyan D., Parthasarathi B.,
+                    Parthasarathi R., Senthilkumar S.,
+                    Sudhahar D.
+                </div>
+
+                <p>
+                    The paper describes a machine-learning approach
+                    for sinusitis detection using facial images and
+                    image-classification techniques. Its proposed
+                    approach discusses deep-learning/CNN-based image
+                    analysis and classification between sinusitis
+                    cases and healthy states.
+                </p>
+
+                <p>
+                    The related work also discusses research using
+                    CT scans, including a study based on 57 CT scans
+                    for detection of nasal cavities and paranasal
+                    sinuses, and another comprehensive sinus-disease
+                    dataset containing annotated CT-scan samples.
+                </p>
+
+                <p>
+                    These studies provide context for the use of
+                    machine learning in sinus-related research, but
+                    their imaging-based problem setting differs from
+                    the survey-based tabular prediction problem
+                    addressed by SinusPredict AI.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             11 — COMPARISON
+        ================================================== -->
+
+        <section class="research-section">
+
+            <span class="section-eyebrow">
+                11. RESEARCH POSITIONING
+            </span>
+
+            <h2>
+                Related work vs. this project
+            </h2>
+
+
+            <div class="comparison-grid">
+
+                <div class="comparison-card">
+
+                    <h3>
+                        Related imaging research
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Medical images such as CT or facial
+                            images are used as input.
+                        </li>
+
+                        <li>
+                            Image-processing and deep-learning
+                            approaches are discussed.
+                        </li>
+
+                        <li>
+                            CNN-based classification is part of
+                            the proposed approach.
+                        </li>
+
+                        <li>
+                            The research is oriented toward
+                            medical-image analysis.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="comparison-card">
+
+                    <h3>
+                        SinusPredict AI
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Uses a structured self-reported
+                            survey dataset.
+                        </li>
+
+                        <li>
+                            Uses demographic, symptom, allergy,
+                            environmental and treatment-related
+                            variables.
+                        </li>
+
+                        <li>
+                            Evaluates six traditional and
+                            gradient-boosting classifiers.
+                        </li>
+
+                        <li>
+                            Uses SHAP and permutation importance
+                            for explainability.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             12 — LIMITATIONS
+        ================================================== -->
+
+        <section class="research-section">
+
+            <div class="limitations">
+
+                <span class="section-eyebrow">
+                    12. LIMITATIONS
+                </span>
+
+                <h2>
+                    Important limitations
+                </h2>
+
+                <ul>
+
+                    <li>
+                        The dataset contains self-reported survey
+                        responses rather than independently verified
+                        clinical diagnoses.
+                    </li>
+
+                    <li>
+                        The dataset contains 1,000 cleaned records,
+                        which limits how broadly the results can be
+                        generalized.
+                    </li>
+
+                    <li>
+                        The held-out test-set performance is limited,
+                        with the tuned Decision Tree obtaining an
+                        F1 score of 56.90% and ROC-AUC of 53.68%.
+                    </li>
+
+                    <li>
+                        The model captures statistical patterns in
+                        the available survey data and does not
+                        establish causal relationships.
+                    </li>
+
+                    <li>
+                        Model performance may change on a different
+                        population or a newly collected dataset.
+                    </li>
+
+                    <li>
+                        The application should not be used as a
+                        substitute for professional medical
+                        evaluation.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             13 — CONCLUSION
+        ================================================== -->
+
+        <section class="research-section">
+
+            <span class="section-eyebrow">
+                13. CONCLUSION
+            </span>
+
+            <h2>
+                What this project demonstrates
+            </h2>
+
+            <div class="research-card">
+
+                <p>
+                    SinusPredict AI demonstrates an end-to-end
+                    machine-learning workflow for a survey-based
+                    sinus-condition prediction task. The project
+                    combines data cleaning, preprocessing,
+                    classification, cross-validation,
+                    hyperparameter tuning, model comparison,
+                    statistical analysis and explainability.
+                </p>
+
+                <p>
+                    Among the six evaluated models, the tuned
+                    Decision Tree produced the highest held-out
+                    test-set F1 score in this experiment. The web
+                    application then exposes that model through an
+                    interactive survey interface and provides
+                    prediction-level explanations.
+                </p>
+
+                <p>
+                    The central contribution is therefore an
+                    explainable academic ML workflow rather than
+                    a clinical diagnostic system.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             REFERENCES
+        ================================================== -->
+
+        <section class="research-section">
+
+            <span class="section-eyebrow">
+                REFERENCES
+            </span>
+
+            <h2>
+                Research sources
+            </h2>
+
+
+            <div class="references">
+
+                <div class="reference-item">
+
+                    <strong>
+                        [1]
+                    </strong>
+
+                    Karthikeyan D., Parthasarathi B.,
+                    Parthasarathi R., Senthilkumar S.,
+                    Sudhahar D.
+                    <em>
+                        Machine Learning-Based Approach For
+                        Sinus Detection In Medical Imaging.
+                    </em>
+                    International Journal of Creative Research
+                    Thoughts (IJCRT), 2024.
+
+                </div>
+
+
+                <div class="reference-item">
+
+                    <strong>
+                        [2]
+                    </strong>
+
+                    Sinus Survey dataset used for the academic
+                    machine-learning experiment:
+                    <em>
+                        sinus_survey_data1.csv
+                    </em>
+
+                </div>
+
+
+                <div class="reference-item">
+
+                    <strong>
+                        [3]
+                    </strong>
+
+                    Project evaluation artifacts including
+                    cross-validation, model comparison,
+                    permutation importance and SHAP results.
+
+                </div>
+
+            </div>
+
+
+            <div class="research-disclaimer">
+
+                <strong>
+                    Research disclaimer:
+                </strong>
+
+                SinusPredict AI is an academic machine-learning
+                project based on self-reported survey data.
+                Its outputs are predictions from a trained model,
+                not medical diagnoses, and should not replace
+                professional medical advice.
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="footer-inner">
+
+        <div>
+
+            <strong>
+                SinusPredict AI
+            </strong>
+
+            <p>
+                Survey-Based Sinus Condition Analyzer
+            </p>
+
+        </div>
+
+
+        <div>
+            Academic Machine Learning Project
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script
+    src="{{ url_for('static', filename='js/app.js') }}"
+></script>
+
+</body>
+
+</html>
